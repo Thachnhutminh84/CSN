@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Di Tích Lịch Sử Tỉnh Trà Vinh</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+</head>
+
+<body class="bg-gray-100">
+    <!-- Header với logo -->
+    <header class="bg-white shadow-lg transition-all duration-300 hover:shadow-xl">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Logo và tên trường -->
+                <div class="flex items-center">
+                    <img src="logodhtravinh.png" alt="Du lịch Trà Vinh" 
+                         class="h-16 w-auto object-contain hover:scale-105 transition-transform duration-300">
+                    <div class="ml-4">
+                        <h1 class="text-2xl font-bold text-red-600 hover:text-red-700 transition-colors">
+                            TRƯỜNG ĐẠI HỌC TRÀ VINH
+                        </h1>
+                        <p class="text-gray-600">
+                            <i class="far fa-clock mr-2"></i>
+                            <span id="currentDateTime">Thứ 2 - 26/10/2024, 10:37:23 PM</span>
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Menu chính -->
+                <nav class="bg-gradient-to-r from-blue-800 to-blue-600 text-white py-4 rounded-lg shadow-lg">
+                    <div class="container mx-auto">
+                        <ul class="flex flex-wrap justify-center gap-6 text-lg font-semibold">
+                            <li><a href="index.html" class="hover:text-yellow-300 transition-colors px-4 py-2 rounded-full hover:bg-blue-700">TRANG CHỦ</a></li>
+                            <li><a href="Gioi-thieu.html" class="hover:text-yellow-300 transition-colors px-4 py-2 rounded-full hover:bg-blue-700">GIỚI THIỆU</a></li>
+                            <li><a href="di-tich-quoc-gia.html" class="hover:text-yellow-300 transition-colors px-4 py-2 rounded-full hover:bg-blue-700">Di Tích Cấp Quốc Gia</a></li>
+                            <li><a href="di-tich-tinh.html" class="hover:text-yellow-300 transition-colors px-4 py-2 rounded-full hover:bg-blue-700">Di Tích Cấp Tỉnh</a></li>
+                            <li><a href="dulich.html" class="hover:text-yellow-300 transition-colors px-4 py-2 rounded-full hover:bg-blue-700">Du Lịch</a></li>
+                            <li><a href="lich-su.html" class="hover:text-yellow-300 transition-colors px-4 py-2 rounded-full hover:bg-blue-700">Lịch Sử</a></li>
+                            <li><a href="lien-he.html" class="hover:text-yellow-300 transition-colors px-4 py-2 rounded-full hover:bg-blue-700">Liên Hệ</a></li>
+                        </ul>
+                    </div>
+                </nav>
+                
+                <!-- Thêm các nút mạng xã hội -->
+                <div class="hidden md:flex space-x-4">
+                    <a href="https://www.facebook.com/TraVinhUniversity.TVU?mibextid=JRoKGi" target="_blank" class="text-gray-600 hover:text-blue-600 transition-colors" onclick="window.open(this.href, '_blank'); return false;">
+                        <i class="fab fa-facebook-square text-2xl"></i>
+                    </a>
+                    <a href="https://www.instagram.com/explore/locations/1017118742/truong-ai-hoc-tra-vinh/" target="_blank" class="text-gray-600 hover:text-pink-600 transition-colors" onclick="window.open(this.href, '_blank'); return false;">
+                        <i class="fab fa-instagram text-2xl"></i>
+                    </a>
+                    <a href="https://youtube.com/@aihoctravinhtvu?si=Mky1izWZ7pXRA9Hs" target="_blank" class="text-gray-600 hover:text-red-600 transition-colors" onclick="window.open(this.href, '_blank'); return false;">
+                        <i class="fab fa-youtube text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Banner chính - thêm hiệu ứng và cải thiện giao diện -->
+    <div class="container mx-auto mt-4">
+        <div class="relative overflow-hidden rounded-lg shadow-2xl">
+            <!-- Slideshow container -->
+            <div class="relative h-[480px]" id="slideshow">
+                <img src="logotravinh.png" alt="Logo Trường Đại học Trà Vinh" 
+                     class="w-full h-full object-contain transition-transform duration-700 hover:scale-105">
+                <!-- Thêm nhiều ảnh khác vào slideshow -->
+                <img src="logotravinh2.jpg" alt="Cổng chào Trường Đại học Trà Vinh" 
+                     class="absolute top-0 left-0 w-full h-full object-contain opacity-0 transition-opacity duration-700">
+                <img src="chùa.jpg" alt="Chùa Âng - Di tích văn hóa Trà Vinh" 
+                     class="absolute top-0 left-0 w-full h-full object-contain opacity-0 transition-opacity duration-700">
+            </div>
+    
+            <!-- Overlay với gradient đẹp hơn -->
+            <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-gray-900/70 via-gray-900/50 to-transparent">
+                <div class="p-8 max-w-2xl">
+                    <h2 class="text-4xl font-bold text-white mb-4 animate-fade-in">
+                        Trang Web Giới Thiệu Các Di Tích Tỉnh Trà Vinh
+                    </h2>
+                    <p class="text-white/90 text-lg animate-fade-in-delay">
+                        Khám phá vẻ đẹp và giá trị lịch sử của các di tích văn hóa tại Trà Vinh
+                    </p>
+                    <!-- Thêm nút CTA -->
+                    <div class="relative">
+                      <button onclick="toggleContent()" class="mt-8 px-8 py-4 bg-yellow-500 text-black font-bold rounded-full 
+                                   hover:bg-yellow-400 transition-all duration-300 
+                                   transform hover:scale-105 animate-fade-in-delay-2 
+                                   shadow-lg hover:shadow-xl text-lg">
+                          Khám Phá Ngay
+                      </button>
+                      
+                      <!-- Nội dung hiện ra khi click -->
+                      <div id="content" class="absolute left-0 mt-2 w-80 bg-white rounded-lg shadow-xl opacity-0
+                                transition-opacity duration-300 p-4">
+                                <h3 class="text-lg font-semibold text-gray-800 mb-2">Khám Phá Di Sản Trà Vinh</h3>
+                                <ul class="text-gray-600 space-y-2">
+                                    <li class="hover:text-blue-600 cursor-pointer flex items-center justify-between">
+                                        <span>• Di tích lịch sử văn hóa</span>
+                                        <i class="fas fa-chevron-right cursor-pointer" onclick="toggleSubContent('ditich', this)"></i>
+                                        <div id="ditich" class="absolute left-full top-0 ml-2 w-96 bg-white rounded-lg shadow-xl p-4 hidden">
+                                            <h4 class="font-semibold mb-2">Di tích lịch sử văn hóa</h4>
+                                            <p>Khám phá các di tích lịch sử như chùa Âng, Ao Bà Om, và nhiều di tích khác mang đậm bản sắc văn hóa Trà Vinh.</p>
+                                        </div>
+                                    </li>
+                                    <li class="hover:text-blue-600 cursor-pointer flex items-center justify-between">
+                                        <span>• Kiến trúc cổ độc đáo</span>
+                                        <i class="fas fa-chevron-right cursor-pointer" onclick="toggleSubContent('kientruc', this)"></i>
+                                        <div id="kientruc" class="absolute left-full top-0 ml-2 w-96 bg-white rounded-lg shadow-xl p-4 hidden">
+                                            <h4 class="font-semibold mb-2">Kiến trúc cổ độc đáo</h4>
+                                            <p>Chiêm ngưỡng những công trình kiến trúc cổ độc đáo mang đậm dấu ấn văn hóa Khmer, Việt, Hoa.</p>
+                                        </div>
+                                    </li>
+                                    <li class="hover:text-blue-600 cursor-pointer flex items-center justify-between">
+                                        <span>• Văn hóa dân tộc đa dạng</span>
+                                        <i class="fas fa-chevron-right cursor-pointer" onclick="toggleSubContent('vanhoa', this)"></i>
+                                        <div id="vanhoa" class="absolute left-full top-0 ml-2 w-96 bg-white rounded-lg shadow-xl p-4 hidden">
+                                            <h4 class="font-semibold mb-2">Văn hóa dân tộc đa dạng</h4>
+                                            <p>Tìm hiểu về văn hóa đa dạng của các dân tộc Khmer, Kinh, Hoa cùng chung sống tại Trà Vinh.</p>
+                                        </div>
+                                    </li>
+                                    <li class="hover:text-blue-600 cursor-pointer flex items-center justify-between">
+                                        <span>• Lễ hội truyền thống</span>
+                                        <i class="fas fa-chevron-right cursor-pointer" onclick="toggleSubContent('lehoi', this)"></i>
+                                        <div id="lehoi" class="absolute left-full top-0 ml-2 w-96 bg-white rounded-lg shadow-xl p-4 hidden">
+                                            <h4 class="font-semibold mb-2">Lễ hội truyền thống</h4>
+                                            <p>Khám phá các lễ hội truyền thống đặc sắc như Ok Om Bok, Sene Dolta và nhiều lễ hội văn hóa khác.</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                      </div>
+                      <script>
+                          function toggleSubContent(id, icon) {
+                              const content = document.getElementById(id);
+                              const allContents = document.querySelectorAll('[id^="ditich"], [id^="kientruc"], [id^="vanhoa"], [id^="lehoi"]');
+                              
+                              // Ẩn tất cả các nội dung khác
+                              allContents.forEach(item => {
+                                  if(item.id !== id) {
+                                      item.classList.add('hidden');
+                                  }
+                              });
+                              
+                              // Hiển thị/ẩn nội dung được chọn
+                              content.classList.toggle('hidden');
+                          }
+                          </script>
+
+                        
+                        <script>
+                            function toggleContent() {
+                                const content = document.getElementById('content');
+                                if(content.style.opacity === '1') {
+                                    content.style.opacity = '0';
+                                    content.style.pointerEvents = 'none';
+                                } else {
+                                    content.style.opacity = '1';
+                                    content.style.pointerEvents = 'auto';
+                                }
+                            }
+                        </script>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Thêm điều khiển slideshow -->
+            <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+                <button class="w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-colors"></button>
+                <button class="w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-colors"></button>
+                <button class="w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-colors"></button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Thêm script cho slideshow và đồng hồ -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Cập nhật thời gian thực
+        function updateDateTime() {
+            const now = new Date();
+            const options = { 
+                weekday: 'long', 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit'
+            };
+            document.getElementById('currentDateTime').textContent = 
+                now.toLocaleDateString('vi-VN', options);
+        }
+        setInterval(updateDateTime, 1000);
+        updateDateTime();
+    
+        // Slideshow tự động
+        const slides = document.querySelectorAll('#slideshow img');
+        let currentSlide = 0;
+    
+        function nextSlide() {
+            slides[currentSlide].style.opacity = '0';
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].style.opacity = '1';
+        }
+    
+        setInterval(nextSlide, 5000);
+    });
+    </script>
+    
+    <!-- Thêm styles cho animation -->
+    <style>
+    .animate-fade-in {
+        animation: fadeIn 1s ease-out;
+    }
+    .animate-fade-in-delay {
+        animation: fadeIn 1s ease-out 0.5s both;
+    }
+    .animate-fade-in-delay-2 {
+        animation: fadeIn 1s ease-out 1s both;
+    }
+    
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    </style>
+
+    <!-- Nội dung chính -->
+    <main class="container mx-auto mt-4">
+        <div class="grid grid-cols-3 gap-4">
+            <!-- Cột trái -->
+            <div class="col-span-2 bg-white p-8 text-center relative">
+                <div class="absolute inset-0">
+                    <video class="w-full h-full object-cover" autoplay loop playsinline muted>
+                        <source src="5969975775948.mp4" type="video/mp4">
+                        Trình duyệt của bạn không hỗ trợ thẻ video.
+                    </video>
+                </div>
+
+                <div class="relative z-10 bg-black/50 p-12 rounded-lg">
+                    <h2 class="text-4xl font-bold mb-8 text-white">LỜI CẢM ƠN</h2>
+                    
+                    <div class="mb-12">
+                        <p class="text-white text-3xl mb-6">
+                           XIN CHÂN THÀNH CẢM ƠN QUÝ THẦY CÔ VÀ CÁC BẠN ĐẾN VỚI WEBSITE CỦA TÔI.
+                        </p>
+                        
+                        <div class="w-1/3 mx-auto border-b-4 border-white/50 my-8"></div>
+                        
+                        <div class="text-white">
+                            <p class="text-4xl font-semibold mb-6">Đề tài:</p>
+                            <p class="text-3xl italic">
+                                "XÂY DỰNG WEBSITE GIỚI THIỆU CÁC DI TÍCH LỊCH SỬ TRÊN ĐỊA BÀN TRÀ VINH"
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cột phải -->
+            <div class="bg-white p-4 relative z-10">
+                <h3 class="text-lg font-bold mb-4">TIẾP CẬN THÔNG TIN</h3>
+                <ul class="space-y-2">
+                    <li>
+                        <button onclick="toggleInfo('kinhte')" class="w-full text-left text-blue-600 hover:underline">Báo cáo kinh tế, xã hội</button>
+                        <div id="kinhte" class="hidden mt-2 p-4 bg-gray-100 rounded">
+                            <div class="text-gray-700">
+                                <p>- GDP tăng trưởng 7.2% trong năm 2023</p>
+                                <p>- Thu nhập bình quân đầu người đạt 3.200 USD</p>
+                                <p>- Tỷ lệ hộ nghèo giảm còn 2.8%</p>
+                                <p>- Kim ngạch xuất khẩu đạt 2.5 tỷ USD</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <button onclick="toggleInfo('dautu')" class="w-full text-left text-blue-600 hover:underline">Dự án đầu tư</button>
+                        <div id="dautu" class="hidden mt-2 p-4 bg-gray-100 rounded">
+                            <div class="text-gray-700">
+                                <p>- Dự án nâng cấp di tích chùa Âng: 50 tỷ đồng</p>
+                                <p>- Dự án bảo tồn làng nghề truyền thống: 30 tỷ đồng</p>
+                                <p>- Dự án phát triển du lịch sinh thái: 100 tỷ đồng</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <button onclick="toggleInfo('nghiencuu')" class="w-full text-left text-blue-600 hover:underline">Đề tài nghiên cứu Khoa học</button>
+                        <div id="nghiencuu" class="hidden mt-2 p-4 bg-gray-100 rounded">
+                            <div class="text-gray-700">
+                                <p>- Nghiên cứu bảo tồn văn hóa Khmer Nam Bộ</p>
+                                <p>- Phát triển du lịch bền vững tại Trà Vinh</p>
+                                <p>- Bảo tồn và phát huy giá trị di sản văn hóa</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+                <script>
+                function toggleInfo(id) {
+                    var element = document.getElementById(id);
+                    var allInfos = document.querySelectorAll('[id^="kinhte"], [id^="dautu"], [id^="nghiencuu"]');
+                    
+                    // Ẩn tất cả các phần thông tin khác
+                    allInfos.forEach(function(info) {
+                        if(info.id !== id) {
+                            info.classList.add('hidden');
+                        }
+                    });
+
+                    // Hiển thị/ẩn phần thông tin được chọn
+                    if(element.classList.contains('hidden')) {
+                        element.classList.remove('hidden');
+                    } else {
+                        element.classList.add('hidden');
+                    }
+                }
+                </script>
+            </div>
+
+                <script>
+                function showInfo(id) {
+                    document.getElementById(id).classList.remove('hidden');
+                }
+
+                function hideInfo(id) {
+                    document.getElementById(id).classList.add('hidden');
+                }
+                </script>
+
+                <script>
+                function toggleInfo(id) {
+                    const element = document.getElementById(id);
+                    if(element.classList.contains('hidden')) {
+                        element.classList.remove('hidden');
+                    } else {
+                        element.classList.add('hidden');
+                    }
+                }
+                </script>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white mt-12 py-8">
+        <div class="container mx-auto px-4">
+         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div>
+           <h4 class="text-lg font-bold mb-4">Liên hệ</h4>
+           <p>Email:110122115@st.tvu.edu.vn</p>
+           <p>Điện thoại:0366058110</p>
+          </div>
+          <div>
+           <h4 class="text-lg font-bold mb-4">Theo dõi chúng tôi</h4>
+           <div class="hidden md:flex space-x-4">
+            <a href="https://www.facebook.com/TraVinhUniversity.TVU?mibextid=JRoKGi" target="_blank" class="text-gray-600 hover:text-blue-600 transition-colors" onclick="window.open(this.href, '_blank'); return false;">
+                <i class="fab fa-facebook-square text-2xl"></i>
+            </a>
+            <a href="https://www.instagram.com/explore/locations/1017118742/truong-ai-hoc-tra-vinh/" target="_blank" class="text-gray-600 hover:text-pink-600 transition-colors" onclick="window.open(this.href, '_blank'); return false;">
+                <i class="fab fa-instagram text-2xl"></i>
+            </a>
+            <a href="https://youtube.com/@aihoctravinhtvu?si=Mky1izWZ7pXRA9Hs" target="_blank" class="text-gray-600 hover:text-red-600 transition-colors" onclick="window.open(this.href, '_blank'); return false;">
+                <i class="fab fa-youtube text-2xl"></i>
+            </a>
+        </div>
+          </div>
+          <div>
+           <h4 class="text-lg font-bold mb-4">Địa chỉ</h4>
+           <p>ấp Trà Sất C,Long Hiệp,Trà Cú,Trà Vinh</p>
+          </div>
+         </div>
+        </div>
+       </footer>
+</body>
+</html>

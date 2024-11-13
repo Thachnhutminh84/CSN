@@ -1,0 +1,1333 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Di Tích Lịch Sử Tỉnh Trà Vinh</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+</head>
+
+<body class="bg-gray-100">
+    <!-- Header với logo -->
+    <header class="bg-white shadow-lg transition-all duration-300 hover:shadow-xl">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Logo và tên trường -->
+                <div class="flex items-center">
+                    <img src="logodhtravinh.png" alt="Logo Trà Vinh" 
+                         class="h-16 w-auto object-contain hover:scale-105 transition-transform duration-300">
+                    <div class="ml-4">
+                        <h1 class="text-2xl font-bold text-red-600 hover:text-red-700 transition-colors">
+                            TRƯỜNG ĐẠI HỌC TRÀ VINH
+                        </h1>
+                        <p class="text-gray-600">
+                            <i class="far fa-clock mr-2"></i>
+                            <span id="currentDateTime">Thứ 2 - 26/10/2024, 10:37:23 PM</span>
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Menu chính -->
+                <nav class="bg-gradient-to-r from-blue-800 to-blue-600 text-white py-4 rounded-lg shadow-lg">
+                    <div class="container mx-auto">
+                        <ul class="flex flex-wrap justify-center gap-6 text-lg font-semibold">
+                            <li><a href="index.html" class="hover:text-yellow-300 transition-colors px-4 py-2 rounded-full hover:bg-blue-700">TRANG CHỦ</a></li>
+                            <li><a href="Gioi-thieu.html" class="hover:text-yellow-300 transition-colors px-4 py-2 rounded-full hover:bg-blue-700">GIỚI THIỆU</a></li>
+                            <li><a href="di-tich-quoc-gia.html" class="hover:text-yellow-300 transition-colors px-4 py-2 rounded-full hover:bg-blue-700">Di Tích Cấp Quốc Gia</a></li>
+                            <li><a href="di-tich-tinh.html" class="hover:text-yellow-300 transition-colors px-4 py-2 rounded-full hover:bg-blue-700">Di Tích Cấp Tỉnh</a></li>
+                            <li><a href="dulich.html" class="hover:text-yellow-300 transition-colors px-4 py-2 rounded-full hover:bg-blue-700">Du Lịch</a></li>
+                            <li><a href="lich-su.html" class="hover:text-yellow-300 transition-colors px-4 py-2 rounded-full hover:bg-blue-700">Lịch Sử</a></li>
+                            <li><a href="lien-he.html" class="hover:text-yellow-300 transition-colors px-4 py-2 rounded-full hover:bg-blue-700">Liên Hệ</a></li>
+                        </ul>
+                    </div>
+                </nav>
+                
+                <div class="hidden md:flex space-x-4">
+                    <a href="https://www.facebook.com/TraVinhUniversity.TVU?mibextid=JRoKGi" target="_blank" class="text-gray-600 hover:text-blue-600 transition-colors" onclick="window.open(this.href, '_blank'); return false;">
+                        <i class="fab fa-facebook-square text-2xl"></i>
+                    </a>
+                    <a href="https://www.instagram.com/explore/locations/1017118742/truong-ai-hoc-tra-vinh/" target="_blank" class="text-gray-600 hover:text-pink-600 transition-colors" onclick="window.open(this.href, '_blank'); return false;">
+                        <i class="fab fa-instagram text-2xl"></i>
+                    </a>
+                    <a href="https://youtube.com/@aihoctravinhtvu?si=Mky1izWZ7pXRA9Hs" target="_blank" class="text-gray-600 hover:text-red-600 transition-colors" onclick="window.open(this.href, '_blank'); return false;">
+                        <i class="fab fa-youtube text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Banner chính - thêm hiệu ứng và cải thiện giao diện -->
+    <div class="container mx-auto mt-4">
+        <div class="relative overflow-hidden rounded-lg shadow-2xl">
+            <!-- Slideshow container -->
+            <div class="relative h-[480px]" id="slideshow">
+                <img src="logotravinh.png" alt="Logo Trường Đại học Trà Vinh" 
+                     class="w-full h-full object-contain transition-transform duration-700 hover:scale-105">
+                <!-- Thêm nhiều ảnh khác vào slideshow -->
+                <img src="logotravinh2.jpg" alt="Cổng chào Trường Đại học Trà Vinh" 
+                     class="absolute top-0 left-0 w-full h-full object-contain opacity-0 transition-opacity duration-700">
+                <img src="chùa.jpg" alt="Chùa Âng - Di tích văn hóa Trà Vinh" 
+                     class="absolute top-0 left-0 w-full h-full object-contain opacity-0 transition-opacity duration-700">
+            </div>
+    
+            <!-- Overlay với gradient đẹp hơn -->
+            <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-gray-900/70 via-gray-900/50 to-transparent">
+                <div class="p-8 max-w-2xl">
+                    <h2 class="text-4xl font-bold text-white mb-4 animate-fade-in">
+                        Trang Web Giới Thiệu Các Di Tích Tỉnh Trà Vinh
+                    </h2>
+                    <p class="text-white/90 text-lg animate-fade-in-delay">
+                        Khám phá vẻ đẹp và giá trị lịch sử của các di tích văn hóa tại Trà Vinh
+                    </p>
+                    <!-- Thêm nút CTA -->
+                    <div class="relative">
+                      <button onclick="toggleContent()" class="mt-8 px-8 py-4 bg-yellow-500 text-black font-bold rounded-full 
+                                   hover:bg-yellow-400 transition-all duration-300 
+                                   transform hover:scale-105 animate-fade-in-delay-2 
+                                   shadow-lg hover:shadow-xl text-lg">
+                          Khám Phá Ngay
+                      </button>
+                      
+                      <!-- Nội dung hiện ra khi click -->
+                      <div id="content" class="absolute left-0 mt-2 w-80 bg-white rounded-lg shadow-xl opacity-0
+                                transition-opacity duration-300 p-4">
+                                <h3 class="text-lg font-semibold text-gray-800 mb-2">Khám Phá Di Sản Trà Vinh</h3>
+                                <ul class="text-gray-600 space-y-2">
+                                    <li class="hover:text-blue-600 cursor-pointer flex items-center justify-between">
+                                        <span>• Di tích lịch sử văn hóa</span>
+                                        <i class="fas fa-chevron-right cursor-pointer" onclick="toggleSubContent('ditich', this)"></i>
+                                        <div id="ditich" class="absolute left-full top-0 ml-2 w-96 bg-white rounded-lg shadow-xl p-4 hidden">
+                                            <h4 class="font-semibold mb-2">Di tích lịch sử văn hóa</h4>
+                                            <p>Khám phá các di tích lịch sử như chùa Âng, Ao Bà Om, và nhiều di tích khác mang đậm bản sắc văn hóa Trà Vinh.</p>
+                                        </div>
+                                    </li>
+                                    <li class="hover:text-blue-600 cursor-pointer flex items-center justify-between">
+                                        <span>• Kiến trúc cổ độc đáo</span>
+                                        <i class="fas fa-chevron-right cursor-pointer" onclick="toggleSubContent('kientruc', this)"></i>
+                                        <div id="kientruc" class="absolute left-full top-0 ml-2 w-96 bg-white rounded-lg shadow-xl p-4 hidden">
+                                            <h4 class="font-semibold mb-2">Kiến trúc cổ độc đáo</h4>
+                                            <p>Chiêm ngưỡng những công trình kiến trúc cổ độc đáo mang đậm dấu ấn văn hóa Khmer, Việt, Hoa.</p>
+                                        </div>
+                                    </li>
+                                    <li class="hover:text-blue-600 cursor-pointer flex items-center justify-between">
+                                        <span>• Văn hóa dân tộc đa dạng</span>
+                                        <i class="fas fa-chevron-right cursor-pointer" onclick="toggleSubContent('vanhoa', this)"></i>
+                                        <div id="vanhoa" class="absolute left-full top-0 ml-2 w-96 bg-white rounded-lg shadow-xl p-4 hidden">
+                                            <h4 class="font-semibold mb-2">Văn hóa dân tộc đa dạng</h4>
+                                            <p>Tìm hiểu về văn hóa đa dạng của các dân tộc Khmer, Kinh, Hoa cùng chung sống tại Trà Vinh.</p>
+                                        </div>
+                                    </li>
+                                    <li class="hover:text-blue-600 cursor-pointer flex items-center justify-between">
+                                        <span>• Lễ hội truyền thống</span>
+                                        <i class="fas fa-chevron-right cursor-pointer" onclick="toggleSubContent('lehoi', this)"></i>
+                                        <div id="lehoi" class="absolute left-full top-0 ml-2 w-96 bg-white rounded-lg shadow-xl p-4 hidden">
+                                            <h4 class="font-semibold mb-2">Lễ hội truyền thống</h4>
+                                            <p>Khám phá các lễ hội truyền thống đặc sắc như Ok Om Bok, Sene Dolta và nhiều lễ hội văn hóa khác.</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                      </div>
+              <script>
+                  function toggleContent() {
+                      const content = document.getElementById('content');
+                      content.style.opacity = content.style.opacity === '1' ? '0' : '1';
+                      content.style.pointerEvents = content.style.opacity === '1' ? 'auto' : 'none';
+                  }
+              </script>
+              </div>
+              </div>
+              </div>
+    
+            <!-- Thêm điều khiển slideshow -->
+            <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+                <button class="w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-colors"></button>
+                <button class="w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-colors"></button>
+                <button class="w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-colors"></button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Thêm script cho slideshow và đồng hồ -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Cập nhật thời gian thực
+        function updateDateTime() {
+            const now = new Date();
+            const options = { 
+                weekday: 'long', 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit'
+            };
+            document.getElementById('currentDateTime').textContent = 
+                now.toLocaleDateString('vi-VN', options);
+        }
+        setInterval(updateDateTime, 1000);
+        updateDateTime();
+    
+        // Slideshow tự động
+        const slides = document.querySelectorAll('#slideshow img');
+        let currentSlide = 0;
+    
+        function nextSlide() {
+            slides[currentSlide].style.opacity = '0';
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].style.opacity = '1';
+        }
+    
+        setInterval(nextSlide, 5000);
+    });
+    </script>
+    
+    <!-- Thêm styles cho animation -->
+    <style>
+    .animate-fade-in {
+        animation: fadeIn 1s ease-out;
+    }
+    .animate-fade-in-delay {
+        animation: fadeIn 1s ease-out 0.5s both;
+    }
+    .animate-fade-in-delay-2 {
+        animation: fadeIn 1s ease-out 1s both;
+    }
+    
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    </style>
+                <div class="flex justify-center">
+                    <div class="relative">
+                        <input type="text" id="searchInput" placeholder="Tìm kiếm di tích lịch sử..." 
+                               class="bg-white text-gray-800 rounded-full py-2 px-4 w-96 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <button onclick="searchLocations()" class="absolute right-0 top-0 mt-2 mr-3">
+                            <i class="fas fa-search text-gray-600"></i>
+                        </button>
+                    </div>
+                </div>
+                <script>
+                    function searchLocations() {
+                        const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+                        const diTichElements = document.getElementsByClassName('bg-white');
+                        let found = false;
+                        let resultCount = 0;
+                        
+                        // Xóa highlight cũ
+                        const highlights = document.querySelectorAll('.bg-yellow-200');
+                        highlights.forEach(el => {
+                            const parent = el.parentNode;
+                            parent.replaceChild(document.createTextNode(el.textContent), el);
+                        });
+
+                        // Xóa thông báo cũ nếu có
+                        const existingMessage = document.getElementById('searchResultMessage');
+                        if (existingMessage) {
+                            existingMessage.remove();
+                        }
+
+                        // Nếu không có từ khóa tìm kiếm, hiển thị lại tất cả
+                        if (searchTerm === '') {
+                            for (let element of diTichElements) {
+                                element.style.display = '';
+                            }
+                            return;
+                        }
+
+                        // Tạo div để hiển thị kết quả tìm kiếm
+                        const searchResults = document.createElement('div');
+                        searchResults.id = 'searchResults';
+                        searchResults.className = 'mt-4 p-4 bg-white rounded-lg shadow-md';
+
+                        // Tìm kiếm và hiển thị kết quả
+                        for (let element of diTichElements) {
+                            const tenDiTich = element.querySelector('h3')?.textContent.toLowerCase() || '';
+                            const diaChiElement = element.querySelector('.text-sm.text-gray-600');
+                            const diaChi = diaChiElement ? diaChiElement.textContent.toLowerCase() : '';
+                            const moTa = element.querySelector('p.text-gray-700')?.textContent.toLowerCase() || '';
+                            const chiTiet = element.querySelector('.hidden')?.textContent.toLowerCase() || '';
+                            
+                            if (tenDiTich.includes(searchTerm) || 
+                                diaChi.includes(searchTerm) || 
+                                moTa.includes(searchTerm) || 
+                                chiTiet.includes(searchTerm)) {
+                                element.style.display = '';
+                                found = true;
+                                resultCount++;
+                                
+                                // Tạo kết quả tìm kiếm
+                                const resultItem = document.createElement('div');
+                                resultItem.className = 'mb-4 p-3 border-b border-gray-200';
+                                resultItem.innerHTML = `
+                                    <h4 class="font-semibold text-blue-700">${element.querySelector('h3').textContent}</h4>
+                                    <p class="text-sm text-gray-600">${diaChiElement.textContent}</p>
+                                    <p class="text-gray-700">${element.querySelector('p.text-gray-700').textContent}</p>
+                                `;
+                                searchResults.appendChild(resultItem);
+                                
+                                highlightText(element, searchTerm);
+                                
+                                // Hiển thị chi tiết khi tìm thấy
+                                const detailsId = element.querySelector('button[onclick]')?.getAttribute('onclick')?.match(/'([^']+)'/)?.[1];
+                                if (detailsId) {
+                                    const details = document.getElementById(detailsId);
+                                    if (details) {
+                                        details.classList.remove('hidden');
+                                        const icon = document.getElementById(detailsId.replace('details', 'icon'));
+                                        if (icon) icon.style.transform = 'rotate(180deg)';
+                                    }
+                                }
+                            } else {
+                                element.style.display = 'none';
+                            }
+                        }
+
+                        // Hiển thị thông báo kết quả
+                        const message = document.createElement('div');
+                        message.id = 'searchResultMessage';
+                        message.className = 'text-center mt-4 text-gray-600 animate-fade-in';
+                        
+                        if (found) {
+                            message.innerHTML = `
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                Đã tìm thấy ${resultCount} di tích tương ứng với từ khóa "${searchTerm}"
+                                <div class="text-sm mt-2">Các kết quả được highlight màu vàng</div>
+                                <div class="text-sm mt-1">Chi tiết di tích đã được tự động mở rộng</div>
+                            `;
+                            // Thêm kết quả tìm kiếm vào sau thông báo
+                            message.appendChild(searchResults);
+                        } else {
+                            message.innerHTML = `
+                                <i class="fas fa-exclamation-circle text-red-500 mr-2"></i>
+                                Không tìm thấy di tích tương ứng với từ khóa "${searchTerm}"<br>
+                                <span class="text-sm">Vui lòng thử lại với từ khóa khác</span>
+                            `;
+                        }
+                        document.querySelector('.relative').parentNode.appendChild(message);
+                    }
+
+                    function highlightText(element, searchTerm) {
+                        const textNodes = [];
+                        const walk = document.createTreeWalker(
+                            element,
+                            NodeFilter.SHOW_TEXT,
+                            null,
+                            false
+                        );
+
+                        let node;
+                        while (node = walk.nextNode()) {
+                            textNodes.push(node);
+                        }
+
+                        textNodes.forEach(node => {
+                            const text = node.textContent.toLowerCase();
+                            if (text.includes(searchTerm)) {
+                                const span = document.createElement('span');
+                                span.className = 'bg-yellow-200';
+                                span.textContent = node.textContent;
+                                node.parentNode.replaceChild(span, node);
+                            }
+                        });
+                    }
+
+                    document.getElementById('searchInput').addEventListener('keyup', function(event) {
+                        if (event.key === 'Enter') {
+                            searchLocations();
+                        }
+                    });
+                </script>
+            </div>
+        </div>
+    </nav>
+    <div class="min-h-screen bg-gray-100">
+        <div class="py-8">
+            <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-blue-800 mb-6 px-4 sm:px-0">
+                    Danh Sách Di Tích Cấp Tỉnh Trà Vinh
+                </h2>
+                <div class="flex flex-wrap -mx-4">
+                    <!-- Card 1 -->
+                    <div class="w-full sm:w-1/2 lg:w-1/3 px-4 mb-8">
+                        <div class="bg-white rounded-lg shadow-md p-6">
+                            <img src="ditichcaptinh/bananninhtinhtravinh.jpg" alt="Ban An Ninh Tỉnh Trà Vinh" class="w-full h-80 object-cover mb-4 rounded shadow-lg hover:shadow-xl transition-shadow duration-300">
+                            <h3 class="text-xl font-semibold text-blue-700 mb-3">Ban An Ninh Tỉnh Trà Vinh</h3>
+                            <p class="text-gray-700 mb-4">Trụ sở cũ của Ban An ninh tỉnh, nơi diễn ra nhiều hoạt động cách mạng quan trọng trong thời kỳ kháng chiến chống Pháp và chống Mỹ.</p>
+                            <div class="text-sm text-gray-600">
+                                <p><i class="fas fa-map-marker-alt mr-2"></i>Phường 1, TP. Trà Vinh</p>
+                                <p><i class="far fa-calendar-alt mr-2"></i>Thành lập: 1945</p>
+                                <p><i class="fas fa-award mr-2"></i>Công nhận di tích: 15/09/2005</p>
+                            </div>
+
+                            <button onclick="toggleDetails('bananninh-details')" class="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full transition duration-300 flex items-center justify-center gap-2">
+                                <span>Xem chi tiết</span>
+                                <i class="fas fa-chevron-down transition-transform duration-300" id="bananninh-icon"></i>
+                            </button>
+
+                            <div id="bananninh-details" class="hidden mt-4 bg-gray-50 p-4 rounded-lg transition-all duration-300">
+                                <h4 class="font-semibold text-lg mb-2">Lịch sử hình thành</h4>
+                                <p class="text-gray-700 mb-3">Ban An ninh tỉnh Trà Vinh được thành lập năm 1945 sau Cách mạng Tháng Tám. Đây là cơ quan đầu não về an ninh của tỉnh, đã tổ chức nhiều chiến dịch bảo vệ cách mạng, đấu tranh chống gián điệp và bảo vệ an toàn cho lãnh đạo tỉnh.</p>
+                                
+                                <h4 class="font-semibold text-lg mb-2">Vai trò lịch sử</h4>
+                                <p class="text-gray-700 mb-3">Trụ sở này đã chứng kiến nhiều sự kiện lịch sử quan trọng của tỉnh Trà Vinh trong hai cuộc kháng chiến. Nơi đây từng là trung tâm chỉ đạo các hoạt động bảo vệ an ninh chính trị và trật tự xã hội của tỉnh.</p>
+                                
+                                <h4 class="font-semibold text-lg mb-2">Các hoạt động chính</h4>
+                                <p class="text-gray-700">Những nhiệm vụ quan trọng đã thực hiện:
+                                    <ul class="list-disc ml-6 mt-2">
+                                        <li>Tổ chức các chiến dịch bảo vệ cách mạng</li>
+                                        <li>Đấu tranh chống gián điệp</li>
+                                        <li>Bảo vệ an toàn cho lãnh đạo tỉnh</li>
+                                        <li>Điều phối các hoạt động an ninh trong tỉnh</li>
+                                    </ul>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                <script>
+                        function toggleDetails(id) {
+                            const details = document.getElementById(id);
+                            const icon = document.getElementById(id.replace('details', 'icon'));
+                            
+                            if (details.classList.contains('hidden')) {
+                                details.classList.remove('hidden');
+                                icon.style.transform = 'rotate(180deg)';
+                            } else {
+                                details.classList.add('hidden');
+                                icon.style.transform = 'rotate(0deg)';
+                            }
+                        }
+                    </script>
+            
+            <div class="w-full sm:w-1/2 lg:w-1/3 px-4 mb-8">
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <img src="ditichcaptinh/chroi tansa .jpg" alt="Chùa Chroi Tasan" class="w-full h-80 object-cover mb-4 rounded shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <h3 class="text-xl font-semibold text-blue-700 mb-3">Chùa Chroi Tasan</h3>
+                    <p class="text-gray-700 mb-4">Ngôi chùa Khmer cổ nổi tiếng với nghệ thuật điêu khắc tinh xảo trên gỗ, là một trong những trung tâm văn hóa tâm linh quan trọng của người Khmer ở Trà Vinh.</p>
+
+                    <div class="text-sm text-gray-600">
+                        <p><i class="fas fa-map-marker-alt mr-2"></i>Xã Hàm Giang, huyện Trà Cú</p>
+                        <p><i class="far fa-calendar-alt mr-2"></i>Thành lập: 1850</p>
+                        <p><i class="fas fa-award mr-2"></i>Công nhận di tích: 05/05/2008</p>
+                    </div>
+
+                    <button onclick="toggleDetails('chroitasan-details')" class="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full transition duration-300 flex items-center justify-center gap-2">
+                        <span>Xem chi tiết</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300" id="chroitasan-icon"></i>
+                    </button>
+
+                    <div id="chroitasan-details" class="hidden mt-4 bg-gray-50 p-4 rounded-lg transition-all duration-300">
+                        <h4 class="font-semibold text-lg mb-2">Lịch sử hình thành</h4>
+                        <p class="text-gray-700 mb-3">Chùa Chroi Tasan được xây dựng vào năm 1850 bởi cộng đồng người Khmer địa phương. Qua nhiều lần trùng tu, chùa vẫn giữ được nét kiến trúc truyền thống với những họa tiết chạm khắc tinh xảo trên gỗ.</p>
+                        
+                        <h4 class="font-semibold text-lg mb-2">Giá trị văn hóa</h4>
+                        <p class="text-gray-700 mb-3">Ngôi chùa là một trong những trung tâm văn hóa tâm linh quan trọng của người Khmer ở Trà Vinh, nơi lưu giữ và phát huy bản sắc văn hóa dân tộc Khmer. Hàng năm diễn ra nhiều lễ hội truyền thống quan trọng như Chol Chnam Thmay, Ok Om Bok, Kathina.</p>
+                        
+                        <h4 class="font-semibold text-lg mb-2">Đặc điểm kiến trúc</h4>
+                        <p class="text-gray-700">Những nét đặc trưng của chùa:
+                            <ul class="list-disc ml-6 mt-2">
+                                <li>Kiến trúc truyền thống Khmer với mái cong uốn lượn</li>
+                                <li>Nghệ thuật chạm khắc tinh xảo trên gỗ thể hiện các tích Phật giáo</li>
+                                <li>Họa tiết trang trí độc đáo kết hợp nhiều biểu tượng văn hóa</li>
+                                <li>Không gian tâm linh thiêng liêng với nhiều tượng Phật cổ</li>
+                                <li>Khuôn viên rộng rãi với vườn cây cổ thụ</li>
+                            </ul>
+                        </p>
+
+                        <h4 class="font-semibold text-lg mb-2 mt-3">Hoạt động văn hóa</h4>
+                        <p class="text-gray-700">Các hoạt động chính tại chùa:
+                            <ul class="list-disc ml-6 mt-2">
+                                <li>Tổ chức các lễ hội truyền thống Khmer</li>
+                                <li>Dạy chữ Khmer và Phật pháp cho thanh thiếu niên</li>
+                                <li>Bảo tồn và truyền dạy nghệ thuật truyền thống</li>
+                                <li>Tổ chức các hoạt động từ thiện xã hội</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+                </div>
+
+                <div class="w-full sm:w-1/2 lg:w-1/3 px-4 mb-8">
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <img src="ditichcaptinh/chuachongbat.jpg" alt="Chùa Chong Bát" class="w-full h-80 object-cover mb-4 rounded shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <h3 class="text-xl font-semibold text-blue-700 mb-3">Chùa Chong Bát</h3>
+                    <p class="text-gray-700 mb-4">Ngôi chùa cổ với kiến trúc độc đáo, nơi lưu giữ nhiều hiện vật quý có giá trị lịch sử và văn hóa.</p>
+
+                    <div class="text-sm text-gray-600">
+                        <p><i class="fas fa-map-marker-alt mr-2"></i>Xã Tân Hiệp, huyện Trà Cú</p>
+                        <p><i class="far fa-calendar-alt mr-2"></i>Thành lập: 1865</p>
+                        <p><i class="fas fa-award mr-2"></i>Công nhận di tích: 07/07/2013</p>
+                    </div>
+
+                    <button onclick="toggleDetails('chuachongbat-details')" class="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full transition duration-300 flex items-center justify-center gap-2">
+                        <span>Xem chi tiết</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300" id="chuachongbat-icon"></i>
+                    </button>
+
+                    <div id="chuachongbat-details" class="hidden mt-4 bg-gray-50 p-4 rounded-lg transition-all duration-300">
+                        <h4 class="font-semibold text-lg mb-2">Lịch sử hình thành</h4>
+                        <p class="text-gray-700 mb-3">Chùa Chong Bát được xây dựng vào năm 1865, là một trong những ngôi chùa Khmer cổ kính tại Trà Vinh. Ban đầu chùa được xây dựng bằng các vật liệu đơn giản như gỗ và lá. Qua nhiều lần trùng tu, chùa đã được xây dựng kiên cố với kiến trúc độc đáo mang đậm bản sắc văn hóa Khmer.</p>
+
+                        <h4 class="font-semibold text-lg mb-2">Giá trị văn hóa</h4>
+                        <p class="text-gray-700">Chùa hiện đang lưu giữ:
+                            <ul class="list-disc ml-6 mt-2">
+                                <li>Nhiều hiện vật quý có giá trị lịch sử</li>
+                                <li>Kiến trúc độc đáo mang đậm bản sắc Khmer</li>
+                                <li>Các tượng Phật cổ quý giá</li>
+                                <li>Tranh tường và họa tiết trang trí tinh xảo</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+                </div>
+
+ <div class="w-full sm:w-1/2 lg:w-1/3 px-4 mb-8">
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <img src="ditichcaptinh/chualapang.jpg" alt="Chùa Slapang" class="w-full h-80 object-cover mb-4 rounded shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <h3 class="text-xl font-semibold text-blue-700 mb-3">Chùa Slapang</h3>
+                    <p class="text-gray-700 mb-4">Chùa nổi tiếng với nghệ thuật điêu khắc tinh xảo và các lễ hội truyền thống của người Khmer.</p>
+
+                    <div class="text-sm text-gray-600">
+                        <p><i class="fas fa-map-marker-alt mr-2"></i>Xã Đôn Châu, huyện Trà Cú</p>
+                        <p><i class="far fa-calendar-alt mr-2"></i>Thành lập: 1880</p>
+                        <p><i class="fas fa-award mr-2"></i>Công nhận di tích: 22/02/2014</p>
+                    </div>
+
+                    <button onclick="toggleDetails('chualapang-details')" class="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full transition duration-300 flex items-center justify-center gap-2">
+                        <span>Xem chi tiết</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300" id="chualapang-icon"></i>
+                    </button>
+
+                    <div id="chualapang-details" class="hidden mt-4 bg-gray-50 p-4 rounded-lg transition-all duration-300">
+                        <h4 class="font-semibold text-lg mb-2">Lịch sử hình thành</h4>
+                        <p class="text-gray-700 mb-3">Chùa Slapang được xây dựng vào năm 1880 bởi cộng đồng người Khmer địa phương. Ngôi chùa là một trung tâm văn hóa tâm linh quan trọng của người Khmer trong vùng.</p>
+
+                        <h4 class="font-semibold text-lg mb-2">Đặc điểm nổi bật</h4>
+                        <p class="text-gray-700">Chùa nổi tiếng với:
+                            <ul class="list-disc ml-6 mt-2">
+                                <li>Nghệ thuật điêu khắc tinh xảo trên gỗ và đá</li>
+                                <li>Họa tiết trang trí mang đậm bản sắc Khmer</li>
+                                <li>Các lễ hội truyền thống quan trọng</li>
+                                <li>Kiến trúc độc đáo của văn hóa Khmer</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+                </div>
+
+                <div class="w-full sm:w-1/2 lg:w-1/3 px-4 mb-8">
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <img src="ditichcaptinh/chualongthanh.jpg" alt="Chùa Long Thành" class="w-full h-80 object-cover mb-4 rounded shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <h3 class="text-xl font-semibold text-blue-700 mb-3">Chùa Long Thành</h3>
+                    <p class="text-gray-700 mb-4">Ngôi chùa cổ với kiến trúc độc đáo, nơi diễn ra nhiều hoạt động văn hóa của cộng đồng.</p>
+
+                    <div class="text-sm text-gray-600">
+                        <p><i class="fas fa-map-marker-alt mr-2"></i>Xã Long Thành, huyện Duyên Hải</p>
+                        <p><i class="far fa-calendar-alt mr-2"></i>Thành lập: 1895</p>
+                        <p><i class="fas fa-award mr-2"></i>Công nhận di tích: 14/11/2015</p>
+                    </div>
+
+                    <button onclick="toggleDetails('chualongthanh-details')" class="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full transition duration-300 flex items-center justify-center gap-2">
+                        <span>Xem chi tiết</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300" id="chualongthanh-icon"></i>
+                    </button>
+
+                    <div id="chualongthanh-details" class="hidden mt-4 bg-gray-50 p-4 rounded-lg transition-all duration-300">
+                        <h4 class="font-semibold text-lg mb-2">Lịch sử hình thành</h4>
+                        <p class="text-gray-700 mb-3">Chùa Long Thành được xây dựng vào năm 1895 bởi cộng đồng Phật tử địa phương. Ban đầu chùa được xây dựng với quy mô nhỏ, sau đó qua nhiều lần trùng tu và mở rộng. Chùa là trung tâm sinh hoạt văn hóa tâm linh quan trọng của người dân trong vùng, nơi diễn ra nhiều lễ hội và hoạt động tôn giáo truyền thống.</p>
+
+                        <h4 class="font-semibold text-lg mb-2">Đặc điểm kiến trúc</h4>
+                        <p class="text-gray-700">Kiến trúc chùa mang đậm nét đặc trưng của văn hóa Nam Bộ với:
+                            <ul class="list-disc ml-6 mt-2">
+                                <li>Mái ngói cong uốn lượn</li>
+                                <li>Họa tiết trang trí tinh xảo</li>
+                                <li>Cổng tam quan đặc trưng</li>
+                                <li>Tượng Phật và các phù điêu nghệ thuật</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+                </div>
+
+                <div class="w-full sm:w-1/2 lg:w-1/3 px-4 mb-8">    
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <img src="ditichcaptinh/vellec.jpg" alt="Chùa Vallec" class="w-full h-80 object-cover mb-4 rounded shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <h3 class="text-xl font-semibold text-blue-700 mb-3">Chùa Vallec</h3>
+                    <p class="text-gray-700 mb-4">Chùa Khmer nổi tiếng với các bức tượng Phật và tranh tường đặc sắc.</p>
+
+                    <div class="text-sm text-gray-600">
+                        <p><i class="fas fa-map-marker-alt mr-2"></i>Xã Đại An, huyện Trà Cú</p>
+                        <p><i class="far fa-calendar-alt mr-2"></i>Thành lập: 1910</p>
+                        <p><i class="fas fa-award mr-2"></i>Công nhận di tích: 08/03/2016</p>
+                    </div>
+
+                    <button onclick="toggleDetails('chuavallec-details')" class="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full transition duration-300 flex items-center justify-center gap-2">
+                        <span>Xem chi tiết</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300" id="chuavallec-icon"></i>
+                    </button>
+
+                    <div id="chuavallec-details" class="hidden mt-4 bg-gray-50 p-4 rounded-lg transition-all duration-300">
+                        <h4 class="font-semibold text-lg mb-2">Lịch sử hình thành</h4>
+                        <p class="text-gray-700 mb-3">Chùa Vallec được xây dựng vào năm 1910 bởi cộng đồng người Khmer. Ngôi chùa được xây dựng theo kiến trúc truyền thống Khmer với nhiều họa tiết trang trí tinh xảo. Qua hơn một thế kỷ, chùa đã trở thành một trong những trung tâm văn hóa tâm linh quan trọng của cộng đồng người Khmer tại địa phương.</p>
+
+                        <h4 class="font-semibold text-lg mb-2">Giá trị nghệ thuật</h4>
+                        <p class="text-gray-700">Chùa nổi tiếng với:
+                            <ul class="list-disc ml-6 mt-2">
+                                <li>Bộ sưu tập các bức tượng Phật cổ</li>
+                                <li>Tranh tường mô tả cuộc đời Đức Phật</li>
+                                <li>Kiến trúc truyền thống Khmer</li>
+                                <li>Các họa tiết chạm khắc tinh xảo</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+                </div>
+
+                <div class="w-full sm:w-1/2 lg:w-1/3 px-4 mb-8">    
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <img src="ditichcaptinh/phnoompung.jpg" alt="Chùa Phnoompung" class="w-full h-80 object-cover mb-4 rounded shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <h3 class="text-xl font-semibold text-blue-700 mb-3">Chùa Phnoompung</h3>
+                    <p class="text-gray-700 mb-4">Ngôi chùa cổ nằm trên đỉnh đồi, nơi diễn ra nhiều lễ hội văn hóa Khmer.</p>
+
+                    <div class="text-sm text-gray-600">
+                        <p><i class="fas fa-map-marker-alt mr-2"></i>Xã Tân Sơn, huyện Trà Cú</p>
+                        <p><i class="far fa-calendar-alt mr-2"></i>Thành lập: 1885</p>
+                        <p><i class="fas fa-award mr-2"></i>Công nhận di tích: 20/10/2017</p>
+                    </div>
+
+                    <button onclick="toggleDetails('chuaphnoompung-details')" class="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full transition duration-300 flex items-center justify-center gap-2">
+                        <span>Xem chi tiết</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300" id="chuaphnoompung-icon"></i>
+                    </button>
+
+                    <div id="chuaphnoompung-details" class="hidden mt-4 bg-gray-50 p-4 rounded-lg transition-all duration-300">
+                        <h4 class="font-semibold text-lg mb-2">Lịch sử hình thành</h4>
+                        <p class="text-gray-700 mb-3">Chùa Phnoompung được xây dựng vào năm 1885 trên một ngọn đồi cao, là một trong những ngôi chùa Khmer tiêu biểu của tỉnh Trà Vinh. Với vị trí đặc biệt trên cao, chùa không chỉ là nơi thờ tự mà còn là điểm nhìn panorama đẹp của vùng. Qua nhiều thế hệ, chùa đã trở thành trung tâm văn hóa tâm linh quan trọng của cộng đồng người Khmer trong vùng.</p>
+
+                        <h4 class="font-semibold text-lg mb-2">Các lễ hội truyền thống</h4>
+                        <p class="text-gray-700">Tại chùa diễn ra nhiều lễ hội quan trọng:
+                            <ul class="list-disc ml-6 mt-2">
+                                <li>Lễ hội Chol Chnam Thmay</li>
+                                <li>Lễ hội Ok Om Bok</li>
+                                <li>Các nghi lễ Phật giáo truyền thống</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+                </div>
+
+                <div class="w-full sm:w-1/2 lg:w-1/3 px-4 mb-8">        
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <img src="ditichcaptinh/omich.jpg" alt="Chùa Ô Mịch" class="w-full h-80 object-cover mb-4 rounded shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <h3 class="text-xl font-semibold text-blue-700 mb-3">Chùa Ô Mịch</h3>
+                    <p class="text-gray-700 mb-4">Chùa nổi tiếng với kiến trúc độc đáo và các hoạt động từ thiện xã hội.</p>
+
+                    <div class="text-sm text-gray-600">
+                        <p><i class="fas fa-map-marker-alt mr-2"></i>Xã Ngọc Biên, huyện Trà Cú</p>
+                        <p><i class="far fa-calendar-alt mr-2"></i>Thành lập: 1900</p>
+                        <p><i class="fas fa-award mr-2"></i>Công nhận di tích: 05/05/2018</p>
+                    </div>
+
+                    <button onclick="toggleDetails('chuaomich-details')" class="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full transition duration-300 flex items-center justify-center gap-2">
+                        <span>Xem chi tiết</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300" id="chuaomich-icon"></i>
+                    </button>
+
+                    <div id="chuaomich-details" class="hidden mt-4 bg-gray-50 p-4 rounded-lg transition-all duration-300">
+                        <h4 class="font-semibold text-lg mb-2">Lịch sử hình thành</h4>
+                        <p class="text-gray-700 mb-3">Chùa Ô Mịch được xây dựng vào năm 1900 bởi cộng đồng Phật tử địa phương. Ban đầu chùa chỉ là một am thờ nhỏ, sau đó được mở rộng và trùng tu nhiều lần. Chùa nổi tiếng với lối kiến trúc độc đáo kết hợp giữa phong cách truyền thống và hiện đại.</p>
+
+                        <h4 class="font-semibold text-lg mb-2">Hoạt động xã hội</h4>
+                        <p class="text-gray-700">Chùa tích cực tham gia các hoạt động:
+                            <ul class="list-disc ml-6 mt-2">
+                                <li>Từ thiện giúp đỡ người nghèo</li>
+                                <li>Hỗ trợ trẻ em có hoàn cảnh khó khăn</li>
+                                <li>Tổ chức các khóa tu học Phật pháp</li>
+                                <li>Bảo tồn và phát huy văn hóa truyền thống</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+                </div>
+
+                <div class="w-full sm:w-1/2 lg:w-1/3 px-4 mb-8">        
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <img src="ditichcaptinh/mieuxubalaghi.jpg" alt="Xử Bà La Ghi" class="w-full h-80 object-cover mb-4 rounded shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <h3 class="text-xl font-semibold text-blue-700 mb-3">Xử Bà La Ghi</h3>
+                    <p class="text-gray-700 mb-4">Di tích tín ngưỡng dân gian, nơi thờ phụng và tổ chức các lễ hội truyền thống.</p>
+
+                    <div class="text-sm text-gray-600">
+                        <p><i class="fas fa-map-marker-alt mr-2"></i>Xã Long Đức, TP. Trà Vinh</p>
+                        <p><i class="far fa-calendar-alt mr-2"></i>Thành lập: 1900</p>
+                        <p><i class="fas fa-award mr-2"></i>Công nhận di tích: 18/08/2020</p>
+                    </div>
+
+                    <button onclick="toggleDetails('xubalaghi-details')" class="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full transition duration-300 flex items-center justify-center gap-2">
+                        <span>Xem chi tiết</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300" id="xubalaghi-icon"></i>
+                    </button>
+
+                    <div id="xubalaghi-details" class="hidden mt-4 bg-gray-50 p-4 rounded-lg transition-all duration-300">
+                        <h4 class="font-semibold text-lg mb-2">Lịch sử hình thành</h4>
+                        <p class="text-gray-700 mb-3">Xử Bà La Ghi được xây dựng vào năm 1900, là một di tích tín ngưỡng quan trọng của người Khmer. Theo truyền thuyết, nơi đây là chốn linh thiêng, gắn liền với sự tích về một vị nữ thần có công giúp đỡ người dân trong vùng. Ban đầu, di tích chỉ là một am thờ nhỏ, sau đó được mở rộng và trùng tu nhiều lần.</p>
+
+                        <h4 class="font-semibold text-lg mb-2">Hoạt động tín ngưỡng</h4>
+                        <p class="text-gray-700">Các hoạt động chính tại di tích:
+                            <ul class="list-disc ml-6 mt-2">
+                                <li>Tổ chức các lễ hội truyền thống</li>
+                                <li>Thực hiện nghi lễ cầu an</li>
+                                <li>Bảo tồn văn hóa tín ngưỡng dân gian</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+                </div>
+
+                <div class="w-full sm:w-1/2 lg:w-1/3 px-4 mb-8">    
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <img src="ditichcaptinh/chuabamom.jpg" alt="Chùa Bào Môn" class="w-full h-80 object-cover mb-4 rounded shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <h3 class="text-xl font-semibold text-blue-700 mb-3">Chùa Bào Môn</h3>
+                    <p class="text-gray-700 mb-4">Ngôi chùa cổ với kiến trúc độc đáo mang đậm văn hóa Khmer.</p>
+
+                    <div class="text-sm text-gray-600">
+                        <p><i class="fas fa-map-marker-alt mr-2"></i>Xã Long Đức, TP. Trà Vinh</p>
+                        <p><i class="far fa-calendar-alt mr-2"></i>Thành lập: 1855</p>
+                        <p><i class="fas fa-award mr-2"></i>Công nhận di tích: 20/05/2011</p>
+                    </div>
+
+                    <button onclick="toggleDetails('chuabamon-details')" class="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full transition duration-300 flex items-center justify-center gap-2">
+                        <span>Xem chi tiết</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300" id="chuabamon-icon"></i>
+                    </button>
+
+                    <div id="chuabamon-details" class="hidden mt-4 bg-gray-50 p-4 rounded-lg transition-all duration-300">
+                        <h4 class="font-semibold text-lg mb-2">Lịch sử hình thành</h4>
+                        <p class="text-gray-700 mb-3">Được xây dựng năm 1855, chùa Bào Môn là một trong những ngôi chùa Khmer cổ kính nhất tại Trà Vinh. Trải qua nhiều lần trùng tu nhưng vẫn giữ được nét kiến trúc nguyên bản.</p>
+
+                        <h4 class="font-semibold text-lg mb-2">Giá trị văn hóa</h4>
+                        <p class="text-gray-700">Các đặc điểm nổi bật:
+                            <ul class="list-disc ml-6 mt-2">
+                                <li>Kiến trúc độc đáo mang đậm bản sắc Khmer</li>
+                                <li>Nơi tổ chức các lễ hội Phật giáo truyền thống</li>
+                                <li>Trung tâm sinh hoạt văn hóa tâm linh của cộng đồng</li>
+                                <li>Bảo tồn nhiều di vật lịch sử quý giá</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+                </div>
+
+                <div class="w-full sm:w-1/2 lg:w-1/3 px-4 mb-8">    
+                <!-- Chùa Phước Lộc -->
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <img src="ditichcaptinh/phuocloc.jpg" alt="Chùa Phước Lộc" 
+                         class="w-full h-80 object-cover mb-4 rounded shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <h3 class="text-xl font-semibold text-blue-700 mb-3">Chùa Phước Lộc</h3>
+                    <p class="text-gray-700 mb-4">Ngôi chùa cổ với nhiều di vật quý giá và kiến trúc độc đáo tại Trà Vinh.</p>
+
+                    <div class="text-sm text-gray-600">
+                        <p><i class="fas fa-map-marker-alt mr-2"></i>Xã Phước Hảo, huyện Châu Thành</p>
+                        <p><i class="far fa-calendar-alt mr-2"></i>Thành lập: 1860</p>
+                        <p><i class="fas fa-award mr-2"></i>Công nhận di tích: 10/08/2012</p>
+                    </div>
+
+                    <button onclick="toggleDetails('phuocloc-details')" class="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full transition duration-300 flex items-center justify-center gap-2">
+                        <span>Xem chi tiết</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300" id="phuocloc-icon"></i>
+                    </button>
+
+                    <div id="phuocloc-details" class="hidden mt-4 bg-gray-50 p-4 rounded-lg transition-all duration-300">
+                        <h4 class="font-semibold text-lg mb-2">Lịch sử hình thành</h4>
+                        <p class="text-gray-700 mb-3">Xây dựng năm 1860, chùa Phước Lộc là trung tâm văn hóa tâm linh quan trọng của địa phương. Chùa đã trải qua nhiều lần trùng tu nhưng vẫn giữ được nét kiến trúc truyền thống. Nơi đây lưu giữ nhiều cổ vật quý giá có giá trị lịch sử và nghệ thuật cao.</p>
+
+                        <h4 class="font-semibold text-lg mb-2">Hoạt động văn hóa</h4>
+                        <p class="text-gray-700">Các hoạt động chính tại chùa:
+                            <ul class="list-disc ml-6 mt-2">
+                                <li>Tổ chức các lễ hội Phật giáo truyền thống</li>
+                                <li>Bảo tồn và trưng bày các cổ vật</li>
+                                <li>Sinh hoạt văn hóa tâm linh của người dân địa phương</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+                </div>
+
+                <div class="w-full sm:w-1/2 lg:w-1/3 px-4 mb-8">    
+                <!-- Chùa Cò -->
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <img src="ditichcaptinh/chuaco.jpg" alt="Chùa Cò" 
+                         class="w-full h-80 object-cover mb-4 rounded shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <h3 class="text-xl font-semibold text-blue-700 mb-3">Chùa Cò</h3>
+                    <p class="text-gray-700 mb-4">Ngôi chùa nổi tiếng với quần thể kiến trúc và cảnh quan thiên nhiên độc đáo.</p>
+
+                    <div class="text-sm text-gray-600">
+                        <p><i class="fas fa-map-marker-alt mr-2"></i>Xã Long Đức, TP. Trà Vinh</p>
+                        <p><i class="far fa-calendar-alt mr-2"></i>Thành lập: 1870</p>
+                        <p><i class="fas fa-award mr-2"></i>Công nhận di tích: 25/09/2013</p>
+                    </div>
+
+                    <button onclick="toggleDetails('chuaco-details')" class="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full transition duration-300 flex items-center justify-center gap-2">
+                        <span>Xem chi tiết</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300" id="chuaco-icon"></i>
+                    </button>
+
+                    <div id="chuaco-details" class="hidden mt-4 bg-gray-50 p-4 rounded-lg transition-all duration-300">
+                        <h4 class="font-semibold text-lg mb-2">Lịch sử hình thành</h4>
+                        <p class="text-gray-700 mb-3">Được xây dựng năm 1870, chùa Cò là điểm đến tâm linh quan trọng của người dân địa phương. Tên gọi chùa Cò gắn liền với hình ảnh đàn cò trắng thường trú ngụ tại đây. Chùa nổi tiếng với không gian thanh bình và cảnh quan thiên nhiên tuyệt đẹp.</p>
+
+                        <h4 class="font-semibold text-lg mb-2">Đặc điểm kiến trúc</h4>
+                        <p class="text-gray-700 mb-3">Chùa được xây dựng theo kiến trúc truyền thống, với nhiều chi tiết chạm khắc tinh xảo. Khuôn viên chùa rộng rãi với nhiều cây cổ thụ và hồ nước, tạo nên một không gian yên bình.</p>
+
+                        <h4 class="font-semibold text-lg mb-2">Hoạt động văn hóa</h4>
+                        <p class="text-gray-700">Các hoạt động chính tại chùa:
+                            <ul class="list-disc ml-6 mt-2">
+                                <li>Tổ chức các lễ hội truyền thống</li>
+                                <li>Bảo tồn và phát triển sinh cảnh tự nhiên</li>
+                                <li>Hoạt động từ thiện xã hội</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+                </div>
+
+                <div class="w-full sm:w-1/2 lg:w-1/3 px-4 mb-8">    
+                <!-- Chùa Phước Long -->
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <img src="ditichcaptinh/phuoclong.jpg" alt="Chùa Phước Long" 
+                         class="w-full h-80 object-cover mb-4 rounded shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <h3 class="text-xl font-semibold text-blue-700 mb-3">Chùa Phước Long</h3>
+                    <p class="text-gray-700 mb-4">Ngôi chùa cổ với kiến trúc độc đáo, là trung tâm văn hóa tâm linh quan trọng.</p>
+
+                    <div class="text-sm text-gray-600">
+                        <p><i class="fas fa-map-marker-alt mr-2"></i>Xã Long Đức, TP. Trà Vinh</p>
+                        <p><i class="far fa-calendar-alt mr-2"></i>Thành lập: 1865</p>
+                        <p><i class="fas fa-award mr-2"></i>Công nhận di tích: 15/07/2014</p>
+                    </div>
+
+                    <button onclick="toggleDetails('phuoclong-details')" class="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full transition duration-300 flex items-center justify-center gap-2">
+                        <span>Xem chi tiết</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300" id="phuoclong-icon"></i>
+                    </button>
+
+                    <div id="phuoclong-details" class="hidden mt-4 bg-gray-50 p-4 rounded-lg transition-all duration-300">
+                        <h4 class="font-semibold text-lg mb-2">Lịch sử hình thành</h4>
+                        <p class="text-gray-700 mb-3">Được xây dựng năm 1865, chùa Phước Long đã trải qua nhiều giai đoạn phát triển và trùng tu. Chùa là nơi lưu giữ nhiều hiện vật quý giá và là điểm sinh hoạt văn hóa tín ngưỡng của người dân địa phương.</p>
+
+                        <h4 class="font-semibold text-lg mb-2">Đặc điểm kiến trúc</h4>
+                        <p class="text-gray-700 mb-3">Chùa được xây dựng theo phong cách truyền thống, với nhiều họa tiết chạm khắc tinh xảo. Kiến trúc chùa mang đậm dấu ấn văn hóa Phật giáo Nam Bộ.</p>
+
+                        <h4 class="font-semibold text-lg mb-2">Hoạt động văn hóa</h4>
+                        <p class="text-gray-700">Các hoạt động chính tại chùa:
+                            <ul class="list-disc ml-6 mt-2">
+                                <li>Tổ chức các lễ hội Phật giáo quan trọng</li>
+                                <li>Bảo tồn và trưng bày các hiện vật lịch sử</li>
+                                <li>Hoạt động từ thiện và giáo dục Phật pháp</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+                </div>
+
+                <div class="w-full sm:w-1/2 lg:w-1/3 px-4 mb-8">    
+                <!-- Chùa Chà -->
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <img src="ditichcaptinh/chuacha.jpg" alt="Chùa Chà" 
+                         class="w-full h-80 object-cover mb-4 rounded shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <h3 class="text-xl font-semibold text-blue-700 mb-3">Chùa Chà</h3>
+                    <p class="text-gray-700 mb-4">Ngôi chùa mang đậm kiến trúc Khmer truyền thống với nhiều họa tiết tinh xảo.</p>
+
+                    <div class="text-sm text-gray-600">
+                        <p><i class="fas fa-map-marker-alt mr-2"></i>Xã Đại An, huyện Trà Cú</p>
+                        <p><i class="far fa-calendar-alt mr-2"></i>Thành lập: 1880</p>
+                        <p><i class="fas fa-award mr-2"></i>Công nhận di tích: 20/09/2015</p>
+                    </div>
+
+                    <button onclick="toggleDetails('chuacha-details')" class="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full transition duration-300 flex items-center justify-center gap-2">
+                        <span>Xem chi tiết</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300" id="chuacha-icon"></i>
+                    </button>
+
+                    <div id="chuacha-details" class="hidden mt-4 bg-gray-50 p-4 rounded-lg transition-all duration-300">
+                        <h4 class="font-semibold text-lg mb-2">Lịch sử hình thành</h4>
+                        <p class="text-gray-700 mb-3">Xây dựng năm 1880, chùa Chà là một trong những ngôi chùa Khmer tiêu biểu của tỉnh. Chùa đã trải qua nhiều lần trùng tu nhưng vẫn giữ được nét kiến trúc nguyên bản.</p>
+
+                        <h4 class="font-semibold text-lg mb-2">Đặc điểm kiến trúc</h4>
+                        <p class="text-gray-700 mb-3">Kiến trúc chùa mang đậm phong cách Khmer cổ truyền, với những họa tiết chạm khắc tinh xảo và màu sắc rực rỡ đặc trưng. Nổi bật là các bức phù điêu kể về cuộc đời Đức Phật.</p>
+
+                        <h4 class="font-semibold text-lg mb-2">Hoạt động văn hóa</h4>
+                        <p class="text-gray-700">Các hoạt động chính tại chùa:
+                            <ul class="list-disc ml-6 mt-2">
+                                <li>Tổ chức các lễ hội văn hóa Khmer</li>
+                                <li>Bảo tồn và phát huy văn hóa truyền thống</li>
+                                <li>Giáo dục và đào tạo sư sãi</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+                </div>
+
+                <div class="w-full sm:w-1/2 lg:w-1/3 px-4 mb-8">    
+                <!-- Chùa Krapoumchhouk -->
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <img src="ditichcaptinh/krapoumchhouk.jpg" alt="Chùa Krapoumchhouk" 
+                         class="w-full h-80 object-cover mb-4 rounded shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <h3 class="text-xl font-semibold text-blue-700 mb-3">Chùa Krapoumchhouk</h3>
+                    <p class="text-gray-700 mb-4">Ngôi chùa Khmer cổ với nghệ thuật điêu khắc tinh xảo và kiến trúc độc đáo.</p>
+
+                    <div class="text-sm text-gray-600">
+                        <p><i class="fas fa-map-marker-alt mr-2"></i>Xã Ngọc Biên, huyện Trà Cú</p>
+                        <p><i class="far fa-calendar-alt mr-2"></i>Thành lập: 1875</p>
+                        <p><i class="fas fa-award mr-2"></i>Công nhận di tích: 05/11/2016</p>
+                    </div>
+
+                    <button onclick="toggleDetails('krapoumchhouk-details')" class="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full transition duration-300 flex items-center justify-center gap-2">
+                        <span>Xem chi tiết</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300" id="krapoumchhouk-icon"></i>
+                    </button>
+
+                    <div id="krapoumchhouk-details" class="hidden mt-4 bg-gray-50 p-4 rounded-lg transition-all duration-300">
+                        <h4 class="font-semibold text-lg mb-2">Lịch sử hình thành</h4>
+                        <p class="text-gray-700 mb-3">Được xây dựng năm 1875, chùa Krapoumchhouk là một trong những ngôi chùa có giá trị văn hóa và kiến trúc cao của tỉnh Trà Vinh. Chùa đã trải qua nhiều giai đoạn phát triển và trùng tu nhưng vẫn giữ được nét đặc trưng nguyên bản.</p>
+
+                        <h4 class="font-semibold text-lg mb-2">Đặc điểm kiến trúc</h4>
+                        <p class="text-gray-700 mb-3">Chùa được xây dựng theo phong cách kiến trúc Khmer truyền thống với nhiều họa tiết chạm khắc tinh xảo. Nổi bật với mái chùa cao vút, trang trí hoa văn đặc trưng và các bức phù điêu mang tính nghệ thuật cao.</p>
+
+                        <h4 class="font-semibold text-lg mb-2">Hoạt động văn hóa</h4>
+                        <p class="text-gray-700">Các hoạt động chính tại chùa:
+                            <ul class="list-disc ml-6 mt-2">
+                                <li>Tổ chức các lễ hội Phật giáo truyền thống</li>
+                                <li>Sinh hoạt văn hóa tín ngưỡng của cộng đồng Khmer</li>
+                                <li>Bảo tồn và phát huy các giá trị văn hóa dân tộc</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+                </div>
+
+                <div class="w-full sm:w-1/2 lg:w-1/3 px-4 mb-8">    
+                <!-- Đình Hội Hưu -->
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <img src="ditichcaptinh/dinhhoihuu.jpg" alt="Đình Hội Hưu" 
+                         class="w-full h-80 object-cover mb-4 rounded shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <h3 class="text-xl font-semibold text-blue-700 mb-3">Đình Hội Hưu</h3>
+                    <p class="text-gray-700 mb-4">Công trình kiến trúc cổ mang đậm bản sắc văn hóa Nam Bộ.</p>
+
+                    <div class="text-sm text-gray-600">
+                        <p><i class="fas fa-map-marker-alt mr-2"></i>Xã Hội Hưu, huyện Cầu Ngang</p>
+                        <p><i class="far fa-calendar-alt mr-2"></i>Thành lập: 1850</p>
+                        <p><i class="fas fa-award mr-2"></i>Công nhận di tích: 15/03/2010</p>
+                    </div>
+
+                    <button onclick="toggleDetails('hoihuu-details')" class="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full transition duration-300 flex items-center justify-center gap-2">
+                        <span>Xem chi tiết</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300" id="hoihuu-icon"></i>
+                    </button>
+
+                    <div id="hoihuu-details" class="hidden mt-4 bg-gray-50 p-4 rounded-lg transition-all duration-300">
+                        <h4 class="font-semibold text-lg mb-2">Lịch sử hình thành</h4>
+                        <p class="text-gray-700 mb-3">Đình Hội Hưu được xây dựng vào năm 1850, là nơi thờ cúng và sinh hoạt văn hóa cộng đồng của người dân địa phương. Đình đã trải qua nhiều lần trùng tu nhưng vẫn giữ được kiến trúc nguyên bản với nhiều họa tiết chạm khắc tinh xảo.</p>
+
+                        <h4 class="font-semibold text-lg mb-2">Đặc điểm kiến trúc</h4>
+                        <p class="text-gray-700 mb-3">Đình được xây dựng theo kiến trúc truyền thống Nam Bộ, với ba gian hai chái, mái ngói âm dương. Nổi bật với các họa tiết chạm trổ tinh xảo trên các cột kèo, đầu dư.</p>
+
+                        <h4 class="font-semibold text-lg mb-2">Hoạt động văn hóa</h4>
+                        <p class="text-gray-700">Các hoạt động chính tại đình:
+                            <ul class="list-disc ml-6 mt-2">
+                                <li>Tổ chức lễ hội truyền thống địa phương</li>
+                                <li>Sinh hoạt văn hóa cộng đồng</li>
+                                <li>Bảo tồn các nghi lễ dân gian cổ truyền</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+                </div>
+
+                <div class="w-full sm:w-1/2 lg:w-1/3 px-4 mb-8">    
+                <!-- Đình Khánh Hưng -->
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <img src="ditichcaptinh/dinhkhanhhung.jpg" alt="Đình Khánh Hưng" 
+                         class="w-full h-80 object-cover mb-4 rounded shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <h3 class="text-xl font-semibold text-blue-700 mb-3">Đình Khánh Hưng</h3>
+                    <p class="text-gray-700 mb-4">Di tích lịch sử văn hóa với kiến trúc đặc trưng của vùng Nam Bộ.</p>
+
+                    <div class="text-sm text-gray-600">
+                        <p><i class="fas fa-map-marker-alt mr-2"></i>Xã Khánh Hưng, huyện Trà Cú</p>
+                        <p><i class="far fa-calendar-alt mr-2"></i>Thành lập: 1855</p>
+                        <p><i class="fas fa-award mr-2"></i>Công nhận di tích: 20/06/2011</p>
+                    </div>
+
+                    <button onclick="toggleDetails('khanhhung-details')" class="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full transition duration-300 flex items-center justify-center gap-2">
+                        <span>Xem chi tiết</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300" id="khanhhung-icon"></i>
+                    </button>
+
+                    <div id="khanhhung-details" class="hidden mt-4 bg-gray-50 p-4 rounded-lg transition-all duration-300">
+                        <h4 class="font-semibold text-lg mb-2">Lịch sử hình thành</h4>
+                        <p class="text-gray-700 mb-3">Xây dựng năm 1855, đình Khánh Hưng là trung tâm sinh hoạt văn hóa, tín ngưỡng của người dân địa phương. Đình được xây dựng theo kiến trúc truyền thống với nhiều hoa văn, họa tiết độc đáo.</p>
+
+                        <h4 class="font-semibold text-lg mb-2">Đặc điểm kiến trúc</h4>
+                        <p class="text-gray-700 mb-3">Đình được xây dựng theo lối kiến trúc Nam Bộ truyền thống với ba gian hai chái. Nổi bật với các họa tiết chạm khắc tinh xảo trên các cột kèo, đầu dư và các bức chạm nổi trang trí.</p>
+
+                        <h4 class="font-semibold text-lg mb-2">Hoạt động văn hóa</h4>
+                        <p class="text-gray-700">Các hoạt động chính tại đình:
+                            <ul class="list-disc ml-6 mt-2">
+                                <li>Tổ chức lễ hội truyền thống địa phương</li>
+                                <li>Sinh hoạt văn hóa cộng đồng</li>
+                                <li>Bảo tồn và phát huy các giá trị văn hóa dân gian</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+                </div>
+
+                <div class="w-full sm:w-1/2 lg:w-1/3 px-4 mb-8">    
+                <!-- Đình Minh Thuận -->
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <img src="ditichcaptinh/dinhminhthuan.jpg" alt="Đình Minh Thuận" 
+                         class="w-full h-80 object-cover mb-4 rounded shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <h3 class="text-xl font-semibold text-blue-700 mb-3">Đình Minh Thuận</h3>
+                    <p class="text-gray-700 mb-4">Công trình kiến trúc cổ với nhiều giá trị lịch sử, văn hóa.</p>
+
+                    <div class="text-sm text-gray-600">
+                        <p><i class="fas fa-map-marker-alt mr-2"></i>Xã Minh Thuận, huyện Châu Thành</p>
+                        <p><i class="far fa-calendar-alt mr-2"></i>Thành lập: 1860</p>
+                        <p><i class="fas fa-award mr-2"></i>Công nhận di tích: 10/09/2012</p>
+                    </div>
+
+                    <button onclick="toggleDetails('minhthuan-details')" class="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full transition duration-300 flex items-center justify-center gap-2">
+                        <span>Xem chi tiết</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300" id="minhthuan-icon"></i>
+                    </button>
+
+                    <div id="minhthuan-details" class="hidden mt-4 bg-gray-50 p-4 rounded-lg transition-all duration-300">
+                        <h4 class="font-semibold text-lg mb-2">Lịch sử hình thành</h4>
+                        <p class="text-gray-700 mb-3">Được xây dựng vào năm 1860, đình Minh Thuận là nơi thờ thành hoàng bổn cảnh và tổ chức các lễ hội truyền thống của địa phương. Đình còn lưu giữ nhiều hiện vật có giá trị về mặt lịch sử và nghệ thuật.</p>
+
+                        <h4 class="font-semibold text-lg mb-2">Đặc điểm kiến trúc</h4>
+                        <p class="text-gray-700 mb-3">Đình được xây dựng theo kiến trúc truyền thống Nam Bộ với quy mô lớn. Nổi bật với mái ngói âm dương, các họa tiết chạm trổ tinh xảo trên các cột kèo và nhiều di vật quý giá được bảo tồn.</p>
+
+                        <h4 class="font-semibold text-lg mb-2">Hoạt động văn hóa</h4>
+                        <p class="text-gray-700">Các hoạt động chính tại đình:
+                            <ul class="list-disc ml-6 mt-2">
+                                <li>Tổ chức các lễ hội truyền thống</li>
+                                <li>Bảo tồn và trưng bày các hiện vật lịch sử</li>
+                                <li>Sinh hoạt văn hóa tín ngưỡng của cộng đồng</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+                </div>
+
+                <div class="w-full sm:w-1/2 lg:w-1/3 px-4 mb-8">    
+                <!-- Đình An Mỹ -->
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <img src="ditichcaptinh/dinhmyan.jpg" alt="Đình An Mỹ" 
+                         class="w-full h-80 object-cover mb-4 rounded shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <h3 class="text-xl font-semibold text-blue-700 mb-3">Đình An Mỹ</h3>
+                    <p class="text-gray-700 mb-4">Di tích lịch sử văn hóa với kiến trúc độc đáo của vùng Nam Bộ.</p>
+
+                    <div class="text-sm text-gray-600">
+                        <p><i class="fas fa-map-marker-alt mr-2"></i>Xã An Mỹ, huyện Càng Long</p>
+                        <p><i class="far fa-calendar-alt mr-2"></i>Thành lập: 1865</p>
+                        <p><i class="fas fa-award mr-2"></i>Công nhận di tích: 25/03/2013</p>
+                    </div>
+
+                    <button onclick="toggleDetails('anmy-details')" class="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full transition duration-300 flex items-center justify-center gap-2">
+                        <span>Xem chi tiết</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+
+                    <div id="anmy-details" class="hidden mt-4">
+                        <h4 class="font-semibold text-lg mb-2">Lịch sử hình thành</h4>
+                        <p class="text-gray-700 mb-3">Xây dựng năm 1865, đình An Mỹ là trung tâm sinh hoạt văn hóa cộng đồng quan trọng. Đình được xây dựng với quy mô lớn, mang đậm phong cách kiến trúc truyền thống.</p>
+
+                        <h4 class="font-semibold text-lg mb-2">Đặc điểm kiến trúc</h4>
+                        <p class="text-gray-700 mb-3">Đình được xây dựng theo lối kiến trúc Nam Bộ truyền thống với ba gian hai chái, mái lợp ngói âm dương. Các chi tiết chạm khắc tinh xảo thể hiện tài nghệ của các nghệ nhân xưa.</p>
+
+                        <h4 class="font-semibold text-lg mb-2">Giá trị văn hóa</h4>
+                        <p class="text-gray-700 mb-3">Đình An Mỹ không chỉ là nơi thờ tự mà còn là trung tâm sinh hoạt văn hóa, tín ngưỡng của người dân địa phương, góp phần bảo tồn và phát huy bản sắc văn hóa dân tộc.</p>
+                    </div>
+                </div>
+                </div>
+
+                <div class="w-full sm:w-1/2 lg:w-1/3 px-4 mb-8">    
+                <!-- Đình Phủ Đức -->
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <img src="ditichcaptinh/dinhphuduc.jpg" alt="Đình Phủ Đức" 
+                         class="w-full h-80 object-cover mb-4 rounded shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <h3 class="text-xl font-semibold text-blue-700 mb-3">Đình Phủ Đức</h3>
+                    <p class="text-gray-700 mb-4">Công trình kiến trúc cổ với nhiều nét đặc sắc của văn hóa Nam Bộ.</p>
+
+                    <div class="text-sm text-gray-600">
+                        <p><i class="fas fa-map-marker-alt mr-2"></i>Xã Phú Đức, huyện Châu Thành</p>
+                        <p><i class="far fa-calendar-alt mr-2"></i>Thành lập: 1870</p>
+                        <p><i class="fas fa-award mr-2"></i>Công nhận di tích: 12/04/2014</p>
+                    </div>
+
+                    <button onclick="toggleDetails('phuduc-details')" class="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full transition duration-300 flex items-center justify-center gap-2">
+                        <span>Xem chi tiết</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+
+                    <div id="phuduc-details" class="hidden mt-4">
+                        <h4 class="font-semibold text-lg mb-2">Lịch sử hình thành</h4>
+                        <p class="text-gray-700 mb-3">Được xây dựng năm 1870, đình Phủ Đức là trung tâm sinh hoạt văn hóa tín ngưỡng quan trọng của địa phương. Đình nổi tiếng với lối kiến trúc độc đáo và nhiều di vật quý giá.</p>
+
+                        <h4 class="font-semibold text-lg mb-2">Đặc điểm kiến trúc</h4>
+                        <p class="text-gray-700 mb-3">Đình có kiến trúc độc đáo với nhiều họa tiết chạm trổ tinh xảo, thể hiện sự giao thoa văn hóa đặc trưng của vùng Nam Bộ.</p>
+
+                        <h4 class="font-semibold text-lg mb-2">Di vật quý</h4>
+                        <p class="text-gray-700 mb-3">Đình còn lưu giữ nhiều hiện vật có giá trị như: bia đá, hoành phi, câu đối, đồ thờ cúng cổ có niên đại từ thế kỷ 19.</p>
+                    </div>
+                </div>
+                </div>
+
+                <div class="w-full sm:w-1/2 lg:w-1/3 px-4 mb-8">    
+                <!-- Đình Phước Lộc -->
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <img src="ditichcaptinh/dinhphuocloc.jpg" alt="Đình Phước Lộc" 
+                         class="w-full h-80 object-cover mb-4 rounded shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <h3 class="text-xl font-semibold text-blue-700 mb-3">Đình Phước Lộc</h3>
+                    <p class="text-gray-700 mb-4">Di tích lịch sử văn hóa với kiến trúc truyền thống Nam Bộ.</p>
+
+                    <div class="text-sm text-gray-600">
+                        <p><i class="fas fa-map-marker-alt mr-2"></i>Xã Phước Lộc, huyện Càng Long</p>
+                        <p><i class="far fa-calendar-alt mr-2"></i>Thành lập: 1875</p>
+                        <p><i class="fas fa-award mr-2"></i>Công nhận di tích: 18/08/2015</p>
+                    </div>
+
+                    <button onclick="toggleDetails('phuocloc-details')" class="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full transition duration-300 flex items-center justify-center gap-2">
+                        <span>Xem chi tiết</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+
+                    <div id="phuocloc-details" class="hidden mt-4">
+                        <h4 class="font-semibold text-lg mb-2">Lịch sử hình thành</h4>
+                        <p class="text-gray-700 mb-3">Xây dựng năm 1875, đình Phước Lộc là nơi thờ cúng và tổ chức các lễ hội truyền thống của địa phương. Công trình vẫn giữ được nhiều nét kiến trúc nguyên bản qua thời gian.</p>
+
+                        <h4 class="font-semibold text-lg mb-2">Đặc điểm kiến trúc</h4>
+                        <p class="text-gray-700 mb-3">Đình được xây dựng theo phong cách kiến trúc Nam Bộ truyền thống với hệ thống cột gỗ, mái ngói âm dương và nhiều họa tiết chạm khắc tinh xảo.</p>
+
+                        <h4 class="font-semibold text-lg mb-2">Giá trị văn hóa</h4>
+                        <p class="text-gray-700 mb-3">Đình Phước Lộc là minh chứng cho sự phát triển văn hóa tín ngưỡng của người dân Nam Bộ, đồng thời là nơi lưu giữ nhiều giá trị văn hóa phi vật thể quý giá.</p>
+                    </div>
+                </div>
+                </div>
+
+                <div class="w-full sm:w-1/2 lg:w-1/3 px-4 mb-8">    
+                <!-- Đình Đồng Khởi Mỹ Long -->
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <img src="ditichcaptinh/dongkhoimylong.jpg" alt="Đình Đồng Khởi Mỹ Long" 
+                         class="w-full h-80 object-cover mb-4 rounded shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <h3 class="text-xl font-semibold text-blue-700 mb-3">Đình Đồng Khởi Mỹ Long</h3>
+                    <p class="text-gray-700 mb-4">Di tích lịch sử cách mạng gắn liền với phong trào Đồng Khởi năm 1960.</p>
+
+                    <div class="text-sm text-gray-600">
+                        <p><i class="fas fa-map-marker-alt mr-2"></i>Xã Mỹ Long Nam, huyện Cầu Ngang</p>
+                        <p><i class="far fa-calendar-alt mr-2"></i>Thành lập: 1880</p>
+                        <p><i class="fas fa-award mr-2"></i>Công nhận di tích: 20/11/2016</p>
+                    </div>
+
+                    <button onclick="toggleDetails('dongkhoi-details')" class="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full transition duration-300 flex items-center justify-center gap-2">
+                        <span>Xem chi tiết</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+
+                    <div id="dongkhoi-details" class="hidden mt-4">
+                        <h4 class="font-semibold text-lg mb-2">Lịch sử hình thành</h4>
+                        <p class="text-gray-700 mb-3">Được xây dựng năm 1880, đình Đồng Khởi Mỹ Long không chỉ là nơi sinh hoạt tín ngưỡng mà còn là căn cứ cách mạng quan trọng trong phong trào Đồng Khởi.</p>
+
+                        <h4 class="font-semibold text-lg mb-2">Vai trò lịch sử</h4>
+                        <p class="text-gray-700 mb-3">Tại đây đã diễn ra nhiều cuộc họp bí mật và hoạt động cách mạng của quân và dân ta trong thời kỳ kháng chiến chống Mỹ. Đình đã trở thành biểu tượng của tinh thần đấu tranh cách mạng.</p>
+
+                        <h4 class="font-semibold text-lg mb-2">Giá trị di tích</h4>
+                        <p class="text-gray-700 mb-3">Ngày nay, đình không chỉ là di tích lịch sử cách mạng mà còn là địa điểm giáo dục truyền thống yêu nước cho thế hệ trẻ.</p>
+                    </div>
+                </div>
+                </div>
+
+                <div class="w-full sm:w-1/2 lg:w-1/3 px-4 mb-8">    
+                <!-- Nhà Cổ Huỳnh Kỳ -->
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <img src="ditichcaptinh/huynhky.jpg" alt="Nhà Cổ Huỳnh Kỳ" 
+                         class="w-full h-80 object-cover mb-4 rounded shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <h3 class="text-xl font-semibold text-blue-700 mb-3">Nhà Cổ Huỳnh Kỳ</h3>
+                    <p class="text-gray-700 mb-4">Công trình kiến trúc cổ mang đậm phong cách Nam Bộ đầu thế kỷ 20.</p>
+
+                    <div class="text-sm text-gray-600">
+                        <p><i class="fas fa-map-marker-alt mr-2"></i>Phường 1, TP. Trà Vinh</p>
+                        <p><i class="far fa-calendar-alt mr-2"></i>Thành lập: 1907</p>
+                        <p><i class="fas fa-award mr-2"></i>Công nhận di tích: 10/07/2018</p>
+                    </div>
+
+                    <button onclick="toggleDetails('huynhky-details')" class="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full transition duration-300 flex items-center justify-center gap-2">
+                        <span>Xem chi tiết</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+
+                    <div id="huynhky-details" class="hidden mt-4">
+                        <h4 class="font-semibold text-lg mb-2">Lịch sử hình thành</h4>
+                        <p class="text-gray-700 mb-3">Được xây dựng năm 1907, nhà cổ Huỳnh Kỳ là một trong những công trình kiến trúc tiêu biểu của vùng Nam Bộ. Ngôi nhà mang đậm dấu ấn kiến trúc Pháp-Việt.</p>
+
+                        <h4 class="font-semibold text-lg mb-2">Đặc điểm kiến trúc</h4>
+                        <p class="text-gray-700 mb-3">Công trình được xây dựng theo lối kiến trúc kết hợp giữa phương Đông và phương Tây, với nhiều chi tiết trang trí tinh xảo và độc đáo.</p>
+
+                        <h4 class="font-semibold text-lg mb-2">Giá trị văn hóa</h4>
+                        <p class="text-gray-700 mb-3">Nhà cổ Huỳnh Kỳ là minh chứng sống động cho sự giao thoa văn hóa Việt-Pháp đầu thế kỷ 20, đồng thời là địa điểm tham quan hấp dẫn du khách.</p>
+                    </div>
+                </div>
+                </div>
+
+                <div class="w-full sm:w-1/2 lg:w-1/3 px-4 mb-8">    
+                <!-- Miếu Cồn Trứng -->
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <img src="ditichcaptinh/mieucontrung.jpg" alt="Miếu Cồn Trứng" 
+                         class="w-full h-80 object-cover mb-4 rounded shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <h3 class="text-xl font-semibold text-blue-700 mb-3">Miếu Cồn Trứng</h3>
+                    <p class="text-gray-700 mb-4">Di tích tín ngưỡng dân gian với kiến trúc độc đáo.</p>
+
+                    <div class="text-sm text-gray-600">
+                        <p><i class="fas fa-map-marker-alt mr-2"></i>Xã Long Hòa, huyện Châu Thành</p>
+                        <p><i class="far fa-calendar-alt mr-2"></i>Thành lập: 1890</p>
+                        <p><i class="fas fa-award mr-2"></i>Công nhận di tích: 25/09/2019</p>
+                    </div>
+
+                    <button onclick="toggleDetails('contrung-details')" class="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full transition duration-300 flex items-center justify-center gap-2">
+                        <span>Xem chi tiết</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+
+                    <div id="contrung-details" class="hidden mt-4">
+                        <h4 class="font-semibold text-lg mb-2">Lịch sử hình thành</h4>
+                        <p class="text-gray-700 mb-3">Xây dựng năm 1890, miếu Cồn Trứng là nơi thờ cúng và sinh hoạt tín ngưỡng của người dân địa phương. Miếu nằm trên một cồn đất cao, tạo nên vẻ đẹp độc đáo.</p>
+
+                        <h4 class="font-semibold text-lg mb-2">Kiến trúc và nghệ thuật</h4>
+                        <p class="text-gray-700 mb-3">Miếu được xây dựng theo kiến trúc truyền thống Nam Bộ, với nhiều họa tiết chạm khắc tinh xảo và những bức tượng thờ có giá trị nghệ thuật cao.</p>
+
+                        <h4 class="font-semibold text-lg mb-2">Giá trị văn hóa tín ngưỡng</h4>
+                        <p class="text-gray-700 mb-3">Miếu Cồn Trứng không chỉ là nơi thờ tự mà còn là trung tâm sinh hoạt văn hóa tín ngưỡng của cộng đồng, nơi diễn ra nhiều lễ hội truyền thống quan trọng.</p>
+                    </div>
+                </div>
+                </div>
+
+                <div class="w-full sm:w-1/2 lg:w-1/3 px-4 mb-8">    
+                <!-- Miếu Phước Mỹ -->
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <img src="ditichcaptinh/huynhky.jpg" alt="Miếu Phước Mỹ" 
+                         class="w-full h-80 object-cover mb-4 rounded shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <h3 class="text-xl font-semibold text-blue-700 mb-3">Miếu Phước Mỹ</h3>
+                    <p class="text-gray-700 mb-4">Di tích tín ngưỡng dân gian với nhiều giá trị văn hóa lịch sử.</p>
+
+                    <div class="text-sm text-gray-600">
+                        <p><i class="fas fa-map-marker-alt mr-2"></i>Xã Phước Mỹ, huyện Càng Long</p>
+                        <p><i class="far fa-calendar-alt mr-2"></i>Thành lập: 1895</p>
+                        <p><i class="fas fa-award mr-2"></i>Công nhận di tích: 30/03/2020</p>
+                    </div>
+
+                    <button onclick="toggleDetails('phuocmy-details')" class="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full transition duration-300 flex items-center justify-center gap-2">
+                        <span>Xem chi tiết</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+
+                    <div id="phuocmy-details" class="hidden mt-4">
+                        <h4 class="font-semibold text-lg mb-2">Lịch sử hình thành</h4>
+                        <p class="text-gray-700 mb-3">Được xây dựng năm 1895, miếu Phước Mỹ là trung tâm sinh hoạt tín ngưỡng quan trọng của địa phương. Miếu nổi tiếng với các lễ hội truyền thống và kiến trúc độc đáo.</p>
+
+                        <h4 class="font-semibold text-lg mb-2">Kiến trúc và nghệ thuật</h4>
+                        <p class="text-gray-700 mb-3">Miếu được xây dựng theo lối kiến trúc truyền thống Nam Bộ, với nhiều họa tiết chạm khắc tinh xảo. Nội thất miếu được trang trí bằng các bức tranh và câu đối có giá trị nghệ thuật cao.</p>
+
+                        <h4 class="font-semibold text-lg mb-2">Giá trị văn hóa</h4>
+                        <p class="text-gray-700 mb-3">Miếu không chỉ là nơi thờ cúng mà còn là điểm sinh hoạt văn hóa cộng đồng quan trọng. Hàng năm, tại đây diễn ra nhiều lễ hội truyền thống, thu hút đông đảo người dân địa phương tham gia.</p>
+                    </div>
+                </div>
+                </div>
+
+                <div class="w-full sm:w-1/2 lg:w-1/3 px-4 mb-8">    
+                <!-- Di tích Lầu Bà Cố Hỷ Thượng Nương Nương -->
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <img src="ditichcaptinh/nuongnuong.jpg" alt="Lầu Bà Cố Hỷ Thượng Nương Nương" 
+                         class="w-full h-80 object-cover mb-4 rounded shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <h3 class="text-xl font-semibold text-blue-700 mb-3">Lầu Bà Cố Hỷ Thượng Nương Nương</h3>
+                    <p class="text-gray-700 mb-4">Di tích kiến trúc và tín ngưỡng độc đáo của cộng đồng người Hoa.</p>
+
+                    <div class="text-sm text-gray-600">
+                        <p><i class="fas fa-map-marker-alt mr-2"></i>Phường 1, TP. Trà Vinh</p>
+                        <p><i class="far fa-calendar-alt mr-2"></i>Thành lập: 1900</p>
+                        <p><i class="fas fa-award mr-2"></i>Công nhận di tích: 20/12/2020</p>
+                    </div>
+
+                    <button onclick="toggleDetails('bacohy-details')" class="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full transition duration-300 flex items-center justify-center gap-2">
+                        <span>Xem chi tiết</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+
+                    <div id="bacohy-details" class="hidden mt-4">
+                        <h4 class="font-semibold text-lg mb-2">Lịch sử hình thành</h4>
+                        <p class="text-gray-700 mb-3">Xây dựng năm 1900, Lầu Bà Cố Hỷ là công trình kiến trúc độc đáo mang đậm văn hóa Hoa. Đây là nơi thờ Bà Cố Hỷ Thượng Nương Nương, một vị thần được cộng đồng người Hoa tôn kính.</p>
+
+                        <h4 class="font-semibold text-lg mb-2">Kiến trúc đặc sắc</h4>
+                        <p class="text-gray-700 mb-3">Công trình mang đậm phong cách kiến trúc Trung Hoa cổ đại, với mái cong uốn lượn, cột kèo chạm trổ tinh xảo và nhiều chi tiết trang trí đặc trưng của văn hóa Hoa.</p>
+
+                        <h4 class="font-semibold text-lg mb-2">Ý nghĩa văn hóa</h4>
+                        <p class="text-gray-700 mb-3">Lầu Bà Cố Hỷ không chỉ là di tích tín ngưỡng mà còn là biểu tượng của sự giao thoa văn hóa Việt-Hoa tại Trà Vinh. Nơi đây thường xuyên tổ chức các lễ hội truyền thống của cộng đồng người Hoa.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </main>
+
+
+
+        <section class="mt-8">
+            <h3 class="text-2xl font-bold text-blue-800 mb-4">Sự phong phú của di tích cấp tỉnh Trà Vinh</h3>
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <p class="text-gray-700 mb-4">
+                    Di tích cấp tỉnh Trà Vinh thể hiện sự đa dạng và phong phú trong di sản văn hóa - lịch sử của vùng đất này. Với hơn 30 di tích được công nhận, chúng bao gồm nhiều loại hình khác nhau:
+                </p>
+                <ul class="list-disc list-inside text-gray-700 mb-4">
+                    <li>Các ngôi chùa Khmer cổ kính, mang đậm bản sắc văn hóa độc đáo của dân tộc Khmer Nam Bộ.</li>
+                    <li>Những đình, miếu thờ thần linh và anh hùng dân tộc, phản ánh tín ngưỡng dân gian của cộng đồng người Việt.</li>
+                    <li>Các di tích lịch sử cách mạng, ghi dấu những sự kiện quan trọng trong cuộc kháng chiến chống ngoại xâm.</li>
+                    <li>Những công trình kiến trúc cổ, thể hiện tài năng nghệ thuật và kỹ thuật xây dựng của người dân địa phương qua nhiều thế hệ.</li>
+                </ul>
+                <p class="text-gray-700" style="display: none;">
+                    Sự phong phú này không chỉ thể hiện qua số lượng và loại hình di tích, mà còn qua giá trị lịch sử, văn hóa, nghệ thuật và khoa học mà chúng mang lại. Mỗi di tích là một trang sử sống động, góp phần tạo nên bức tranh đa sắc về bản sắc văn hóa và lịch sử của Trà Vinh, đồng thời là nguồn tài nguyên quý giá cho phát triển du lịch và giáo dục truyền thống cho thế hệ trẻ.
+                </p>
+            </div>
+        </section>
+        <footer class="bg-gray-800 text-white mt-12 py-8">
+            <div class="container mx-auto px-4">
+             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div>
+               <h4 class="text-lg font-bold mb-4">Liên hệ</h4>
+               <p>Email:110122115@st.tvu.edu.vn</p>
+               <p>Điện thoại:0366058110</p>
+              </div>
+              <div>
+               <h4 class="text-lg font-bold mb-4">Theo dõi chúng tôi</h4>
+               <div class="hidden md:flex space-x-4">
+                <a href="https://www.facebook.com/TraVinhUniversity.TVU?mibextid=JRoKGi" target="_blank" class="text-gray-600 hover:text-blue-600 transition-colors" onclick="window.open(this.href, '_blank'); return false;">
+                    <i class="fab fa-facebook-square text-2xl"></i>
+                </a>
+                <a href="https://www.instagram.com/explore/locations/1017118742/truong-ai-hoc-tra-vinh/" target="_blank" class="text-gray-600 hover:text-pink-600 transition-colors" onclick="window.open(this.href, '_blank'); return false;">
+                    <i class="fab fa-instagram text-2xl"></i>
+                </a>
+                <a href="https://youtube.com/@aihoctravinhtvu?si=Mky1izWZ7pXRA9Hs" target="_blank" class="text-gray-600 hover:text-red-600 transition-colors" onclick="window.open(this.href, '_blank'); return false;">
+                    <i class="fab fa-youtube text-2xl"></i>
+                </a>
+            </div>
+              </div>
+              <div>
+               <h4 class="text-lg font-bold mb-4">Địa chỉ</h4>
+               <p>ấp Trà Sất C,Long Hiệp,Trà Cú,Trà Vinh</p>
+              </div>
+             </div>
+            </div>
+            </div>
+           </footer>
+ </body>
+</html>

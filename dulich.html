@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Di Tích Lịch Sử Tỉnh Trà Vinh</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+</head>
+
+<body class="bg-gray-100">
+    <!-- Header với logo -->
+    <header class="bg-white shadow-lg transition-all duration-300 hover:shadow-xl">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Logo và tên trường -->
+                <div class="flex items-center">
+                    <img src="logodhtravinh.png" alt="Logo Trà Vinh" 
+                         class="h-16 w-auto object-contain hover:scale-105 transition-transform duration-300">
+                    <div class="ml-4">
+                        <h1 class="text-2xl font-bold text-red-600 hover:text-red-700 transition-colors">
+                            TRƯỜNG ĐẠI HỌC TRÀ VINH
+                        </h1>
+                        <p class="text-gray-600">
+                            <i class="far fa-clock mr-2"></i>
+                            <span id="currentDateTime">Thứ 2 - 26/10/2024, 10:37:23 PM</span>
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Menu chính -->
+                <nav class="bg-gradient-to-r from-blue-800 to-blue-600 text-white py-4 rounded-lg shadow-lg">
+                    <div class="container mx-auto">
+                        <ul class="flex flex-wrap justify-center gap-6 text-lg font-semibold">
+                            <li><a href="index.html" class="hover:text-yellow-300 transition-colors px-4 py-2 rounded-full hover:bg-blue-700">TRANG CHỦ</a></li>
+                            <li><a href="Gioi-thieu.html" class="hover:text-yellow-300 transition-colors px-4 py-2 rounded-full hover:bg-blue-700">GIỚI THIỆU</a></li>
+                            <li><a href="di-tich-quoc-gia.html" class="hover:text-yellow-300 transition-colors px-4 py-2 rounded-full hover:bg-blue-700">Di Tích Cấp Quốc Gia</a></li>
+                            <li><a href="di-tich-tinh.html" class="hover:text-yellow-300 transition-colors px-4 py-2 rounded-full hover:bg-blue-700">Di Tích Cấp Tỉnh</a></li>
+                            <li><a href="dulich.html" class="hover:text-yellow-300 transition-colors px-4 py-2 rounded-full hover:bg-blue-700">Du Lịch</a></li>
+                            <li><a href="lich-su.html" class="hover:text-yellow-300 transition-colors px-4 py-2 rounded-full hover:bg-blue-700">Lịch Sử</a></li>
+                            <li><a href="lien-he.html" class="hover:text-yellow-300 transition-colors px-4 py-2 rounded-full hover:bg-blue-700">Liên Hệ</a></li>
+                        </ul>
+                    </div>
+                </nav>
+                
+                <!-- Thêm các nút mạng xã hội -->
+                <div class="hidden md:flex space-x-4">
+                  <a href="https://www.facebook.com/TraVinhUniversity.TVU?mibextid=JRoKGi" target="_blank" class="text-gray-600 hover:text-blue-600 transition-colors" onclick="window.open(this.href, '_blank'); return false;">
+                      <i class="fab fa-facebook-square text-2xl"></i>
+                  </a>
+                  <a href="https://www.instagram.com/explore/locations/1017118742/truong-ai-hoc-tra-vinh/" target="_blank" class="text-gray-600 hover:text-pink-600 transition-colors" onclick="window.open(this.href, '_blank'); return false;">
+                    <i class="fab fa-instagram text-2xl"></i>
+                </a>
+                    <a href="https://youtube.com/@aihoctravinhtvu?si=Mky1izWZ7pXRA9Hs" target="_blank" class="text-gray-600 hover:text-red-600 transition-colors" onclick="window.open(this.href, '_blank'); return false;">
+                      <i class="fab fa-youtube text-2xl"></i>
+                  </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Banner chính - thêm hiệu ứng và cải thiện giao diện -->
+    <div class="container mx-auto mt-4">
+      <div class="relative overflow-hidden rounded-lg shadow-2xl">
+          <!-- Slideshow container -->
+          <div class="relative h-[480px]" id="slideshow">
+              <img src="logotravinh.png" alt="Logo Trường Đại học Trà Vinh" 
+                   class="w-full h-full object-contain transition-transform duration-700 hover:scale-105">
+              <!-- Thêm nhiều ảnh khác vào slideshow -->
+              <img src="logotravinh2.jpg" alt="Cổng chào Trường Đại học Trà Vinh" 
+                   class="absolute top-0 left-0 w-full h-full object-contain opacity-0 transition-opacity duration-700">
+              <img src="chùa.jpg" alt="Chùa Âng - Di tích văn hóa Trà Vinh" 
+                   class="absolute top-0 left-0 w-full h-full object-contain opacity-0 transition-opacity duration-700">
+          </div>
+    
+            <!-- Overlay với gradient đẹp hơn -->
+            <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-gray-900/70 via-gray-900/50 to-transparent">
+                <div class="p-8 max-w-2xl">
+                    <h2 class="text-4xl font-bold text-white mb-4 animate-fade-in">
+                        Trang Web Giới Thiệu Các Di Tích Tỉnh Trà Vinh
+                    </h2>
+                    <p class="text-white/90 text-lg animate-fade-in-delay">
+                        Khám phá vẻ đẹp và giá trị lịch sử của các di tích văn hóa tại Trà Vinh
+                    </p>
+                    <!-- Thêm nút CTA -->
+                    <div class="relative">
+                      <button onclick="toggleContent()" class="mt-8 px-8 py-4 bg-yellow-500 text-black font-bold rounded-full 
+                                   hover:bg-yellow-400 transition-all duration-300 
+                                   transform hover:scale-105 animate-fade-in-delay-2 
+                                   shadow-lg hover:shadow-xl text-lg">
+                          Khám Phá Ngay
+                      </button>
+                      
+                      <!-- Nội dung hiện ra khi click -->
+                      <div id="content" class="absolute left-0 mt-2 w-80 bg-white rounded-lg shadow-xl opacity-0
+                                transition-opacity duration-300 p-4">
+                                <h3 class="text-lg font-semibold text-gray-800 mb-2">Khám Phá Di Sản Trà Vinh</h3>
+                                <ul class="text-gray-600 space-y-2">
+                                    <li class="hover:text-blue-600 cursor-pointer flex items-center justify-between">
+                                        <span>• Di tích lịch sử văn hóa</span>
+                                        <i class="fas fa-chevron-right cursor-pointer" onclick="toggleSubContent('ditich', this)"></i>
+                                        <div id="ditich" class="absolute left-full top-0 ml-2 w-96 bg-white rounded-lg shadow-xl p-4 hidden">
+                                            <h4 class="font-semibold mb-2">Di tích lịch sử văn hóa</h4>
+                                            <p>Khám phá các di tích lịch sử như chùa Âng, Ao Bà Om, và nhiều di tích khác mang đậm bản sắc văn hóa Trà Vinh.</p>
+                                        </div>
+                                    </li>
+                                    <li class="hover:text-blue-600 cursor-pointer flex items-center justify-between">
+                                        <span>• Kiến trúc cổ độc đáo</span>
+                                        <i class="fas fa-chevron-right cursor-pointer" onclick="toggleSubContent('kientruc', this)"></i>
+                                        <div id="kientruc" class="absolute left-full top-0 ml-2 w-96 bg-white rounded-lg shadow-xl p-4 hidden">
+                                            <h4 class="font-semibold mb-2">Kiến trúc cổ độc đáo</h4>
+                                            <p>Chiêm ngưỡng những công trình kiến trúc cổ độc đáo mang đậm dấu ấn văn hóa Khmer, Việt, Hoa.</p>
+                                        </div>
+                                    </li>
+                                    <li class="hover:text-blue-600 cursor-pointer flex items-center justify-between">
+                                        <span>• Văn hóa dân tộc đa dạng</span>
+                                        <i class="fas fa-chevron-right cursor-pointer" onclick="toggleSubContent('vanhoa', this)"></i>
+                                        <div id="vanhoa" class="absolute left-full top-0 ml-2 w-96 bg-white rounded-lg shadow-xl p-4 hidden">
+                                            <h4 class="font-semibold mb-2">Văn hóa dân tộc đa dạng</h4>
+                                            <p>Tìm hiểu về văn hóa đa dạng của các dân tộc Khmer, Kinh, Hoa cùng chung sống tại Trà Vinh.</p>
+                                        </div>
+                                    </li>
+                                    <li class="hover:text-blue-600 cursor-pointer flex items-center justify-between">
+                                        <span>• Lễ hội truyền thống</span>
+                                        <i class="fas fa-chevron-right cursor-pointer" onclick="toggleSubContent('lehoi', this)"></i>
+                                        <div id="lehoi" class="absolute left-full top-0 ml-2 w-96 bg-white rounded-lg shadow-xl p-4 hidden">
+                                            <h4 class="font-semibold mb-2">Lễ hội truyền thống</h4>
+                                            <p>Khám phá các lễ hội truyền thống đặc sắc như Ok Om Bok, Sene Dolta và nhiều lễ hội văn hóa khác.</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                      </div>
+              <script>
+                  function toggleContent() {
+                      const content = document.getElementById('content');
+                      content.style.opacity = content.style.opacity === '1' ? '0' : '1';
+                      content.style.pointerEvents = content.style.opacity === '1' ? 'auto' : 'none';
+                  }
+              </script>
+              </div>
+              </div>
+              </div>
+    
+            <!-- Thêm điều khiển slideshow -->
+            <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+                <button class="w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-colors"></button>
+                <button class="w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-colors"></button>
+                <button class="w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-colors"></button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Thêm script cho slideshow và đồng hồ -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Cập nhật thời gian thực
+        function updateDateTime() {
+            const now = new Date();
+            const options = { 
+                weekday: 'long', 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit'
+            };
+            document.getElementById('currentDateTime').textContent = 
+                now.toLocaleDateString('vi-VN', options);
+        }
+        setInterval(updateDateTime, 1000);
+        updateDateTime();
+    
+        // Slideshow tự động
+        const slides = document.querySelectorAll('#slideshow img');
+        let currentSlide = 0;
+    
+        function nextSlide() {
+            slides[currentSlide].style.opacity = '0';
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].style.opacity = '1';
+        }
+    
+        setInterval(nextSlide, 5000);
+    });
+    </script>
+    
+    <!-- Thêm styles cho animation -->
+    <style>
+    .animate-fade-in {
+        animation: fadeIn 1s ease-out;
+    }
+    .animate-fade-in-delay {
+        animation: fadeIn 1s ease-out 0.5s both;
+    }
+    .animate-fade-in-delay-2 {
+        animation: fadeIn 1s ease-out 1s both;
+    }
+    
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    </style>
+            </div>
+        </div>
+    </nav>
+
+           
+    <!-- Tour du lịch 2 -->
+           
+           
+           
+           
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4 py-8 max-w-7xl mx-auto">
+              <!-- Tour du lịch 2 -->
+              <!-- Tour Văn hóa Khmer -->
+              <div class="bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-2xl">
+                <div class="relative">
+                  <img src="Untitled.jpg" alt="Văn hóa Khmer" class="w-full h-72 object-cover hover:opacity-90 transition duration-300"/>
+                  <div class="absolute top-0 right-0 bg-blue-600 text-white px-4 py-2 rounded-bl-lg">Hot</div>
+                </div>
+                <div class="p-8">
+                  <h3 class="text-2xl font-bold mb-4 text-blue-700 hover:text-blue-800">Tour Văn Hóa Khmer</h3>
+                  <p class="text-gray-600 mb-6 leading-relaxed">Khám phá nét văn hóa độc đáo của đồng bào Khmer Nam Bộ thông qua các lễ hội truyền thống như Chol Chnam Thmay, Ok Om Bok. Thưởng thức các món ăn đặc sản như bánh pía, bánh ống, nước dừa tươi. Tham quan các ngôi chùa Khmer cổ kính với kiến trúc độc đáo như chùa Âng, chùa Hang.</p>
+                  
+                  
+                  <div class="flex justify-between items-center">
+                    <span class="text-blue-600 font-bold text-2xl">800.000 VNĐ/người</span>
+                    <button onclick="openBookingModal()" class="bg-blue-600 text-white px-8 py-3 rounded-full hover:bg-blue-700 transition duration-300 transform hover:-translate-y-1 hover:shadow-lg">Đặt tour</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Tour Sinh thái Cồn Hô -->
+              <div class="bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-2xl">
+                <div class="relative">
+                  <img src="sinhthai.jpg" alt="Cồn Hô" class="w-full h-72 object-cover hover:opacity-90 transition duration-300"/>
+                  <div class="absolute top-0 right-0 bg-green-600 text-white px-4 py-2 rounded-bl-lg">Mới</div>
+                </div>
+                <div class="p-8">
+                  <h3 class="text-2xl font-bold mb-4 text-blue-700 hover:text-blue-800">Tour Sinh thái Cồn Hô</h3>
+                  <p class="text-gray-600 mb-6 leading-relaxed">Khám phá vẻ đẹp hoang sơ của Cồn Hô, trải nghiệm cuộc sống miệt vườn đậm chất Nam Bộ và thưởng thức đặc sản địa phương tươi ngon.</p>
+                  <div class="flex justify-between items-center">
+                    <span class="text-blue-600 font-bold text-2xl">600.000 VNĐ/người</span>
+                    <button onclick="openBookingModal3()" class="bg-blue-600 text-white px-8 py-3 rounded-full hover:bg-blue-700 transition duration-300 transform hover:-translate-y-1 hover:shadow-lg">Đặt tour</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Phương tiện di chuyển -->
+              <div class="bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-2xl">
+                <div class="relative">
+                  <img src="xebus.jpg" alt="xe buýt" class="w-full h-72 object-cover hover:opacity-90 transition duration-300"/>
+                  <div class="absolute top-0 right-0 bg-yellow-600 text-white px-4 py-2 rounded-bl-lg">Tiện lợi</div>
+                </div>
+                <div class="p-8">
+                  <h3 class="text-2xl font-bold mb-4 text-blue-700 hover:text-blue-800">Phương tiện di chuyển</h3>
+                  <p class="text-gray-600 mb-6 leading-relaxed">Du khách có thể di chuyển đến Trà Vinh bằng xe khách từ TP.HCM (khoảng 6 giờ) hoặc các tỉnh lân cận. Tại địa phương có nhiều dịch vụ taxi, xe máy cho thuê và xe buýt nội tỉnh phục vụ nhu cầu đi lại.</p>
+                  <div class="flex justify-between items-center">
+                    <span class="text-blue-600 font-bold text-2xl">200.000 VNĐ/người</span>
+                    <button onclick="openTransportModal()" class="bg-blue-600 text-white px-8 py-3 rounded-full hover:bg-blue-700 transition duration-300 transform hover:-translate-y-1 hover:shadow-lg">Đặt xe</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Modal đặt tour Khmer -->
+              <div id="bookingModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+                <div class="bg-white p-8 rounded-lg w-96 shadow-2xl">
+                  <h4 class="text-2xl font-bold mb-6 text-blue-700">Đặt Tour Văn hóa Khmer</h4>
+                  <form id="bookingForm" onsubmit="showBookingInfo(event)">
+                    <div class="mb-4">
+                      <label class="block text-gray-700 mb-2 font-semibold">Họ và tên:</label>
+                      <input type="text" id="fullName" class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                    </div>
+                    <div class="mb-4">
+                      <label class="block text-gray-700 mb-2 font-semibold">Email:</label>
+                      <input type="email" id="email" class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                    </div>
+                    <div class="mb-4">
+                      <label class="block text-gray-700 mb-2 font-semibold">Số điện thoại:</label>
+                      <input type="tel" id="phone" class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                    </div>
+                    <div class="mb-4">
+                      <label class="block text-gray-700 mb-2 font-semibold">Ngày khởi hành:</label>
+                      <input type="date" id="departureDate" class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                    </div>
+                    <div class="mb-4">
+                      <label class="block text-gray-700 mb-2 font-semibold">Số người:</label>
+                      <input type="number" id="numPeople" min="1" class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                    </div>
+                    <div class="mb-6">
+                      <label class="block text-gray-700 mb-2 font-semibold">Ghi chú:</label>
+                      <textarea id="notes" class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 h-24" placeholder="Nhập yêu cầu đặc biệt nếu có..."></textarea>
+                    </div>
+                    <div class="flex justify-end gap-4">
+                      <button type="button" onclick="closeBookingModal()" class="px-6 py-3 bg-gray-200 rounded-lg hover:bg-gray-300 font-semibold">Đóng</button>
+                      <button type="submit" class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 font-semibold">Xác nhận đặt tour</button>
+                    </div>
+                  </form>
+                  
+                  <!-- Phần hiển thị thông tin đặt tour -->
+                  <div id="bookingInfo" class="hidden mt-6 p-4 bg-gray-100 rounded-lg">
+                    <h5 class="text-xl font-bold mb-4 text-blue-700">Thông tin đặt tour của bạn:</h5>
+                    <div id="bookingDetails" class="space-y-2 text-gray-700">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <script>
+              function openBookingModal() {
+                document.getElementById('bookingModal').classList.remove('hidden');
+              }
+
+              function closeBookingModal() {
+                document.getElementById('bookingModal').classList.add('hidden');
+              }
+
+              function showBookingInfo(event) {
+                event.preventDefault();
+                
+                const fullName = document.getElementById('fullName').value;
+                const email = document.getElementById('email').value;
+                const phone = document.getElementById('phone').value;
+                const departureDate = document.getElementById('departureDate').value;
+                const numPeople = document.getElementById('numPeople').value;
+                const notes = document.getElementById('notes').value;
+
+                const bookingDetails = document.getElementById('bookingDetails');
+                bookingDetails.innerHTML = `
+                  <p><strong>Họ và tên:</strong> ${fullName}</p>
+                  <p><strong>Email:</strong> ${email}</p>
+                  <p><strong>Số điện thoại:</strong> ${phone}</p>
+                  <p><strong>Ngày khởi hành:</strong> ${departureDate}</p>
+                  <p><strong>Số người:</strong> ${numPeople}</p>
+                  <p><strong>Ghi chú:</strong> ${notes}</p>
+                `;
+
+                document.getElementById('bookingInfo').classList.remove('hidden');
+              }
+              </script>
+
+              <!-- Modal đặt tour Cồn Hô -->
+              <div id="bookingModal3" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+                <div class="bg-white p-8 rounded-lg w-96 shadow-2xl">
+                  <h4 class="text-2xl font-bold mb-6 text-blue-700">Đặt Tour Sinh thái Cồn Hô</h4>
+                  <form id="bookingForm3">
+                    <div class="mb-4">
+                      <label class="block text-gray-700 mb-2 font-semibold">Họ và tên:</label>
+                      <input type="text" class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                    </div>
+                    <div class="mb-4">
+                      <label class="block text-gray-700 mb-2 font-semibold">Số điện thoại:</label>
+                      <input type="tel" class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                    </div>
+                    <div class="mb-4">
+                      <label class="block text-gray-700 mb-2 font-semibold">Ngày khởi hành:</label>
+                      <input type="date" class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                    </div>
+                    <div class="mb-6">
+                      <label class="block text-gray-700 mb-2 font-semibold">Số người:</label>
+                      <input type="number" min="1" class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                    </div>
+                    <div class="flex justify-end gap-4">
+                      <button type="button" onclick="closeBookingModal3()" class="px-6 py-3 bg-gray-200 rounded-lg hover:bg-gray-300 font-semibold">Đóng</button>
+                      <button type="submit" class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 font-semibold">Xác nhận</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+
+              <!-- Modal đặt xe -->
+              <div id="transportModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+                <div class="bg-white p-8 rounded-lg w-96 shadow-2xl">
+                  <h4 class="text-2xl font-bold mb-6 text-blue-700">Đặt Xe Di Chuyển</h4>
+                  <form id="transportForm">
+                    <div class="mb-4">
+                      <label class="block text-gray-700 mb-2 font-semibold">Họ và tên:</label>
+                      <input type="text" class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                    </div>
+                    <div class="mb-4">
+                      <label class="block text-gray-700 mb-2 font-semibold">Số điện thoại:</label>
+                      <input type="tel" class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                    </div>
+                    <div class="mb-4">
+                      <label class="block text-gray-700 mb-2 font-semibold">Ngày đi:</label>
+                      <input type="date" class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                    </div>
+                    <div class="mb-6">
+                      <label class="block text-gray-700 mb-2 font-semibold">Loại xe:</label>
+                      <select class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                        <option value="">Chọn loại xe</option>
+                        <option value="4cho">Xe 4 chỗ</option>
+                        <option value="7cho">Xe 7 chỗ</option>
+                        <option value="16cho">Xe 16 chỗ</option>
+                      </select>
+                    </div>
+                    <div class="flex justify-end gap-4">
+                      <button type="button" onclick="closeTransportModal()" class="px-6 py-3 bg-gray-200 rounded-lg hover:bg-gray-300 font-semibold">Đóng</button>
+                      <button type="submit" class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 font-semibold">Xác nhận</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+
+                <script>
+                  function openTransportModal() {
+                    document.getElementById('transportModal').classList.remove('hidden');
+                    document.getElementById('transportModal').classList.add('flex');
+                  }
+
+                  function closeTransportModal() {
+                    document.getElementById('transportModal').classList.add('hidden');
+                    document.getElementById('transportModal').classList.remove('flex');
+                  }
+
+                  document.getElementById('transportForm').onsubmit = function(e) {
+                    e.preventDefault();
+                    alert('Đặt xe thành công! Chúng tôi sẽ liên hệ với bạn sớm.');
+                    closeTransportModal();
+                  }
+                </script>
+
+                <script>
+                  function openBookingModal3() {
+                    document.getElementById('bookingModal3').classList.remove('hidden');
+                    document.getElementById('bookingModal3').classList.add('flex');
+                  }
+
+                  function closeBookingModal3() {
+                    document.getElementById('bookingModal3').classList.add('hidden');
+                    document.getElementById('bookingModal3').classList.remove('flex');
+                  }
+
+                  document.getElementById('bookingForm3').onsubmit = function(e) {
+                    e.preventDefault();
+                    alert('Đặt tour thành công! Chúng tôi sẽ liên hệ với bạn sớm.');
+                    closeBookingModal3();
+                  }
+                </script>
+                </div>
+              </div>
+              </div>
+            </div>
+
+            <!-- Thông tin thêm -->
+            <div class="mt-12 bg-white rounded-lg shadow-lg p-8 transform transition duration-300 hover:shadow-xl">
+              <h2 class="text-3xl font-bold mb-6 text-blue-800 text-center">Thông tin du lịch hữu ích</h2>
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-6 bg-blue-50 rounded-lg">
+                  <h3 class="text-2xl font-bold mb-4 text-blue-700">Thời điểm du lịch lý tưởng</h3>
+                  <p class="text-gray-700 leading-relaxed">Trà Vinh có khí hậu nhiệt đới gió mùa, thời điểm lý tưởng để du lịch là từ tháng 12 đến tháng 4 năm sau. Trong thời gian này, thời tiết mát mẻ, ít mưa và rất thuận lợi cho các hoạt động tham quan, khám phá.</p>
+                </div>
+                <div class="p-6 bg-blue-50 rounded-lg">
+                  <h3 class="text-2xl font-bold mb-4 text-blue-700">Phương tiện di chuyển</h3>
+                  <p class="text-gray-700 leading-relaxed">Du khách có thể di chuyển đến Trà Vinh bằng xe khách từ TP.HCM (khoảng 6 giờ) hoặc các tỉnh lân cận. Tại địa phương có nhiều dịch vụ taxi, xe máy cho thuê và xe buýt nội tỉnh phục vụ nhu cầu đi lại.</p>
+                </div>
+                <div class="p-6 bg-blue-50 rounded-lg">
+                  <h3 class="text-2xl font-bold mb-4 text-blue-700">Lưu trú và Ẩm thực</h3>
+                  <p class="text-gray-700 leading-relaxed">Trà Vinh có nhiều khách sạn, nhà nghỉ từ bình dân đến cao cấp. Ẩm thực đặc trưng gồm bún nước lèo, bánh tét Trà Cuôn, các món ăn Khmer truyền thống. Giá cả phải chăng và phù hợp mọi túi tiền.</p>
+                </div>
+              </div>
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
+                <div class="p-6 bg-blue-50 rounded-lg">
+                  <h3 class="text-2xl font-bold mb-4 text-blue-700">Lễ hội văn hóa</h3>
+                  <p class="text-gray-700 leading-relaxed">Trà Vinh có nhiều lễ hội văn hóa đặc sắc như: Lễ hội Ok Om Bok, Lễ hội Nghinh Ông, Lễ hội Katê. Đây là dịp để du khách tìm hiểu về văn hóa đa dạng của người dân địa phương.</p>
+                </div>
+                <div class="p-6 bg-blue-50 rounded-lg">
+                  <h3 class="text-2xl font-bold mb-4 text-blue-700">Mua sắm và quà lưu niệm</h3>
+                  <p class="text-gray-700 leading-relaxed">Du khách có thể mua sắm tại chợ trung tâm, các cửa hàng đặc sản. Những món quà lưu niệm phổ biến gồm: bánh tét, trái cây đặc sản, các sản phẩm thủ công mỹ nghệ của người Khmer.</p>
+                </div>
+                <div class="p-6 bg-blue-50 rounded-lg">
+                  <h3 class="text-2xl font-bold mb-4 text-blue-700">An toàn và sức khỏe</h3>
+                  <p class="text-gray-700 leading-relaxed">Trà Vinh là điểm đến an toàn với người dân thân thiện. Tuy nhiên du khách nên mang theo thuốc cá nhân, bảo hiểm du lịch và tuân thủ các quy định an toàn khi tham quan các điểm du lịch.</p>
+                </div>
+              </div>
+            </div>
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-6 bg-blue-50 rounded-lg">
+                  <h3 class="text-2xl font-bold mb-4 text-blue-700">Thời điểm du lịch lý tưởng</h3>
+                  <p class="text-gray-700 leading-relaxed">Trà Vinh có khí hậu nhiệt đới gió mùa, thời điểm lý tưởng để du lịch là từ tháng 12 đến tháng 4 năm sau. Trong thời gian này, thời tiết mát mẻ, ít mưa và rất thuận lợi cho các hoạt động tham quan, khám phá.</p>
+                </div>
+                <div class="p-6 bg-blue-50 rounded-lg">
+                  <h3 class="text-2xl font-bold mb-4 text-blue-700">Phương tiện di chuyển</h3>
+                  <p class="text-gray-700 leading-relaxed">Du khách có thể di chuyển đến Trà Vinh bằng xe khách từ TP.HCM (khoảng 6 giờ) hoặc các tỉnh lân cận. Tại địa phương có nhiều dịch vụ taxi, xe máy cho thuê và xe buýt nội tỉnh phục vụ nhu cầu đi lại.</p>
+                </div>
+                <div class="p-6 bg-blue-50 rounded-lg">
+                  <h3 class="text-2xl font-bold mb-4 text-blue-700">Lưu trú và Ẩm thực</h3>
+                  <p class="text-gray-700 leading-relaxed">Trà Vinh có nhiều khách sạn, nhà nghỉ từ bình dân đến cao cấp. Ẩm thực đặc trưng gồm bún nước lèo, bánh tét Trà Cuôn, các món ăn Khmer truyền thống. Giá cả phải chăng và phù hợp mọi túi tiền.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+       </main>
+
+       <footer class="bg-gray-800 text-white mt-12 py-8">
+        <div class="container mx-auto px-4">
+         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div>
+           <h4 class="text-lg font-bold mb-4">Liên hệ</h4>
+           <p>Email:110122115@st.tvu.edu.vn</p>
+           <p>Điện thoại:0366058110</p>
+          </div>
+          <div>
+           <h4 class="text-lg font-bold mb-4">Theo dõi chúng tôi</h4>
+           <div class="hidden md:flex space-x-4">
+            <a href="https://www.facebook.com/TraVinhUniversity.TVU?mibextid=JRoKGi" target="_blank" class="text-gray-600 hover:text-blue-600 transition-colors" onclick="window.open(this.href, '_blank'); return false;">
+                <i class="fab fa-facebook-square text-2xl"></i>
+            </a>
+            <a href="https://www.instagram.com/explore/locations/1017118742/truong-ai-hoc-tra-vinh/" target="_blank" class="text-gray-600 hover:text-pink-600 transition-colors" onclick="window.open(this.href, '_blank'); return false;">
+                <i class="fab fa-instagram text-2xl"></i>
+            </a>
+            <a href="https://youtube.com/@aihoctravinhtvu?si=Mky1izWZ7pXRA9Hs" target="_blank" class="text-gray-600 hover:text-red-600 transition-colors" onclick="window.open(this.href, '_blank'); return false;">
+                <i class="fab fa-youtube text-2xl"></i>
+            </a>
+        </div>
+          </div>
+          <div>
+           <h4 class="text-lg font-bold mb-4">Địa chỉ</h4>
+           <p>ấp Trà Sất C,Long Hiệp,Trà Cú,Trà Vinh</p>
+          </div>
+         </div>
+        </div>
+       </footer>
+
+ </body>
+</html>
