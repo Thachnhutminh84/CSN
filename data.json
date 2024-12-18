@@ -1,0 +1,532 @@
+{
+  "sites": [
+    {
+      "id": "aobaom",
+      "name": "Ao Ba Om",
+      "image": "ditichquocgia/aobaom.jpg",
+      "description": "Ao Ba Om được hình thành vào thế kỷ thứ 10, theo truyền thuyết do bà Om - một phụ nữ người Khmer đào nên.",
+      "location": "Phường 8, TP. Trà Vinh",
+      "established": "Thế kỷ 10",
+      "recognition": "02/12/1994",
+      "details": {
+        "history": "Ao Ba Om được hình thành vào thế kỷ thứ 10, theo truyền thuyết do bà Om - một phụ nữ người Khmer đào nên. Ban đầu ao được đào để trữ nước phục vụ sinh hoạt và tưới tiêu.",
+        "culturalValue": [
+          "Trung tâm văn hóa Khmer",
+          "Nơi diễn ra lễ hội Ok Om Bok",
+          "Điểm tổ chức lễ hội truyền thống",
+          "Công trình thủy lợi cổ"
+        ],
+        "historicalValue": [
+          "Di tích văn hóa cấp quốc gia",
+          "Chứng tích lịch sử Khmer",
+          "Nơi lưu giữ văn hóa truyền thống",
+          "Điểm son văn hóa tâm linh"
+        ],
+        "services": [
+          "Hướng dẫn tham quan",
+          "Khu vui chơi giải trí",
+          "Không gian xanh mát",
+          "Bãi đỗ xe"
+        ],
+        "info": [
+          "Mở cửa: 6:00 - 18:00",
+          "Thuyết minh đa ngôn ngữ",
+          "Tham quan miễn phí",
+          "Chụp ảnh tự do"
+        ],
+        "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3928.841454392438!2d106.34573661474199!3d10.033297892830387!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTDCsDAxJzU5LjkiTiAxMDbCsDIwJzQ0LjYiRQ!5e0!3m2!1svi!2s!4v1635789012345!5m2!1svi!2s",
+        "directionsUrl": "https://www.google.com/maps/dir//10.033297,106.345736"
+      }
+    },
+    {
+      "id": "chuabodhiculaman",
+      "name": "Chùa BODHICULAMAN",
+      "image": "ditichquocgia/BODHICULAMANI.jpg",
+      "description": "Chùa BODHICULAMANI được xây dựng vào năm 1308, là một trong những ngôi chùa Khmer cổ nhất tại Trà Vinh.",
+      "location": "Xã Đa Lộc, H. Châu Thành",
+      "established": "Năm 1308",
+      "recognition": "16/11/2018",
+      "details": {
+        "history": "Chùa BODHICULAMANI được xây dựng vào năm 1308, là một trong những ngôi chùa Khmer cổ nhất tại Trà Vinh. Ngôi chùa được xây dựng theo kiến trúc truyền thống Khmer với nhiều họa tiết chạm khắc tinh xảo.",
+        "culturalValue": [
+          "Trung tâm văn hóa Phật giáo Khmer",
+          "Kiến trúc độc đáo Nam tông",
+          "Nơi tổ chức lễ hội truyền thống",
+          "Điểm du lịch tâm linh nổi tiếng"
+        ],
+        "historicalValue": [
+          "Di tích văn hóa cấp quốc gia",
+          "Chứng tích lịch sử Khmer",
+          "Nơi lưu giữ văn hóa truyền thống",
+          "Điểm son văn hóa tâm linh"
+        ],
+        "services": [
+          "Hướng dẫn tham quan",
+          "Khu vui chơi giải trí",
+          "Không gian xanh mát",
+          "Bãi đỗ xe"
+        ],
+        "info": [
+          "Mở cửa: 6:00 - 18:00",
+          "Thuyết minh đa ngôn ngữ",
+          "Tham quan miễn phí",
+          "Chụp ảnh tự do"
+        ]
+      }
+    },
+    {
+      "id": "chuaan",
+      "name": "Chùa Âng",
+      "image": "ditichquocgia/chuaang.jpg",
+      "description": "Chùa Âng được xây dựng vào khoảng năm 990, là một trong những ngôi chùa Khmer cổ nhất tại Trà Vinh. Ngôi chùa mang đậm kiến trúc Khmer truyền thống với nhiều họa tiết chạm khắc tinh xảo.",
+      "location": "Khóm 4, Phường 8, TP. Trà Vinh",
+      "established": "Khoảng năm 990",
+      "recognition": "16/11/2018",
+      "details": {
+        "history": "Chùa Âng được xây dựng vào khoảng năm 990, là một trong những ngôi chùa Khmer cổ nhất tại Trà Vinh. Ngôi chùa mang đậm kiến trúc Khmer truyền thống với nhiều họa tiết chạm khắc tinh xảo.",
+        "culturalValue": [
+          "Trung tâm văn hóa Phật giáo Khmer",
+          "Kiến trúc độc đáo Nam tông",
+          "Nơi tổ chức lễ hội truyền thống",
+          "Điểm du lịch tâm linh nổi tiếng"
+        ],
+        "historicalValue": [
+          "Di tích văn hóa cấp quốc gia",
+          "Chứng tích lịch sử Khmer",
+          "Nơi lưu giữ văn hóa truyền thống",
+          "Điểm son văn hóa tâm linh"
+        ],
+        "services": [
+          "Hướng dẫn tham quan",
+          "Khu vui chơi giải trí",
+          "Không gian xanh mát",
+          "Bãi đỗ xe"
+        ],
+        "info": [
+          "Mở cửa: 6:00 - 18:00",
+          "Thuyết minh đa ngôn ngữ",
+          "Tham quan miễn phí",
+          "Chụp ảnh tự do"
+        ],
+        "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3928.841454392438!2d106.34573661474199!3d10.033297892830387!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTDCsDAxJzU5LjkiTiAxMDbCsDIwJzQ0LjYiRQ!5e0!3m2!1svi!2s!4v1635789012345!5m2!1svi!2s",
+        "directionsUrl": "https://www.google.com/maps/dir//10.033297,106.345736"
+      }
+    },
+    {
+      "id": "chuakompong",
+      "name": "Chùa kom Pong",
+      "image": "ditichquocgia/chuakpmpong.jpg",
+      "description": "Chùa KomPong được xây dựng vào thế kỷ 16, là một di sản văn hóa quý giá của người Khmer tại Trà Vinh.",
+      "location": "50/1 Lê Lợi, Khóm 2, Phường 1, TP. Trà Vinh",
+      "established": "Thế kỷ 16",
+      "recognition": "16/11/2018",
+      "details": {
+        "history": "Chùa KomPong được xây dựng vào thế kỷ 16, là một trong những ngôi chùa Khmer cổ kính tại Trà Vinh. Ngôi chùa mang đậm kiến trúc truyền thống của người Khmer và là trung tâm văn hóa tâm linh quan trọng của cộng đồng.",
+        "culturalValue": [
+          "Trung tâm văn hóa Phật giáo Khmer",
+          "Kiến trúc độc đáo Nam tông",
+          "Nơi tổ chức lễ hội truyền thống",
+          "Điểm du lịch tâm linh nổi tiếng"
+        ],
+        "historicalValue": [
+          "Di tích văn hóa cấp quốc gia",
+          "Chứng tích lịch sử Khmer",
+          "Nơi lưu giữ văn hóa truyền thống",
+          "Điểm son văn hóa tâm linh"
+        ],
+        "services": [
+          "Hướng dẫn tham quan",
+          "Khu vui chơi giải trí",
+          "Không gian xanh mát",
+          "Bãi đỗ xe"
+        ],
+        "info": [
+          "Mở cửa: 6:00 - 18:00",
+          "Thuyết minh đa ngôn ngữ",
+          "Tham quan miễn phí",
+          "Chụp ảnh tự do"
+        ],
+        "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3928.841454392438!2d106.34573661474199!3d10.033297892830387!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTDCsDAxJzU5LjkiTiAxMDbCsDIwJzQ0LjYiRQ!5e0!3m2!1svi!2s!4v1635789012345!5m2!1svi!2s",
+        "directionsUrl": "https://www.google.com/maps/dir//10.033297,106.345736"
+      }
+    },
+    {
+      "id": "chualogach",
+      "name": "Chùa Lo Gạch",
+      "image": "ditichquocgia/logach.jpg",
+      "description": "Chùa Lo Gạch được xây dựng vào thế kỷ 19, là một trong những ngôi chùa Khmer cổ kính tại Trà Vinh. Ngôi chùa được xây dựng với kiến trúc độc đáo kết hợp giữa phong cách truyền thống Khmer và những nét đặc trưng của vùng đất Nam Bộ.",
+      "location": "Khóm 4, Phường 8, TP. Trà Vinh",
+      "established": "Thế kỷ 19",
+      "recognition": "16/11/2018",
+      "details": {
+        "history": "Chùa Lo Gạch được xây dựng vào thế kỷ 19, là một trong những ngôi chùa Khmer cổ kính tại Trà Vinh. Ngôi chùa được xây dựng với kiến trúc độc đáo kết hợp giữa phong cách truyền thống Khmer và những nét đặc trưng của vùng đất Nam Bộ.",
+        "culturalValue": [
+          "Trung tâm văn hóa Phật giáo Khmer",
+          "Kiến trúc độc đáo Nam tông",
+          "Nơi tổ chức lễ hội truyền thống",
+          "Điểm du lịch tâm linh nổi tiếng"
+        ],
+        "historicalValue": [
+          "Di tích văn hóa cấp quốc gia",
+          "Chứng tích lịch sử Khmer",
+          "Nơi lưu giữ văn hóa truyền thống",
+          "Điểm son văn hóa tâm linh"
+        ],
+        "services": [
+          "Hướng dẫn tham quan",
+          "Khu vui chơi giải trí",
+          "Không gian xanh mát",
+          "Bãi đỗ xe"
+        ],
+        "info": [
+          "Mở cửa: 6:00 - 18:00",
+          "Thuyết minh đa ngôn ngữ",
+          "Tham quan miễn phí",
+          "Chụp ảnh tự do"
+        ],
+        "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3928.841454392438!2d106.34573661474199!3d10.033297892830387!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTDCsDAxJzU5LjkiTiAxMDbCsDIwJzQ0LjYiRQ!5e0!3m2!1svi!2s!4v1635789012345!5m2!1svi!2s",
+        "directionsUrl": "https://www.google.com/maps/dir//10.033297,106.345736"
+      }
+    },
+    {
+      "id": "chuagiaclinh",
+      "name": "Chùa Giác Linh",
+      "image": "ditichquocgia/chuagiaclinh.jpg",
+      "description": "Chùa Giác Linh được xây dựng vào thế kỷ 18, là một di sản văn hóa quý giá của Phật giáo Nam tông Khmer tại Trà Vinh. Ngôi chùa được xây dựng theo kiến trúc truyền thống với nhiều họa tiết chạm khắc tinh xảo mang đậm bản sắc văn hóa Khmer. Qua hơn 200 năm tồn tại, chùa đã trở thành trung tâm sinh hoạt văn hóa tâm linh quan trọng của cộng đồng địa phương, nơi lưu giữ và bảo tồn nhiều giá trị văn hóa truyền thống quý báu.",
+      "location": "Xã Lương Hòa, H. Châu Thành",
+      "established": "Thế kỷ 18",
+      "recognition": "16/11/2018",
+      "details": {
+        "history": "Chùa Giác Linh được xây dựng vào thế kỷ 18, là một trong những ngôi chùa Khmer cổ kính tại Trà Vinh. Trải qua hơn 200 năm tồn tại, chùa đã trở thành trung tâm văn hóa tâm linh quan trọng của cộng đồng người Khmer trong vùng.",
+        "culturalValue": [
+          "Trung tâm văn hóa Phật giáo Khmer",
+          "Kiến trúc độc đáo Nam tông",
+          "Nơi tổ chức lễ hội truyền thống",
+          "Điểm du lịch tâm linh nổi tiếng"
+        ],
+        "historicalValue": [
+          "Di tích văn hóa cấp quốc gia",
+          "Chứng tích lịch sử Khmer",
+          "Nơi lưu giữ văn hóa truyền thống",
+          "Điểm son văn hóa tâm linh"
+        ],
+        "services": [
+          "Hướng dẫn tham quan",
+          "Khu vui chơi giải trí",
+          "Không gian xanh mát",
+          "Bãi đỗ xe"
+        ],
+        "info": [
+          "Mở cửa: 6:00 - 18:00",
+          "Thuyết minh đa ngôn ngữ",
+          "Tham quan miễn phí",
+          "Chụp ảnh tự do"
+        ],
+        "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3928.841454392438!2d106.34573661474199!3d10.033297892830387!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTDCsDAxJzU5LjkiTiAxMDbCsDIwJzQ0LjYiRQ!5e0!3m2!1svi!2s!4v1635789012345!5m2!1svi!2s",
+        "directionsUrl": "https://www.google.com/maps/dir//10.033297,106.345736"
+      }
+    },
+    {
+      "id": "chuatalon",
+      "name": "Chùa TaLon",
+      "image": "ditichquocgia/chuatalon.jpg",
+      "description": "Chùa TaLon được xây dựng vào thế kỷ 17, là một trong những ngôi chùa Khmer cổ kính tại Trà Vinh. Ngôi chùa mang đậm kiến trúc Phật giáo Nam tông Khmer với nhiều họa tiết chạm khắc tinh xảo. Trải qua hơn 400 năm tồn tại, chùa đã trở thành trung tâm văn hóa tâm linh quan trọng của cộng đồng người Khmer trong vùng.",
+      "location": "Xã Đại An, H. Trà Cú",
+      "established": "Thế kỷ 17",
+      "recognition": "16/11/2018",
+      "details": {
+        "history": "Chùa TaLon được xây dựng vào thế kỷ 17, là một trong những ngôi chùa Khmer cổ kính tại Trà Vinh. Trải qua hơn 400 năm tồn tại, chùa đã trở thành trung tâm văn hóa tâm linh quan trọng của cộng đồng người Khmer trong vùng.",
+        "culturalValue": [
+          "Trung tâm văn hóa Phật giáo Khmer",
+          "Kiến trúc độc đáo Nam tông",
+          "Nơi tổ chức lễ hội truyền thống",
+          "Điểm du lịch tâm linh nổi tiếng"
+        ],
+        "historicalValue": [
+          "Di tích văn hóa cấp quốc gia",
+          "Chứng tích lịch sử Khmer",
+          "Nơi lưu giữ văn hóa truyền thống",
+          "Điểm son văn hóa tâm linh"
+        ],
+        "services": [
+          "Hướng dẫn tham quan",
+          "Khu vui chơi giải trí",
+          "Không gian xanh mát",
+          "Bãi đỗ xe"
+        ],
+        "info": [
+          "Mở cửa: 6:00 - 18:00",
+          "Thuyết minh đa ngôn ngữ",
+          "Tham quan miễn phí",
+          "Chụp ảnh tự do"
+        ]
+      }
+    },
+    {
+      "id": "denbac",
+      "name": "Đền Bác",
+      "image": "ditichquocgia/denbac.jpg",
+      "description": "Đền Bác được khởi công xây dựng vào ngày 19/5/1990, nhân dịp kỷ niệm 100 năm ngày sinh của Chủ tịch Hồ Chí Minh. Công trình được xây dựng với sự đóng góp của nhân dân Trà Vinh để tưởng nhớ và bày tỏ lòng biết ơn sâu sắc đối với Người. Đền được thiết kế theo kiến trúc trang nghiêm, thanh thoát, là nơi tổ chức nhiều hoạt động giáo dục truyền thống cách mạng cho thế hệ trẻ.",
+      "location": "Khóm 4, Phường 4, TP. Trà Vinh",
+      "established": "19/5/1990",
+      "recognition": "23/12/2011",
+      "details": {
+        "history": "Đền Bác được khởi công xây dựng vào ngày 19/5/1990, nhân dịp kỷ niệm 100 năm ngày sinh của Chủ tịch Hồ Chí Minh. Công trình được xây dựng với sự đóng góp của nhân dân Trà Vinh để tưởng nhớ và bày tỏ lòng biết ơn sâu sắc đối với Người.",
+        "culturalValue": [
+          "Công trình văn hóa tâm linh",
+          "Nơi giáo dục truyền thống",
+          "Điểm tổ chức lễ kỷ niệm",
+          "Không gian tưởng niệm"
+        ],
+        "historicalValue": [
+          "Di tích cấp quốc gia",
+          "Chứng tích lịch sử cách mạng",
+          "Nơi lưu giữ kỷ niệm",
+          "Điểm son văn hóa chính trị"
+        ],
+        "services": [
+          "Hướng dẫn tham quan",
+          "Khu vui chơi giải trí",
+          "Không gian xanh mát",
+          "Bãi đỗ xe"
+        ],
+        "info": [
+          "Mở cửa: 6:00 - 18:00",
+          "Thuyết minh đa ngôn ngữ",
+          "Tham quan miễn phí",
+          "Chụp ảnh tự do"
+        ]
+      }
+    },
+    {
+      "id": "dinhlongduc",
+      "name": "Đình Long Đức",
+      "image": "ditichquocgia/dinhlongduc.jpg",
+      "description": "Đình Long Đức được xây dựng vào thế kỷ 19, là một trong những công trình kiến trúc cổ tiêu biểu của vùng đất Trà Vinh. Đình được xây dựng theo kiến trúc truyền thống Nam Bộ với nhiều họa tiết chạm khắc tinh xảo, thể hiện tài nghệ của các nghệ nhân thời bấy giờ.",
+      "location": "Xã Long Đức, TP. Trà Vinh",
+      "established": "Thế kỷ 19",
+      "recognition": "16/11/2018",
+      "details": {
+        "history": "Đình Long Đức được xây dựng vào thế kỷ 19, là một trong những công trình kiến trúc cổ tiêu biểu của vùng đất Trà Vinh. Đình được xây dựng theo kiến trúc truyền thống Nam Bộ với nhiều họa tiết chạm khắc tinh xảo.",
+        "culturalValue": [
+          "Trung tâm văn hóa tín ngưỡng",
+          "Nơi tổ chức lễ hội truyền thống",
+          "Điểm sinh hoạt cộng đồng",
+          "Công trình kiến trúc nghệ thuật"
+        ],
+        "historicalValue": [
+          "Di tích văn hóa cấp quốc gia",
+          "Chứng tích lịch sử địa phương",
+          "Nơi lưu giữ văn hóa truyền thống",
+          "Điểm son văn hóa tâm linh"
+        ],
+        "services": [
+          "Hướng dẫn tham quan",
+          "Khu vui chơi giải trí",
+          "Không gian xanh mát",
+          "Bãi đỗ xe"
+        ],
+        "info": [
+          "Mở cửa: 6:00 - 18:00",
+          "Thuyết minh đa ngôn ngữ",
+          "Tham quan miễn phí",
+          "Chụp ảnh tự do"
+        ]
+      }
+    },
+    {
+      "id": "noitiepnhanvukhi",
+      "name": "Nơi Tiếp Nhận Vụ Khí",
+      "image": "ditichquocgia/dinhlongduc.jpg",
+      "description": "Đình Long Đức được xây dựng vào thế kỷ 19, là một trong những công trình kiến trúc cổ tiêu biểu của vùng đất Trà Vinh. Đình được xây dựng theo kiến trúc truyền thống Nam Bộ với nhiều họa tiết chạm khắc tinh xảo, thể hiện tài nghệ của các nghệ nhân thời bấy giờ.",
+      "location": "Xã Long Đức, TP. Trà Vinh",
+      "established": "Thế kỷ 19",
+      "recognition": "16/11/2018",
+      "details": {
+        "history": "Đình Long Đức được xây dựng vào thế kỷ 19, là một trong những công trình kiến trúc cổ tiêu biểu của vùng đất Trà Vinh. Đình được xây dựng theo kiến trúc truyền thống Nam Bộ với nhiều họa tiết chạm khắc tinh xảo.",
+        "culturalValue": [
+          "Trung tâm văn hóa tín ngưỡng",
+          "Nơi tổ chức lễ hội truyền thống",
+          "Điểm sinh hoạt cộng đồng",
+          "Công trình kiến trúc nghệ thuật"
+        ],
+        "historicalValue": [
+          "Di tích văn hóa cấp quốc gia",
+          "Chứng tích lịch sử địa phương",
+          "Nơi lưu giữ văn hóa truyền thống",
+          "Điểm son văn hóa tâm linh"
+        ],
+        "services": [
+          "Hướng dẫn tham quan",
+          "Khu vui chơi giải trí",
+          "Không gian xanh mát",
+          "Bãi đỗ xe"
+        ],
+        "info": [
+          "Mở cửa: 6:00 - 18:00",
+          "Thuyết minh đa ngôn ngữ",
+          "Tham quan miễn phí",
+          "Chụp ảnh tự do"
+        ]
+      }
+    },
+    {
+      "id": "phuocminhcung",
+      "name": "Phước Minh Cung",
+      "image": "ditichquocgia/phuocminhcung.jpg",
+      "description": "Phước Minh Cung được xây dựng vào năm 1876 bởi cộng đồng người Hoa tại Trà Vinh. Đây là một công trình kiến trúc cổ mang đậm bản sắc văn hóa Hoa với nhiều họa tiết trang trí tinh xảo.",
+      "location": "Phường 1, TP. Trà Vinh",
+      "established": "Năm 1876", 
+      "recognition": "16/11/2018",
+      "details": {
+        "history": "Phước Minh Cung được xây dựng vào năm 1876 bởi cộng đồng người Hoa tại Trà Vinh. Công trình này đã trải qua nhiều lần trùng tu nhưng vẫn giữ được nét kiến trúc nguyên bản.",
+        "culturalValue": [
+          "Trung tâm văn hóa người Hoa",
+          "Nơi diễn ra lễ hội truyền thống",
+          "Điểm giao lưu văn hóa",
+          "Công trình kiến trúc tiêu biểu"
+        ],
+        "historicalValue": [
+          "Di tích văn hóa cấp quốc gia",
+          "Chứng tích lịch sử người Hoa",
+          "Nơi lưu giữ văn hóa truyền thống",
+          "Điểm son văn hóa tâm linh"
+        ],
+        "services": [
+          "Hướng dẫn tham quan",
+          "Khu vui chơi giải trí",
+          "Không gian xanh mát",
+          "Bãi đỗ xe"
+        ],
+        "info": [
+          "Mở cửa: 6:00 - 18:00",
+          "Thuyết minh đa ngôn ngữ",
+          "Tham quan miễn phí",
+          "Chụp ảnh tự do"
+        ]
+      }
+    },
+    {
+      "id": "luucu2",
+      "name": "Lưu Cừ 2",
+      "image": "ditichquocgia/luucu2.jpg",
+      "description": "Di tích khảo cổ học Lưu Cừ 2 là một trong những di tích quan trọng của nền văn hóa Óc Eo tại Trà Vinh. Khu di tích này được phát hiện qua các đợt khai quật khảo cổ học, cung cấp nhiều hiện vật quý giá.",
+      "location": "Xã Lưu Nghiệp Anh, H. Trà Cú",
+      "established": "Thế kỷ 1-7",
+      "recognition": "16/11/2018",
+      "details": {
+        "history": "Di tích khảo cổ học Lưu Cừ 2 được phát hiện qua các đợt khai quật từ thế kỷ I đến thế kỷ VII sau Công nguyên. Đây là một trong những di tích quan trọng của nền văn hóa Óc Eo tại Trà Vinh.",
+        "culturalValue": [
+          "Di tích văn hóa Óc Eo",
+          "Khu định cư cổ",
+          "Nơi lưu giữ hiện vật quý",
+          "Điểm nghiên cứu khảo cổ"
+        ],
+        "historicalValue": [
+          "Di tích khảo cổ cấp quốc gia",
+          "Chứng tích văn hóa Óc Eo",
+          "Nơi lưu giữ di vật cổ",
+          "Điểm son lịch sử địa phương"
+        ],
+        "services": [
+          "Hướng dẫn tham quan",
+          "Khu trưng bày hiện vật",
+          "Không gian nghiên cứu",
+          "Bãi đỗ xe"
+        ],
+        "info": [
+          "Mở cửa: 7:00 - 17:00",
+          "Thuyết minh chuyên môn",
+          "Tham quan có phí",
+          "Chụp ảnh có giới hạn"
+        ]
+      }
+    }
+  ],
+  "overview": {
+    "introduction": {
+      "title": "Giá trị di sản văn hóa Trà Vinh (Di tích cấp quốc gia)",
+      "description": "Di tích cấp quốc gia tại Trà Vinh là minh chứng cho sự đa dạng và phong phú trong di sản văn hóa - lịch sử của vùng đất này. Bao gồm nhiều loại hình khác nhau, từ chùa chiền, đình miếu đến các công trình kiến trúc và địa điểm lịch sử, mỗi di tích đều mang trong mình những giá trị độc đáo:",
+      "values": [
+        {
+          "title": "Giá trị lịch sử",
+          "description": "Ghi dấu những sự kiện, nhân vật quan trọng trong lịch sử địa phương và đất nước"
+        },
+        {
+          "title": "Giá trị văn hóa",
+          "description": "Thể hiện bản sắc văn hóa đặc trưng của các dân tộc sinh sống tại Trà Vinh"
+        },
+        {
+          "title": "Giá trị kiến trúc - nghệ thuật",
+          "description": "Mang đến những công trình với kiến trúc độc đáo, tinh xảo"
+        },
+        {
+          "title": "Giá trị giáo dục",
+          "description": "Là nguồn tài liệu quý giá để giáo dục truyền thống cho thế hệ trẻ"
+        },
+        {
+          "title": "Giá trị du lịch",
+          "description": "Thu hút khách tham quan trong và ngoài nước"
+        },
+        {
+          "title": "Giá trị tâm linh",
+          "description": "Là nơi sinh hoạt tín ngưỡng của cộng đồng các dân tộc"
+        },
+        {
+          "title": "Giá trị nghệ thuật",
+          "description": "Thể hiện những kỹ thuật nghệ thuật đặc trưng của các dân tộc"
+        }
+      ],
+      "conclusion": "Việc bảo tồn và phát huy giá trị của các di tích này không chỉ góp phần gìn giữ bản sắc văn hóa dân tộc mà còn tạo nên sức hấp dẫn đặc biệt cho du lịch Trà Vinh, mở ra cơ hội phát triển kinh tế - xã hội bền vững cho địa phương."
+    },
+    "statistics": {
+      "total": 12,
+      "categories": [
+        {
+          "name": "Di tích kiến trúc nghệ thuật",
+          "count": 5
+        },
+        {
+          "name": "Di tích lịch sử",
+          "count": 4
+        },
+        {
+          "name": "Di tích khảo cổ",
+          "count": 2
+        },
+        {
+          "name": "Di tích danh lam thắng cảnh",
+          "count": 1
+        }
+      ]
+    },
+    "distribution": [
+      {
+        "location": "TP. Trà Vinh",
+        "count": 4
+      },
+      {
+        "location": "H. Càng Long",
+        "count": 2
+      },
+      {
+        "location": "H. Châu Thành",
+        "count": 2
+      },
+      {
+        "location": "H. Cầu Ngang",
+        "count": 2
+      },
+      {
+        "location": "Các huyện khác",
+        "count": 2
+      }
+    ],
+    "generalInfo": [
+      "Được công nhận từ năm 1990 đến nay",
+      "Đa dạng về loại hình và giá trị",
+      "Phân bố rộng khắp các địa phương",
+      "Đang được bảo tồn và phát huy giá trị"
+    ]
+  }
+}

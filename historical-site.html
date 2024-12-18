@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Di tích lịch sử Trà Vinh</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="site-container"></div>
+
+    <script src="site-renderer.js"></script>
+    <script>
+        // Fetch and render the site data
+        fetch('data.json')
+            .then(response => response.json())
+            .then(data => {
+                const site = data.find(site => site.id === 'noitiepnhanvukhi');
+                if (site) {
+                    document.getElementById('site-container').innerHTML = renderHistoricalSite(site);
+                }
+            })
+            .catch(error => console.error('Error loading site data:', error));
+    </script>
+</body>
+</html>

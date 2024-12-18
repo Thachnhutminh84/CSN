@@ -29,19 +29,153 @@
                 </div>
                 
                 <!-- Menu chính -->
-                <nav class="bg-gradient-to-r from-blue-800 to-blue-600 text-white py-4 rounded-lg shadow-lg">
+                <nav id="mobileMenu" class="hidden md:flex w-full md:w-auto text-black py-4 rounded-lg">
                     <div class="container mx-auto">
-                        <ul class="flex flex-wrap justify-center gap-6 text-lg font-semibold">
-                            <li><a href="index.html" class="hover:text-yellow-300 transition-colors px-4 py-2 rounded-full hover:bg-blue-700">TRANG CHỦ</a></li>
-                            <li><a href="Gioi-thieu.html" class="hover:text-yellow-300 transition-colors px-4 py-2 rounded-full hover:bg-blue-700">GIỚI THIỆU</a></li>
-                            <li><a href="di-tich-quoc-gia.html" class="hover:text-yellow-300 transition-colors px-4 py-2 rounded-full hover:bg-blue-700">Di Tích Cấp Quốc Gia</a></li>
-                            <li><a href="di-tich-tinh.html" class="hover:text-yellow-300 transition-colors px-4 py-2 rounded-full hover:bg-blue-700">Di Tích Cấp Tỉnh</a></li>
-                            <li><a href="dulich.html" class="hover:text-yellow-300 transition-colors px-4 py-2 rounded-full hover:bg-blue-700">Du Lịch</a></li>
-                            <li><a href="lich-su.html" class="hover:text-yellow-300 transition-colors px-4 py-2 rounded-full hover:bg-blue-700">Lịch Sử</a></li>
-                            <li><a href="lien-he.html" class="hover:text-yellow-300 transition-colors px-4 py-2 rounded-full hover:bg-blue-700">Liên Hệ</a></li>
+                        <ul class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6 text-lg font-semibold">
+                            <li><a href="index.html" class="block hover:text-blue-600 transition-colors">TRANG CHỦ</a></li>
+                            <li><a href="Gioi-thieu.html" class="block hover:text-blue-600 transition-colors">GIỚI THIỆU</a></li>
+                            <li class="relative group">
+                                <a href="di-tich-quoc-gia.html" class="block hover:text-blue-600 transition-colors">Di Tích Cấp Quốc Gia</a>
+                                <ul class="hidden group-hover:block absolute left-0 top-full bg-white shadow-lg rounded-lg py-2 w-64 z-50">
+                                    <li class="relative group/sub">
+                                        <a href="https://banquanlyditichtravinh.vn/cap-quoc-gia/thanh-pho-tra-vinh-cap-quoc-gia/" class="block px-4 py-2 hover:bg-gray-100">Thành phố Trà Vinh</a>
+                                        <ul class="hidden group-hover/sub:block absolute left-full top-0 bg-white shadow-lg rounded-lg py-2 w-96 z-50">
+                                            <li><a href="https://banquanlyditichtravinh.vn/cap-quoc-gia/di-tich-phuoc-minh-cung/" class="block px-4 py-2 hover:bg-gray-100">Di tích Phước Minh Cung (Chùa Ông)</a></li>
+                                            <li><a href="https://banquanlyditichtravinh.vn/cap-quoc-gia/di-tich-chua-ang/" class="block px-4 py-2 hover:bg-gray-100">Di tích chùa Âng</a></li>
+                                            <li><a href="https://banquanlyditichtravinh.vn/cap-quoc-gia/di-tich-ao-ba-om/" class="block px-4 py-2 hover:bg-gray-100">Di tích Ao Bà Om</a></li>
+                                            <li><a href="https://banquanlyditichtravinh.vn/cap-quoc-gia/di-tich-chua-kom-pong/" class="block px-4 py-2 hover:bg-gray-100">Di tích Chùa Kom Pong (Chùa Ông Mẹt)</a></li>
+                                            <li><a href="https://banquanlyditichtravinh.vn/cap-quoc-gia/di-tich-den-tho-chu-tich-ho-chi-minh/" class="block px-4 py-2 hover:bg-gray-100">Di tích Đền thờ Chủ tịch Hồ Chí Minh</a></li>
+                                            <li><a href="https://banquanlyditichtravinh.vn/cap-quoc-gia/di-tich-dinh-long-duc/" class="block px-4 py-2 hover:bg-gray-100">Di tích Đình Long Đức (Thành Hoàng Miếu)</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="relative group/sub">
+                                        <a href="https://banquanlyditichtravinh.vn/cap-quoc-gia/huyen-cang-long-cap-quoc-gia/" class="block px-4 py-2 hover:bg-gray-100">Huyện Càng Long</a>
+                                        <ul class="hidden group-hover/sub:block absolute left-full top-0 bg-white shadow-lg rounded-lg py-2 w-96 z-50">
+                                            <li><a href="https://banquanlyditichtravinh.vn/cap-quoc-gia/di-tich-chi-bo-an-truong/" class="block px-4 py-2 hover:bg-gray-100">Di tích Nơi thành lập Chi bộ An Trường</a></li>
+                                            <li><a href="https://banquanlyditichtravinh.vn/cap-quoc-gia/chua-py-sey-va-ra-ram/" class="block px-4 py-2 hover:bg-gray-100">Chùa PY-SEY VA-RA-RAM (Chùa Ba Sy)</a></li>
+                                            <li><a href="https://banquanlyditichtravinh.vn/cap-quoc-gia/di-tich-chua-bodhiculamani/" class="block px-4 py-2 hover:bg-gray-100">Di tích Chùa BODHICULÀMANI (Chùa Ấp Sóc)</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="relative group/sub">
+                                        <a href="https://banquanlyditichtravinh.vn/cap-quoc-gia/huyen-cau-ke-cap-quoc-gia/" class="block px-4 py-2 hover:bg-gray-100">Huyện Cầu Kè</a>
+                                        <ul class="hidden group-hover/sub:block absolute left-full top-0 bg-white shadow-lg rounded-lg py-2 w-96 z-50">
+                                            <li><a href="https://banquanlyditichtravinh.vn/cap-quoc-gia/di-tich-minh-duc-cung/" class="block px-4 py-2 hover:bg-gray-100">Di tích Minh Đức Cung (Chùa Ông Bổn)</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="relative group/sub">
+                                        <a href="https://banquanlyditichtravinh.vn/cap-quoc-gia/huyen-cau-ngang-cap-quoc-gia/" class="block px-4 py-2 hover:bg-gray-100">Huyện Cầu Ngang</a>
+                                        <ul class="hidden group-hover/sub:block absolute left-full top-0 bg-white shadow-lg rounded-lg py-2 w-96 z-50">
+                                            <li><a href="https://banquanlyditichtravinh.vn/cap-quoc-gia/di-tich-chua-giac-linh/" class="block px-4 py-2 hover:bg-gray-100">Di tích Chùa Giác Linh</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="relative group/sub">
+                                        <a href="https://banquanlyditichtravinh.vn/cap-quoc-gia/huyen-chau-thanh-cap-quoc-gia/" class="block px-4 py-2 hover:bg-gray-100">Huyện Châu Thành</a>
+                                        <ul class="hidden group-hover/sub:block absolute left-full top-0 bg-white shadow-lg rounded-lg py-2 w-96 z-50">
+                                            <li><a href="https://banquanlyditichtravinh.vn/cap-quoc-gia/dia-diem-bo-luy-chua-lo-gach/" class="block px-4 py-2 hover:bg-gray-100">Địa điểm Bờ Lũy – Chùa Lò Gạch</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="relative group/sub">
+                                        <a href="https://banquanlyditichtravinh.vn/cap-quoc-gia/huyen-tra-cu-cap-quoc-gia/" class="block px-4 py-2 hover:bg-gray-100">Huyện Trà Cú</a>
+                                        <ul class="hidden group-hover/sub:block absolute left-full top-0 bg-white shadow-lg rounded-lg py-2 w-96 z-50">
+                                            <li><a href="https://banquanlyditichtravinh.vn/cap-quoc-gia/di-tich-luu-cu-ii/" class="block px-4 py-2 hover:bg-gray-100">Di tích Lưu Cừ II</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="relative group/sub">
+                                        <a href="https://banquanlyditichtravinh.vn/cap-quoc-gia/huyen-duyen-hai-cap-quoc-gia/" class="block px-4 py-2 hover:bg-gray-100">Huyện Duyên Hải</a>
+                                        <ul class="hidden group-hover/sub:block absolute left-full top-0 bg-white shadow-lg rounded-lg py-2 w-96 z-50">
+                                            <li><a href="https://banquanlyditichtravinh.vn/cap-quoc-gia/di-tich-chua-ta-lon/" class="block px-4 py-2 hover:bg-gray-100">Di tích Chùa Ta Lôn (Cái Cối)</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="relative group/sub">
+                                        <a href="https://banquanlyditichtravinh.vn/cap-quoc-gia/thi-xa-duyen-hai-cap-quoc-gia/" class="block px-4 py-2 hover:bg-gray-100">Thị xã Duyên Hải</a>
+                                        <ul class="hidden group-hover/sub:block absolute left-full top-0 bg-white shadow-lg rounded-lg py-2 w-96 z-50">
+                                            <li><a href="https://banquanlyditichtravinh.vn/cap-quoc-gia/di-tich-ben-tiep-nhan-vu-khi/" class="block px-4 py-2 hover:bg-gray-100">Di tích Bến tiếp nhận vũ khí Cồn Tàu</a></li>
+                                            <li><a href="https://banquanlyditichtravinh.vn/cap-quoc-gia/di-tich-dinh-mieu-con-trung/" class="block px-4 py-2 hover:bg-gray-100">Di tích Đình miếu Cồn Trứng</a></li>
+                                            <li><a href="https://banquanlyditichtravinh.vn/cap-quoc-gia/di-tich-lang-ong-con-tau/" class="block px-4 py-2 hover:bg-gray-100">Di tích Lăng Ông Cồn Tàu</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="relative group">
+                                <a href="di-tich-tinh.html" class="block hover:text-blue-600 transition-colors">Di Tích Cấp Tỉnh</a>
+                                <ul class="hidden group-hover:block absolute left-0 top-full bg-white shadow-lg rounded-lg py-2 w-64 z-50">
+                                    <li class="relative group/sub">
+                                        <a href="https://banquanlyditichtravinh.vn/cap-tinh/thanh-pho-tra-vinh-cap-tinh/" class="block px-4 py-2 hover:bg-gray-100">Thành phố Trà Vinh</a>
+                                        <ul class="hidden group-hover/sub:block absolute left-full top-0 bg-white shadow-lg rounded-lg py-2 w-96 z-50">
+                                            <li><a href="https://banquanlyditichtravinh.vn/cap-tinh/di-tich-mieu-tien-vang-mieu-tien-su/" class="block px-4 py-2 hover:bg-gray-100">Di tích Miếu Tiền Vãng (Miếu Tiên Sư)</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="relative group/sub">
+                                        <a href="https://banquanlyditichtravinh.vn/cap-tinh/huyen-cang-long-cap-tinh/" class="block px-4 py-2 hover:bg-gray-100">Huyện Càng Long</a>
+                                        <ul class="hidden group-hover/sub:block absolute left-full top-0 bg-white shadow-lg rounded-lg py-2 w-96 z-50">
+                                            <li><a href="https://banquanlyditichtravinh.vn/cap-tinh/di-tich-dinh-phu-duc/" class="block px-4 py-2 hover:bg-gray-100">Di tích Đình Phú Đức</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="relative group/sub">
+                                        <a href="https://banquanlyditichtravinh.vn/cap-tinh/huyen-cau-ke-cap-tinh/" class="block px-4 py-2 hover:bg-gray-100">Huyện Cầu Kè</a>
+                                        <ul class="hidden group-hover/sub:block absolute left-full top-0 bg-white shadow-lg rounded-lg py-2 w-96 z-50">
+                                            <li><a href="https://banquanlyditichtravinh.vn/cap-tinh/di-tich-thanh-tinh-thanh-long-trang-vo/" class="block px-4 py-2 hover:bg-gray-100">Di tích Thánh tịnh Thanh Long Tràng Võ</a></li>
+                                            <li><a href="https://banquanlyditichtravinh.vn/cap-tinh/di-tich-chua-o-mich/" class="block px-4 py-2 hover:bg-gray-100">Di tích Chùa Ô Mịch</a></li>
+                                            <li><a href="https://banquanlyditichtravinh.vn/cap-tinh/di-tich-nha-huynh-ky-nha-co-cau-ke/" class="block px-4 py-2 hover:bg-gray-100">Di tích Nhà Huỳnh Kỳ (Nhà cổ Cầu Kè)</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="relative group/sub">
+                                        <a href="https://banquanlyditichtravinh.vn/cap-tinh/huyen-cau-ngang-cap-tinh/" class="block px-4 py-2 hover:bg-gray-100">Huyện Cầu Ngang</a>
+                                        <ul class="hidden group-hover/sub:block absolute left-full top-0 bg-white shadow-lg rounded-lg py-2 w-96 z-50">
+                                            <li><a href="https://banquanlyditichtravinh.vn/cap-tinh/huyen-cau-ngang-cap-tinh/di-tich-dinh-than-long-ha%cc%a3u-thuo%cc%a3ng/" class="block px-4 py-2 hover:bg-gray-100">Di tích Đình Thần Long Hậu thượng</a></li>
+                                            <li><a href="https://banquanlyditichtravinh.vn/cap-tinh/di-tich-dong-khoi-my-long/" class="block px-4 py-2 hover:bg-gray-100">Di tích Đồng Khởi Mỹ Long</a></li>
+                                            <li><a href="https://banquanlyditichtravinh.vn/cap-tinh/di-tich-dinh-minh-thuan/" class="block px-4 py-2 hover:bg-gray-100">Di tích Đình Minh Thuận</a></li>
+                                            <li><a href="https://banquanlyditichtravinh.vn/cap-tinh/di-tich-chua-vel-lac-lac-hoa/" class="block px-4 py-2 hover:bg-gray-100">Di tích Chùa Vel Lac (Lạc Hòa)</a></li>
+                                            <li><a href="https://banquanlyditichtravinh.vn/cap-tinh/di-tich-chua-can-snom-can-nom/" class="block px-4 py-2 hover:bg-gray-100">Di tích Chùa Can Snom (Căn Nom)</a></li>
+                                            <li><a href="https://banquanlyditichtravinh.vn/cap-tinh/di-tich-phuoc-my-chua-ba-so/" class="block px-4 py-2 hover:bg-gray-100">Di tích Phước Mỹ (Chùa Bà Sở)</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="relative group/sub">
+                                        <a href="https://banquanlyditichtravinh.vn/cap-tinh/huyen-chau-thanh-cap-tinh/" class="block px-4 py-2 hover:bg-gray-100">Huyện Châu Thành</a>
+                                        <ul class="hidden group-hover/sub:block absolute left-full top-0 bg-white shadow-lg rounded-lg py-2 w-96 z-50">
+                                            <li><a href="https://banquanlyditichtravinh.vn/cap-tinh/di-tich-dinh-an-my-dinh-ba-tram/" class="block px-4 py-2 hover:bg-gray-100">Di tích Đình An Mỹ (Đình Bà Trầm)</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="relative group/sub">
+                                        <a href="https://banquanlyditichtravinh.vn/cap-tinh/huyen-tra-cu-cap-tinh/" class="block px-4 py-2 hover:bg-gray-100">Huyện Trà Cú</a>
+                                        <ul class="hidden group-hover/sub:block absolute left-full top-0 bg-white shadow-lg rounded-lg py-2 w-96 z-50">
+                                            <li><a href="https://banquanlyditichtravinh.vn/cap-tinh/di-tich-chua-chong-bat/" class="block px-4 py-2 hover:bg-gray-100">Di tích Chùa Chông Bát</a></li>
+                                            <li><a href="https://banquanlyditichtravinh.vn/cap-tinh/chua-phno-om-pung-chua-long-truong/" class="block px-4 py-2 hover:bg-gray-100">Chùa Phnô Om Pung (Chùa Long Trường)</a></li>
+                                            <li><a href="https://banquanlyditichtravinh.vn/cap-tinh/chua-chroy-ton-sa-chua-bai-xao-giua/" class="block px-4 py-2 hover:bg-gray-100">Chùa Chrôi Tansa (Chùa Bãi Xào Giữa)</a></li>
+                                            <li><a href="https://banquanlyditichtravinh.vn/cap-tinh/di-tich-chua-long-thanh/" class="block px-4 py-2 hover:bg-gray-100">Di tích Chùa Long Thành</a></li>
+                                            <li><a href="https://banquanlyditichtravinh.vn/cap-tinh/di-tich-chua-phno-sanke-thmay-chua-me-lang/" class="block px-4 py-2 hover:bg-gray-100">Di tích Chùa Phnô Sanke Thmây (Chùa Mé Láng)</a></li>
+                                            <li><a href="https://banquanlyditichtravinh.vn/cap-tinh/di-tich-chua-krapoumchhouk-chral-chua-cha/" class="block px-4 py-2 hover:bg-gray-100">Di tích Chùa Krapoumchhouk Chral Char (CHÙA CHÀ)</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="relative group/sub">
+                                        <a href="https://banquanlyditichtravinh.vn/cap-tinh/huyen-duyen-hai-cap-tinh/" class="block px-4 py-2 hover:bg-gray-100">Huyện Duyên Hải</a>
+                                        <ul class="hidden group-hover/sub:block absolute left-full top-0 bg-white shadow-lg rounded-lg py-2 w-96 z-50">
+                                            <li><a href="https://banquanlyditichtravinh.vn/cap-tinh/di-tich-dinh-khanh-hung/" class="block px-4 py-2 hover:bg-gray-100">Di tích Đình Khánh Hưng</a></li>
+                                            <li><a href="https://banquanlyditichtravinh.vn/cap-tinh/di-tich-ban-an-ninh-tinh-tra-vinh/" class="block px-4 py-2 hover:bg-gray-100">Di tích Ban An ninh tỉnh Trà Vinh</a></li>
+                                            <li><a href="https://banquanlyditichtravinh.vn/cap-tinh/di-tich-chua-satharam-van-ta-rom-chua-ta-rom/" class="block px-4 py-2 hover:bg-gray-100">Di tích Chùa Satharam Van Ta Rom (Chùa Tà Rom)</a></li>
+                                            <li><a href="https://banquanlyditichtravinh.vn/cap-tinh/di-tich-chua-bao-mon/" class="block px-4 py-2 hover:bg-gray-100">Di tích Chùa Bào Môn</a></li>
+                                            <li><a href="https://banquanlyditichtravinh.vn/cap-tinh/di-tich-chua-sattharinadi-pro-khup-chua-tra-khup/" class="block px-4 py-2 hover:bg-gray-100">Di tích Chùa Sattharinadi Pro Khup (Chùa Trà Khúp)</a></li>
+                                            <li><a href="https://banquanlyditichtravinh.vn/cap-tinh/di-tich-mieu-ba-chua-xu-la-ghi/" class="block px-4 py-2 hover:bg-gray-100">Di tích Miếu Bà Chúa xứ La Ghi</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="relative group/sub">
+                                        <a href="https://banquanlyditichtravinh.vn/cap-tinh/thi-xa-duyen-hai-cap-tinh/" class="block px-4 py-2 hover:bg-gray-100">Thị xã Duyên Hải</a>
+                                        <ul class="hidden group-hover/sub:block absolute left-full top-0 bg-white shadow-lg rounded-lg py-2 w-96 z-50">
+                                            <li><a href="https://banquanlyditichtravinh.vn/cap-tinh/di-tich-dinh-hoi-huu/" class="block px-4 py-2 hover:bg-gray-100">Di tích Đình Hội Hữu</a></li>
+                                            <li><a href="https://banquanlyditichtravinh.vn/cap-tinh/di-tich-dinh-phuoc-loc/" class="block px-4 py-2 hover:bg-gray-100">Di tích Đình Phước Lộc</a></li>
+                                            <li><a href="https://banquanlyditichtravinh.vn/cap-tinh/di-tich-lau-ba-co-hy-thuong-dong-nuong-nuong/" class="block px-4 py-2 hover:bg-gray-100">Di tích Lầu bà Cố Hỷ Thượng Động nương nương</a></li>
+                                            <li><a href="https://banquanlyditichtravinh.vn/cap-tinh/di-tich-can-cu-tinh-uy-tra-vinhcan-cu-giong-gieng/" class="block px-4 py-2 hover:bg-gray-100">Di tích Căn cứ Tỉnh ủy Trà Vinh (Căn cứ Giồng Giếng)</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="dulich.html" class="block hover:text-blue-600 transition-colors">Du Lịch</a></li>
+                            <li><a href="lich-su.html" class="block hover:text-blue-600 transition-colors">Lịch Sử</a></li>
+                            <li><a href="lien-he.html" class="block hover:text-blue-600 transition-colors">Liên Hệ</a></li>
                         </ul>
                     </div>
                 </nav>
+                
                 
                 <!-- Thêm các nút mạng xã hội -->
                 <div class="hidden md:flex space-x-4">
@@ -73,6 +207,7 @@
                      class="absolute top-0 left-0 w-full h-full object-contain opacity-0 transition-opacity duration-700">
             </div>
     
+    
             <!-- Overlay với gradient đẹp hơn -->
             <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-gray-900/70 via-gray-900/50 to-transparent">
                 <div class="p-8 max-w-2xl">
@@ -84,72 +219,94 @@
                     </p>
                     <!-- Thêm nút CTA -->
                     <div class="relative">
-                      <button onclick="toggleContent()" class="mt-8 px-8 py-4 bg-yellow-500 text-black font-bold rounded-full 
-                                   hover:bg-yellow-400 transition-all duration-300 
-                                   transform hover:scale-105 animate-fade-in-delay-2 
-                                   shadow-lg hover:shadow-xl text-lg">
-                          Khám Phá Ngay
-                      </button>
-                      
-                      <!-- Nội dung hiện ra khi click -->
-                      <div id="content" class="absolute left-0 mt-2 w-80 bg-white rounded-lg shadow-xl opacity-0
-                                transition-opacity duration-300 p-4">
-                                <h3 class="text-lg font-semibold text-gray-800 mb-2">Khám Phá Di Sản Trà Vinh</h3>
-                                <ul class="text-gray-600 space-y-2">
-                                    <li class="hover:text-blue-600 cursor-pointer flex items-center justify-between">
-                                        <span>• Di tích lịch sử văn hóa</span>
-                                        <i class="fas fa-chevron-right cursor-pointer" onclick="toggleSubContent('ditich', this)"></i>
-                                        <div id="ditich" class="absolute left-full top-0 ml-2 w-96 bg-white rounded-lg shadow-xl p-4 hidden">
-                                            <h4 class="font-semibold mb-2">Di tích lịch sử văn hóa</h4>
-                                            <p>Khám phá các di tích lịch sử như chùa Âng, Ao Bà Om, và nhiều di tích khác mang đậm bản sắc văn hóa Trà Vinh.</p>
-                                        </div>
-                                    </li>
-                                    <li class="hover:text-blue-600 cursor-pointer flex items-center justify-between">
-                                        <span>• Kiến trúc cổ độc đáo</span>
-                                        <i class="fas fa-chevron-right cursor-pointer" onclick="toggleSubContent('kientruc', this)"></i>
-                                        <div id="kientruc" class="absolute left-full top-0 ml-2 w-96 bg-white rounded-lg shadow-xl p-4 hidden">
-                                            <h4 class="font-semibold mb-2">Kiến trúc cổ độc đáo</h4>
-                                            <p>Chiêm ngưỡng những công trình kiến trúc cổ độc đáo mang đậm dấu ấn văn hóa Khmer, Việt, Hoa.</p>
-                                        </div>
-                                    </li>
-                                    <li class="hover:text-blue-600 cursor-pointer flex items-center justify-between">
-                                        <span>• Văn hóa dân tộc đa dạng</span>
-                                        <i class="fas fa-chevron-right cursor-pointer" onclick="toggleSubContent('vanhoa', this)"></i>
-                                        <div id="vanhoa" class="absolute left-full top-0 ml-2 w-96 bg-white rounded-lg shadow-xl p-4 hidden">
-                                            <h4 class="font-semibold mb-2">Văn hóa dân tộc đa dạng</h4>
-                                            <p>Tìm hiểu về văn hóa đa dạng của các dân tộc Khmer, Kinh, Hoa cùng chung sống tại Trà Vinh.</p>
-                                        </div>
-                                    </li>
-                                    <li class="hover:text-blue-600 cursor-pointer flex items-center justify-between">
-                                        <span>• Lễ hội truyền thống</span>
-                                        <i class="fas fa-chevron-right cursor-pointer" onclick="toggleSubContent('lehoi', this)"></i>
-                                        <div id="lehoi" class="absolute left-full top-0 ml-2 w-96 bg-white rounded-lg shadow-xl p-4 hidden">
-                                            <h4 class="font-semibold mb-2">Lễ hội truyền thống</h4>
-                                            <p>Khám phá các lễ hội truyền thống đặc sắc như Ok Om Bok, Sene Dolta và nhiều lễ hội văn hóa khác.</p>
-                                        </div>
-                                    </li>
-                                </ul>
+                        <button onclick="toggleContent()" class="mt-8 px-8 py-4 bg-yellow-500 text-black font-bold rounded-full 
+                                     hover:bg-yellow-400 transition-all duration-300 
+                                     transform hover:scale-105 animate-fade-in-delay-2 
+                                     shadow-lg hover:shadow-xl text-lg">
+                            Khám Phá Ngay
+                        </button>
+                        
+                        <!-- Nội dung hiện ra khi click -->
+                        <div id="content" class="absolute left-0 mt-2 w-80 bg-white rounded-lg shadow-xl opacity-0
+                                  transition-opacity duration-300 p-4">
+                                  <h3 class="text-lg font-semibold text-gray-800 mb-2">Khám Phá Di Sản Trà Vinh</h3>
+                                  <ul class="text-gray-600 space-y-2">
+                                      <li class="hover:text-blue-600 cursor-pointer flex items-center justify-between">
+                                          <span>• Di tích lịch sử văn hóa</span>
+                                          <i class="fas fa-chevron-right cursor-pointer" onclick="toggleSubContent('ditich', this)"></i>
+                                          <div id="ditich" class="absolute left-full top-0 ml-2 w-96 bg-white rounded-lg shadow-xl p-4 hidden">
+                                              <h4 class="font-semibold mb-2">Di tích lịch sử văn hóa</h4>
+                                              <p>Khám phá các di tích lịch sử như chùa Âng, Ao Bà Om, và nhiều di tích khác mang đậm bản sắc văn hóa Trà Vinh.</p>
+                                          </div>
+                                      </li>
+                                      <li class="hover:text-blue-600 cursor-pointer flex items-center justify-between">
+                                          <span>• Kiến trúc cổ độc đáo</span>
+                                          <i class="fas fa-chevron-right cursor-pointer" onclick="toggleSubContent('kientruc', this)"></i>
+                                          <div id="kientruc" class="absolute left-full top-0 ml-2 w-96 bg-white rounded-lg shadow-xl p-4 hidden">
+                                              <h4 class="font-semibold mb-2">Kiến trúc cổ độc đáo</h4>
+                                              <p>Chiêm ngưỡng những công trình kiến trúc cổ độc đáo mang đậm dấu ấn văn hóa Khmer, Việt, Hoa.</p>
+                                          </div>
+                                      </li>
+                                      <li class="hover:text-blue-600 cursor-pointer flex items-center justify-between">
+                                          <span>• Văn hóa dân tộc đa dạng</span>
+                                          <i class="fas fa-chevron-right cursor-pointer" onclick="toggleSubContent('vanhoa', this)"></i>
+                                          <div id="vanhoa" class="absolute left-full top-0 ml-2 w-96 bg-white rounded-lg shadow-xl p-4 hidden">
+                                              <h4 class="font-semibold mb-2">Văn hóa dân tộc đa dạng</h4>
+                                              <p>Tìm hiểu về văn hóa đa dạng của các dân tộc Khmer, Kinh, Hoa cùng chung sống tại Trà Vinh.</p>
+                                          </div>
+                                      </li>
+                                      <li class="hover:text-blue-600 cursor-pointer flex items-center justify-between">
+                                          <span>• Lễ hội truyền thống</span>
+                                          <i class="fas fa-chevron-right cursor-pointer" onclick="toggleSubContent('lehoi', this)"></i>
+                                          <div id="lehoi" class="absolute left-full top-0 ml-2 w-96 bg-white rounded-lg shadow-xl p-4 hidden">
+                                              <h4 class="font-semibold mb-2">Lễ hội truyền thống</h4>
+                                              <p>Khám phá các lễ hội truyền thống đặc sắc như Ok Om Bok, Sene Dolta và nhiều lễ hội văn hóa khác.</p>
+                                          </div>
+                                      </li>
+                                  </ul>
+                        </div>
+                        <script>
+                            function toggleSubContent(id, icon) {
+                                const content = document.getElementById(id);
+                                const allContents = document.querySelectorAll('[id^="ditich"], [id^="kientruc"], [id^="vanhoa"], [id^="lehoi"]');
+                                
+                                // Ẩn tất cả các nội dung khác
+                                allContents.forEach(item => {
+                                    if(item.id !== id) {
+                                        item.classList.add('hidden');
+                                    }
+                                });
+                                
+                                // Hiển thị/ẩn nội dung được chọn
+                                content.classList.toggle('hidden');
+                            }
+                            </script>
+  
+                          
+                          <script>
+                              function toggleContent() {
+                                  const content = document.getElementById('content');
+                                  if(content.style.opacity === '1') {
+                                      content.style.opacity = '0';
+                                      content.style.pointerEvents = 'none';
+                                  } else {
+                                      content.style.opacity = '1';
+                                      content.style.pointerEvents = 'auto';
+                                  }
+                              }
+                          </script>
                       </div>
-              <script>
-                  function toggleContent() {
-                      const content = document.getElementById('content');
-                      content.style.opacity = content.style.opacity === '1' ? '0' : '1';
-                      content.style.pointerEvents = content.style.opacity === '1' ? 'auto' : 'none';
-                  }
-              </script>
+                  </div>
               </div>
+      
+              <!-- Thêm điều khiển slideshow -->
+              <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+                  <button class="w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-colors"></button>
+                  <button class="w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-colors"></button>
+                  <button class="w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-colors"></button>
               </div>
-              </div>
-    
-            <!-- Thêm điều khiển slideshow -->
-            <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
-                <button class="w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-colors"></button>
-                <button class="w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-colors"></button>
-                <button class="w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-colors"></button>
-            </div>
-        </div>
-    </div>
-    
+          </div>
+      </div>
     <!-- Thêm script cho slideshow và đồng hồ -->
     <script>
     document.addEventListener('DOMContentLoaded', function() {
@@ -202,97 +359,202 @@
         to { opacity: 1; transform: translateY(0); }
     }
     </style>
-                <div class="relative">
-                    <input type="text" placeholder="Tìm kiếm..." class="bg-white text-gray-800 rounded-full py-2 px-4 focus:outline-none">
-                    <button class="absolute right-0 top-0 mt-2 mr-3">
-                        <i class="fas fa-search text-gray-600"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </nav>
-
-
+    </style>
         <div class="container mx-auto px-4 py-8">
             <section id="lich-su" class="mt-4">
                 <h2 class="text-4xl font-bold text-brown-600 mb-8 text-center animate-fade-in" style="color: #8B4513;">Lịch sử phát triển di tích tỉnh Trà Vinh</h2>
-                <p class="text-gray-700 mb-8 text-lg leading-relaxed max-w-3xl mx-auto text-center animate-fade-in-delay">Trà Vinh có lịch sử lâu đời với sự hiện diện của nhiều dân tộc, trong đó có người Kinh, người Khmer và người Hoa. Sự đa dạng văn hóa này đã để lại nhiều di tích lịch sử quý giá trên vùng đất Trà Vinh.</p>
+                <p style="font-size: 1.2rem;"class="text-gray-700 mb-8 text-lg leading-relaxed max-w-3xl mx-auto text-center animate-fade-in-delay">Trà Vinh có lịch sử lâu đời với sự hiện diện của nhiều dân tộc, trong đó có người Kinh, người Khmer và người Hoa. Sự đa dạng văn hóa này đã để lại nhiều di tích lịch sử quý giá trên vùng đất Trà Vinh.</p>
                 
                 <div class="bg-white rounded-lg shadow-lg p-8 mb-12 hover:shadow-2xl transition duration-300 animate-fade-in-delay-2">
-                    <h3 class="text-3xl font-semibold text-blue-700 mb-6 text-center">Sự phát triển của di tích tỉnh Trà Vinh qua các thời kỳ</h3>
+                    <h3 class="text-3xl font-semibold text-blue-700 mb-6 text-center">Sự phát triển di tích qua các thời kỳ</h3>
                     
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <div class="bg-gray-50 p-6 rounded-lg hover:bg-gray-100 transition duration-300 transform hover:-translate-y-1">
-                            <h4 class="text-2xl font-semibold text-green-700 mb-4">Thời kỳ cổ đại đến thế kỷ 17</h4>
+                   
+                    <div class="flex flex-col items-start border border-gray-200 p-4"> <!-- Thêm lớp border và padding -->
+                        <div class="bg-gray-50 p-6 rounded-lg hover:bg-gray-100 transition duration-300 transform hover:-translate-y-1 mb-4 border border-blue-500">
+                            <h4 style="font-size: 2.0rem;" class="text-xl font-bold mb-6 pb-2 inline-block border-b-2 border-blue-600">
+                                <a href="https://vi.wikipedia.org/wiki/Th%E1%BA%BF_k%E1%BB%B7_17" target="_blank" class="text-red-600 hover:underline">
+                                    Thời kỳ cổ đại đến thế kỷ 17
+                                </a>
+                            </h4>
                             <ul class="list-disc list-inside text-gray-700 space-y-3">
-                                <li class="hover:text-green-600 transition duration-200">Hình thành các di tích thuộc văn hóa Óc Eo và Phù Nam</li>
-                                <li class="hover:text-green-600 transition duration-200">Xây dựng nhiều ngôi chùa Khmer cổ như Chùa Âng, Chùa Kom Pong</li>
-                                <li class="hover:text-green-600 transition duration-200">Hình thành các di chỉ khảo cổ quan trọng</li>
+                                <li style="font-size: 1.2rem;"class="hover:text-green-600 transition duration-200">Hình thành các di tích thuộc văn hóa Óc Eo và Phù Nam</li>
+                                <li style="font-size: 1.2rem;"class="hover:text-green-600 transition duration-200">Xây dựng nhiều ngôi chùa Khmer cổ như Chùa Âng, Chùa Kom Pong</li>
+                                <li style="font-size: 1.2rem;"class="hover:text-green-600 transition duration-200">Hình thành các di chỉ khảo cổ quan trọng</li>
                             </ul>
-                        </div>
-                        
-                        <div class="bg-gray-50 p-6 rounded-lg hover:bg-gray-100 transition duration-300 transform hover:-translate-y-1">
-                            <h4 class="text-2xl font-semibold text-green-700 mb-4">Thời kỳ Nam tiến (thế kỷ 17-18)</h4>
+                        <div class="bg-gray-50 p-6 rounded-lg hover:bg-gray-100 transition duration-300 transform hover:-translate-y-1 mb-4">
+                            <h4 style="font-size: 2.0rem;" class="text-xl font-bold mb-6 pb-2 inline-block border-b-2 border-blue-600">
+                                <a href="https://www.coolmate.me/post/di-tich-lich-su-viet-nam-dep-noi-tieng-qua-nam-thang" target="_blank" class="text-blue-600 hover:underline">
+                                    Di tích và văn hóa đặc sắc
+                                </a>
+                            </h4>
+                            <p style="font-size: 1.2rem;"class="text-gray-700 mb-4">Trong thời kỳ này, Trà Vinh đã phát triển mạnh mẽ về văn hóa và kiến trúc, với nhiều di tích lịch sử và kiến trúc tiêu biểu. Dưới đây là một số di tích nổi bật:</p>
                             <ul class="list-disc list-inside text-gray-700 space-y-3">
-                                <li class="hover:text-green-600 transition duration-200">Xây dựng các đình làng, miếu thờ của người Việt</li>
-                                <li class="hover:text-green-600 transition duration-200">Hình thành các khu định cư mới, tạo nên nhiều di tích lịch sử</li>
-                                <li class="hover:text-green-600 transition duration-200">Phát triển các ngôi chùa Phật giáo Nam tông</li>
+                                <li style="font-size: 1.2rem;"class="hover:text-green-600 transition duration-200">Di tích Chùa Hang: Nổi tiếng với kiến trúc độc đáo và phong cảnh thiên nhiên hữu tình.</li>
+                                <li style="font-size: 1.2rem;"class="hover:text-green-600 transition duration-200">Di tích Trà Vinh: Là nơi lưu giữ nhiều tài liệu lịch sử quan trọng về sự phát triển của vùng đất này.</li>
+                                <li style="font-size: 1.2rem;"class="hover:text-green-600 transition duration-200">Di tích Đình Thần: Là nơi thờ phụng các vị thần và tổ tiên của người dân địa phương.</li>
                             </ul>
-                        </div>
-
-                        <div class="bg-gray-50 p-6 rounded-lg hover:bg-gray-100 transition duration-300 transform hover:-translate-y-1">
-                            <h4 class="text-2xl font-semibold text-green-700 mb-4">Thời kỳ Pháp thuộc (1867-1954)</h4>
-                            <ul class="list-disc list-inside text-gray-700 space-y-3">
-                                <li class="hover:text-green-600 transition duration-200">Xây dựng các công trình kiến trúc theo phong cách Pháp</li>
-                                <li class="hover:text-green-600 transition duration-200">Hình thành các di tích liên quan đến phong trào kháng chiến</li>
-                                <li class="hover:text-green-600 transition duration-200">Bảo tồn và trùng tu một số di tích cổ</li>
-                            </ul>
-                        </div>
-
-                        <div class="bg-gray-50 p-6 rounded-lg hover:bg-gray-100 transition duration-300 transform hover:-translate-y-1">
-                            <h4 class="text-2xl font-semibold text-green-700 mb-4">Thời kỳ hiện đại (từ 1954 đến nay)</h4>
-                            <ul class="list-disc list-inside text-gray-700 space-y-3">
-                                <li class="hover:text-green-600 transition duration-200">Công nhận và xếp hạng nhiều di tích cấp quốc gia và cấp tỉnh</li>
-                                <li class="hover:text-green-600 transition duration-200">Đầu tư trùng tu, tôn tạo các di tích quan trọng</li>
-                                <li class="hover:text-green-600 transition duration-200">Phát triển du lịch văn hóa gắn với hệ thống di tích</li>
-                                <li class="hover:text-green-600 transition duration-200">Nghiên cứu, bảo tồn và phát huy giá trị di sản văn hóa</li>
-                            </ul>
+                            <p style="font-size: 1.2rem;"class="text-gray-700 mt-4">Bên cạnh đó, các lễ hội truyền thống cũng được tổ chức thường xuyên, tạo nên không khí văn hóa sôi động và hấp dẫn cho địa phương.</p>
                         </div>
                     </div>
-                </div>
+                    <div class="bg-gray-50 p-6 rounded-lg hover:bg-gray-100 transition duration-300 transform hover:-translate-y-1 border border-blue-500">
+                        <h4 style="font-size: 2.0rem;" class="text-xl font-bold mb-6 pb-2 inline-block border-b-2 border-blue-600">
+                            <a href="https://vi.wikipedia.org/wiki/Nam_ti%E1%BA%BFn" target="_blank" class="text-red-600 hover:underline">
+                                Thời kỳ Nam tiến (thế kỷ 17-18)
+                            </a>
+                        </h4>
+                        <ul class="list-disc list-inside text-gray-700 space-y-3">
+                            <li style="font-size: 1.2rem;"class="hover:text-green-600 transition duration-200">Xây dựng các đình làng, miếu thờ của người Việt</li>
+                            <li style="font-size: 1.2rem;"class="hover:text-green-600 transition duration-200">Hình thành các khu định cư mới, tạo nên nhiều di tích lịch sử</li>
+                            <li style="font-size: 1.2rem;"class="hover:text-green-600 transition duration-200">Phát triển các ngôi chùa Phật giáo Nam tông</li>
+                        </ul>
+                        <h4 style="font-size: 2.0rem;" class="text-xl font-bold mb-6 pb-2 inline-block border-b-2 border-blue-600">
+                            <a href="https://www.coolmate.me/post/di-tich-lich-su-viet-nam-dep-noi-tieng-qua-nam-thang" target="_blank" class="text-blue-600 hover:underline">
+                                Di tích nổi bậc
+                            </a>
+                        </h4>
+                        <p style="font-size: 1.2rem;"class="text-gray-700 mb-4">Trong thời kỳ này, nhiều di tích lịch sử quan trọng đã được xây dựng, phản ánh sự phát triển của cộng đồng người Việt tại miền Nam. Một số di tích nổi bật bao gồm:</p>
+                        <ul class="list-disc list-inside text-gray-700 space-y-3">
+                            <li style="font-size: 1.2rem;"style="font-size: 1.2rem;"class="hover:text-green-600 transition duration-200">Đình Bình Thủy: Nơi thờ phụng các vị thần và tổ tiên, là trung tâm sinh hoạt văn hóa của người dân địa phương.</li>
+                            <li style="font-size: 1.2rem;"class="hover:text-green-600 transition duration-200">Miếu Thờ Bà Chúa Xứ: Nơi thờ cúng rất linh thiêng, thu hút đông đảo du khách và người dân đến cầu nguyện.</li>
+                            <li style="font-size: 1.2rem;"class="hover:text-green-600 transition duration-200">Chùa Vĩnh Tràng: Một trong những ngôi chùa nổi tiếng nhất ở miền Tây, với kiến trúc độc đáo và phong cảnh hữu tình.</li>
+                        </ul>
+                        <p style="font-size: 1.2rem;"class="text-gray-700 mt-4">Sự phát triển của các di tích này không chỉ thể hiện sự phát triển của văn hóa mà còn góp phần quan trọng vào việc giữ gìn bản sắc văn hóa của người Việt tại miền Nam.</p>
+                    </div>
 
-                <p class="text-gray-700 mb-4 animate-fade-in-delay">Hiện nay, Trà Vinh có 18 di tích cấp quốc gia và hơn 30 di tích cấp tỉnh, bao gồm đa dạng các loại hình như chùa Khmer, đình miếu, nhà cổ, di tích lịch sử cách mạng. Việc bảo tồn và phát huy giá trị các di tích này đang được tỉnh Trà Vinh chú trọng, góp phần quan trọng vào việc giữ gìn bản sắc văn hóa và phát triển du lịch của địa phương.</p>
-            </section>
-
-            <footer class="bg-gray-800 text-white mt-12 py-8">
-                <div class="container mx-auto px-4">
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        <div class="hover:transform hover:scale-105 transition duration-300">
-                            <h4 class="text-lg font-bold mb-4">Liên hệ</h4>
-                            <p class="hover:text-blue-400 transition duration-200">Email: 110122115@st.tvu.edu.vn</p>
-                            <p class="hover:text-blue-400 transition duration-200">Điện thoại: 0366058110</p>
+                    <div class="bg-gray-50 p-6 rounded-lg hover:bg-gray-100 transition duration-300 transform hover:-translate-y-1 border border-blue-500">
+                        <h4 style="font-size: 2.0rem;" class="text-xl font-bold mb-6 pb-2 inline-block border-b-2 border-blue-600">
+                            <a href="https://vi.wikipedia.org/wiki/Ph%C3%A1p_thu%E1%BB%99c" target="_blank" class="text-red-600 hover:underline">
+                                Thời kỳ Pháp thuộc (1867-1954)
+                            </a>
+                        </h4>
+                        <ul class="list-disc list-inside text-gray-700 space-y-3">
+                            <li style="font-size: 1.2rem;"class="hover:text-green-600 transition duration-200">Xây dựng các công trình kiến trúc theo phong cách Pháp</li>
+                            <li style="font-size: 1.2rem;"class="hover:text-green-600 transition duration-200">Hình thành các di tích liên quan đến phong trào kháng chiến</li>
+                            <li style="font-size: 1.2rem;"class="hover:text-green-600 transition duration-200">Bảo tồn và trùng tu một số di tích cổ</li>
+                        </ul>
+                        <h4 style="font-size: 2.0rem;" class="text-xl font-bold mb-6 pb-2 inline-block border-b-2 border-blue-600">
+                            <a href="https://www.coolmate.me/post/di-tich-lich-su-viet-nam-dep-noi-tieng-qua-nam-thang" target="_blank" class="text-blue-600 hover:underline">
+                               Công trình và kiến trúc tiêu biểu
+                            </a>
+                        </h4>
+                        <p style="font-size: 1.2rem;"class="text-gray-700 mb-4">Trong thời kỳ này, nhiều công trình kiến trúc nổi bật đã được xây dựng, phản ánh sự giao thoa văn hóa giữa Pháp và Việt Nam. Một số công trình tiêu biểu bao gồm:</p>
+                        <ul class="list-disc list-inside text-gray-700 space-y-3">
+                            <li style="font-size: 1.2rem;"class="hover:text-green-600 transition duration-200">Nhà thờ lớn Sài Gòn: Một trong những biểu tượng kiến trúc của thành phố, thể hiện phong cách Gothic đặc trưng.</li>
+                            <li style="font-size: 1.2rem;"class="hover:text-green-600 transition duration-200">Bến Nhà Rồng: Nơi khởi đầu cuộc đời hoạt động cách mạng của Chủ tịch Hồ Chí Minh, hiện nay là một di tích lịch sử quan trọng.</li>
+                            <li style="font-size: 1.2rem;"class="hover:text-green-600 transition duration-200">Công viên Tao Đàn: Một không gian xanh giữa lòng thành phố, nơi diễn ra nhiều hoạt động văn hóa và giải trí.</li>
+                        </ul>
+                        <p style="font-size: 1.2rem;"class="text-gray-700 mt-4">Thời kỳ này không chỉ ghi dấu ấn bằng các công trình kiến trúc mà còn là thời kỳ hình thành nhiều phong trào yêu nước, góp phần vào cuộc đấu tranh giành độc lập sau này.</p>
+                    </div>
+                        <div class="bg-gray-50 p-6 rounded-lg hover:bg-gray-100 transition duration-300 transform hover:-translate-y-1 border border-blue-500">
+                            <h4 style="font-size: 2.0rem;" class="text-xl font-bold mb-6 pb-2 inline-block border-b-2 border-blue-600">
+                                <a href="https://vi.wikipedia.org/wiki/L%E1%BB%8Bch_s%E1%BB%AD_Vi%E1%BB%87t_Nam" target="_blank" class="text-red-600 hover:underline">
+                                    Thời kỳ hiện đại (1945 đến nay)
+                                </a>
+                            </h4>
+                         <ul class="list-disc list-inside text-gray-700 space-y-3">
+                          <li style="font-size: 1.2rem;"class="hover:text-green-600 transition duration-200">Công nhận và xếp hạng nhiều di tích cấp quốc gia và cấp tỉnh</li>
+                           <li style="font-size: 1.2rem;"class="hover:text-green-600 transition duration-200">Đầu tư trùng tu, tôn tạo các di tích quan trọng</li>
+                          <li style="font-size: 1.2rem;"class="hover:text-green-600 transition duration-200">Phát triển du lịch văn hóa gắn với hệ thống di tích</li>
+                          <li style="font-size: 1.2rem;"class="hover:text-green-600 transition duration-200">Nghiên cứu, bảo tồn và phát huy giá trị di sản văn hóa</li>
+                        </ul>
+                        <h4 style="font-size: 2.0rem;" class="text-xl font-bold mb-6 pb-2 inline-block border-b-2 border-blue-600">
+                            <a href="https://www.coolmate.me/post/di-tich-lich-su-viet-nam-dep-noi-tieng-qua-nam-thang" target="_blank" class="text-blue-600 hover:underline">
+                                Các hoạt động nổi bậc
+                            </a>
+                        </h4>
+                        <p style="font-size: 1.2rem;"class="text-gray-700 mb-4">Trong thời kỳ hiện đại, nhiều hoạt động đã được triển khai nhằm bảo tồn và phát huy giá trị văn hóa di sản. Một số hoạt động nổi bật bao gồm:</p>
+                        <ul style="font-size: 1.2rem;"class="list-disc list-inside text-gray-700 space-y-3">
+                         <li style="font-size: 1.2rem;"class="hover:text-green-600 transition duration-200">Tổ chức các lễ hội văn hóa truyền thống, góp phần gìn giữ bản sắc văn hóa địa phương.</li>
+                        <li style="font-size: 1.2rem;"class="hover:text-green-600 transition duration-200">Phát triển các chương trình giáo dục về di sản văn hóa cho thế hệ trẻ.</li>
+                        <li style="font-size: 1.2rem;"class="hover:text-green-600 transition duration-200">Hợp tác quốc tế trong việc bảo tồn và phát huy giá trị di sản văn hóa.</li>
+                      </ul>
+                      <section class="bg-white p-4 relative z-10 border border-blue-500">
+                        <h3 style="font-size: 2.0rem;"class="text-lg font-bold mb-4">TIẾP CẬN THÔNG TIN</h3>
+                        <ul class="space-y-2">
+                            <!-- Bạn có thể thêm các mục vào đây nếu cần -->
+                        </ul>
+                        <style>
+                            .custom-text-size {
+                                font-size: 2.25rem; /* Tương đương với 20px */
+                            }
+                        </style>
+                        <p style="font-size: 1.2rem;"class="text-gray-700 mb-4 animate-fade-in-delay">
+                            ----->Hiện nay, Trà Vinh có 18 di tích cấp quốc gia và hơn 30 di tích cấp tỉnh, bao gồm đa dạng các loại hình như chùa Khmer, đình miếu, nhà cổ, di tích lịch sử cách mạng. Việc bảo tồn và phát huy giá trị các di tích này đang được tỉnh Trà Vinh chú trọng, góp phần quan trọng vào việc giữ gìn bản sắc văn hóa và phát triển du lịch của địa phương.
+                        </p>
+                    </section>
+                    
+            <!-- Footer -->
+            <footer class="bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 text-white mt-16 py-12 w-full">
+                <div class="container mx-auto px-6">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                        <div class="transform hover:scale-105 transition-transform duration-300 border-2 border-red-600 rounded-md p-4">
+                            <h4 class="text-xl font-bold mb-6 pb-2 inline-block border-b-2 border-red-600">Liên Hệ</h4>
+                            <div class="space-y-4">
+                                <p class="flex items-center">
+                                    <i class="far fa-envelope mr-3 text-emerald-400"></i>
+                                    <span class="border border-red-600 rounded-md px-1">
+                                        110122115@st.tvu.edu.vn
+                                    </span>
+                                </p>
+                                <p class="flex items-center">
+                                    <i class="fas fa-phone-alt mr-3 text-emerald-400"></i>
+                                    <span class="border border-red-600 rounded-md px-1">
+                                        0366058110
+                                    </span>
+                                </p>
+                            </div>
                         </div>
-                        <div class="hover:transform hover:scale-105 transition duration-300">
-                            <h4 class="text-lg font-bold mb-4">Theo dõi chúng tôi</h4>
-                            <div class="hidden md:flex space-x-4">
-                                <a href="https://www.facebook.com/TraVinhUniversity.TVU?mibextid=JRoKGi" target="_blank" class="text-gray-600 hover:text-blue-600 transition-colors" onclick="window.open(this.href, '_blank'); return false;">
-                                    <i class="fab fa-facebook-square text-2xl"></i>
+                        
+                        <div class="transform hover:scale-105 transition-transform duration-300 border-2 border-red-600 rounded-md p-4">
+                            <h4 class="text-xl font-bold mb-6 pb-2 inline-block border-b-2 border-red-600">Theo Dõi Chúng Tôi</h4>
+                            <div class="flex space-x-6">
+                                <a href="https://www.facebook.com/TraVinhUniversity.TVU?mibextid=JRoKGi" target="_blank" 
+                                   class="text-gray-300 hover:text-blue-500 transition-colors duration-300">
+                                    <i class="fab fa-facebook-square text-3xl"></i>
                                 </a>
-                                <a href="https://www.instagram.com/explore/locations/1017118742/truong-ai-hoc-tra-vinh/" target="_blank" class="text-gray-600 hover:text-pink-600 transition-colors" onclick="window.open(this.href, '_blank'); return false;">
-                                    <i class="fab fa-instagram text-2xl"></i>
+                                <a href="https://www.instagram.com/explore/locations/1017118742/truong-ai-hoc-tra-vinh/" target="_blank"
+                                   class="text-gray-300 hover:text-pink-500 transition-colors duration-300">
+                                    <i class="fab fa-instagram text-3xl"></i>
                                 </a>
-                                <a href="https://youtube.com/@aihoctravinhtvu?si=Mky1izWZ7pXRA9Hs" target="_blank" class="text-gray-600 hover:text-red-600 transition-colors" onclick="window.open(this.href, '_blank'); return false;">
-                                    <i class="fab fa-youtube text-2xl"></i>
+                                <a href="https://youtube.com/@aihoctravinhtvu?si=Mky1izWZ7pXRA9Hs" target="_blank"
+                                   class="text-gray-300 hover:text-red-500 transition-colors duration-300">
+                                    <i class="fab fa-youtube text-3xl"></i>
                                 </a>
                             </div>
                         </div>
-                        <div class="hover:transform hover:scale-105 transition duration-300">
-                            <h4 class="text-lg font-bold mb-4">Địa chỉ</h4>
-                            <p class="hover:text-blue-400 transition duration-200">ấp Trà Sất C, Long Hiệp, Trà Cú, Trà Vinh</p>
+                         <div class="transform hover:scale-105 transition-transform duration-300 border-2 border-red-600 rounded-md p-4">
+                            <h4 class="text-xl font-bold mb-6 pb-2 inline-block border-b-2 border-red-600">
+                                Địa Chỉ
+                            </h4>
+                            <p class="flex items-center">
+                                <i class="fas fa-map-marker-alt mr-3 text-emerald-400"></i>
+                                <span class="border border-red-600 rounded-md px-1">
+                                    ấp Trà Sất C, Long Hiệp, Trà Cú, Trà Vinh
+                                </span>
+                            </p
                         </div>
+                    </div>
+                    
+                    <div class="mt-12 pt-8 border-t border-gray-700 text-2xl">
+                        <p class="text-gray-400">&copy; 2024 Di Tích Trà Vinh. Tất cả quyền được bảo lưu.</p>
                     </div>
                 </div>
             </footer>
         </div>
  </body>
+ <script>
+    // Hàm toggleSubMenu
+    function toggleSubMenu(menuId) {
+        var subMenu = document.getElementById(menuId);
+        var arrow = subMenu.previousElementSibling; // Lấy mũi tên gần nhất (là <span>)
+        
+        if (subMenu.classList.contains("hidden")) {
+            subMenu.classList.remove("hidden");  // Mở menu
+            arrow.innerHTML = "&#9650;";  // Mũi tên chỉ lên
+        } else {
+            subMenu.classList.add("hidden");  // Ẩn menu
+            arrow.innerHTML = "&#9660;";  // Mũi tên chỉ xuống
+        }
+    }
+</script>
 </html>

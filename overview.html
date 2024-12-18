@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tổng Quan Di Tích Cấp Quốc Gia - Trà Vinh</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="overview-container"></div>
+    <script src="site-renderer.js"></script>
+    <script>
+        fetch('data.json')
+            .then(response => response.json())
+            .then(data => {
+                const renderer = new SiteRenderer(data);
+                document.getElementById('overview-container').innerHTML = renderer.renderOverview();
+            })
+            .catch(error => console.error('Error loading data:', error));
+    </script>
+</body>
+</html>
